@@ -4,7 +4,7 @@
 ///////////////////////////////////////
 
 #include <iostream>
-#include <exception>
+#include <stdexcept>
 
 ///
 /// Compute x's n power, x^n

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <exception> // for std::out_of_range
+#include <stdexcept> // for std::out_of_range
 
 ///////////////////////////////////////
 /// 存储结构定义
