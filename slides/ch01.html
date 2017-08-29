@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="滨州学院　庄波">
+  <title>数据结构</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showMathMenu:false,
+  TeX:{equationNumbers:{autoNumber:'AMS'}}});
+  </script>
+  <script type="text/javascript" async 
+  src="MathJax/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">数据结构</h1>
+  <p class="subtitle">CH1 绪论</p>
+  <p class="author">滨州学院　庄波</p>
+</section>
+
+<section id="如何学习数据结构" class="slide level2">
+<h2>如何学习数据结构</h2>
+<ul>
+<li>重要地位</li>
+<li>学习方法</li>
+<li>学习要求</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>教学资源
+<ul>
+<li>https://zhuangbo.github.io/ds-cpp/</li>
+<li>https://github.com/zhuangbo/ds-cpp</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section><section id="学科背景" class="titleslide slide level1"><h1>1.1 学科背景</h1></section><section id="用计算机解决问题的步骤" class="slide level2">
+<h2>用计算机解决问题的步骤</h2>
+<ol type="1">
+<li>抽象出数学模型</li>
+<li>设计算法</li>
+<li>编写程序</li>
+<li>测试、调试得到结果</li>
+</ol>
+</section><section id="数学模型的例子" class="slide level2">
+<h2>数学模型的例子</h2>
+<ul>
+<li>数值计算问题
+<ul>
+<li>线性方程组</li>
+<li>微分方程</li>
+</ul></li>
+<li>非数值计算问题
+<ul>
+<li>例1-1：书目检索</li>
+<li>例1-2：人机对弈</li>
+<li>例1-3：交通灯管理</li>
+</ul></li>
+</ul>
+</section><section id="数据结构学科" class="slide level2">
+<h2>数据结构学科</h2>
+<ul>
+<li>研究对象
+<ul>
+<li>非数值计算问题中计算机的操作对象以及它们之间的关系和操作</li>
+</ul></li>
+<li>历史沿革</li>
+<li>涉及范围</li>
+<li>重要地位</li>
+</ul>
+</section></section>
+<section><section id="基本概念" class="titleslide slide level1"><h1>1.2 基本概念</h1></section><section id="section" class="slide level2">
+<h2></h2>
+<dl>
+<dt>数据</dt>
+<dd>对客观事物的符号表示
+</dd>
+<dd>含义广泛（整数，实数，图像，声音等）
+</dd>
+<dt>数据元素</dt>
+<dd>数据的基本单位
+</dd>
+<dd>作为整体进行处理
+</dd>
+<dd>可由若干数据项组成
+</dd>
+<dt>数据项</dt>
+<dd>数据的不可分割的最小单位
+</dd>
+<dt>数据对象</dt>
+<dd>性质相同的数据元素的集合
+</dd>
+<dd>数据的子集
+</dd>
+</dl>
+</section><section id="section-1" class="slide level2">
+<h2></h2>
+<dl>
+<dt>数据结构</dt>
+<dd>相互之间存在一种或多种特定关系的数据元素的集合
+</dd>
+<dt>四类基本结构</dt>
+<dd><ol type="1">
+<li><strong>集合</strong>：同属一个集合</li>
+</ol>
+</dd>
+<dd><ol start="2" type="1">
+<li><strong>线性结构</strong>：先后顺序</li>
+</ol>
+</dd>
+<dd><ol start="3" type="1">
+<li><strong>树形结构</strong>：一对多</li>
+</ol>
+</dd>
+<dd><ol start="4" type="1">
+<li><strong>图（网）状结构</strong>：多对多</li>
+</ol>
+</dd>
+</dl>
+</section><section id="section-2" class="slide level2">
+<h2></h2>
+<dl>
+<dt>数据结构</dt>
+<dd>形式定义：(D,S)
+</dd>
+<dd>D：数据元素的有限集
+</dd>
+<dd>S：D 上关系的有限集（逻辑结构）
+</dd>
+<dd>
+</dd>
+<dd>例1-4：复数
+</dd>
+<dd>例1-5：课题组
+</dd>
+</dl>
+</section><section id="section-3" class="slide level2">
+<h2></h2>
+<dl>
+<dt>存储结构（物理结构）</dt>
+<dd>数据结构在计算机中的表示（映像）
+</dd>
+<dd><strong>位</strong>（bit） 0/1
+</dd>
+<dd><strong>元素</strong>（<strong>结点</strong>）--数据元素
+</dd>
+<dd><strong>数据域</strong>--数据项
+</dd>
+</dl>
+</section><section id="section-4" class="slide level2">
+<h2></h2>
+<dl>
+<dt>关系的两种表示方法</dt>
+<dd><strong>顺序映像</strong>和<strong>非顺序映像</strong>
+</dd>
+<dt>顺序映像</dt>
+<dd><strong>顺序存储结构</strong>
+</dd>
+<dd>借助元素在存储器中的相对<strong>位置</strong>来表示数据元素之间的逻辑关系
+</dd>
+<dt>非顺序映像</dt>
+<dd><strong>链式存储结构</strong>
+</dd>
+<dd>借助<strong>指针</strong>表示数据元素之间的逻辑关系
+</dd>
+</dl>
+</section><section id="section-5" class="slide level2">
+<h2></h2>
+<dl>
+<dt>数据类型</dt>
+<dd>一个<strong>值的集合</strong>（如整数）和一组<strong>操作</strong>（如加减乘除）
+</dd>
+<dd>分类：<strong>原子类型</strong>和<strong>结构类型</strong>
+</dd>
+<dd>作用：提供接口，隐藏细节
+</dd>
+</dl>
+</section><section id="section-6" class="slide level2">
+<h2></h2>
+<dl>
+<dt>抽象数据类型（ADT）</dt>
+<dd>一个<strong>数学模型</strong>以及定义在该模型上的一组<strong>操作</strong>
+</dd>
+<dd>特点：1）仅取决于逻辑特性 2）与计算机内部表示无关
+</dd>
+<dd>作用：软件复用
+</dd>
+<dd>分类：<strong>原子类型</strong>(不可分解)、<strong>固定聚合类型</strong>(成分数目确定)和<strong>可变聚合类型</strong>(成分数目不定)
+</dd>
+</dl>
+</section><section id="section-7" class="slide level2">
+<h2></h2>
+<dl>
+<dt>ADT 的形式定义</dt>
+<dd>(D,S,P)
+</dd>
+<dd>D：数据对象
+</dd>
+<dd>S：D 上的关系集
+</dd>
+<dd>P：对 D 的基本操作集
+</dd>
+<dd>例1-6：三元组 ADT
+</dd>
+</dl>
+</section><section id="section-8" class="slide level2">
+<h2></h2>
+<dl>
+<dt>多形数据类型</dt>
+<dd>值的成分不确定
+</dd>
+<dd>需要面向对象、泛型（模板）等方法描述
+</dd>
+</dl>
+</section></section>
+<section><section id="adt的表示与实现" class="titleslide slide level1"><h1>1.3 ADT的表示与实现</h1></section><section id="section-9" class="slide level2">
+<h2></h2>
+<ul>
+<li>描述语言：C/C++</li>
+<li>扩充
+<ul>
+<li>C
+<ul>
+<li>常量 TRUE/FALSE, OK/ERROR...</li>
+<li>结果状态 Status</li>
+</ul></li>
+<li>C++
+<ul>
+<li>输入输出 <iostream>, cin, cout</li>
+<li>引用 T&amp;, const T&amp;</li>
+<li>模板 template<typename T></li>
+<li>内存分配 new, delete</li>
+<li>异常处理 throw, try-catch</li>
+</ul></li>
+</ul></li>
+<li>例1-7：三元组</li>
+</ul>
+</section></section>
+<section><section id="算法" class="titleslide slide level1"><h1>1.4 算法</h1></section><section id="算法-1" class="slide level2">
+<h2>算法</h2>
+<dl>
+<dt>算法</dt>
+<dd>对特定问题求解步骤的一种描述
+</dd>
+<dd>它是指令的有限序列
+</dd>
+<dd>其中每一条指令表示一个或多个操作。
+</dd>
+</dl>
+</section><section id="算法的特性" class="slide level2">
+<h2>算法的特性</h2>
+<ul>
+<li>有穷性
+<ul>
+<li>有限步</li>
+<li>有限时间</li>
+</ul></li>
+<li>确定性：无二义性</li>
+<li>可行性</li>
+<li>输入：零个或多个输入
+<ul>
+<li>参数，文件，键盘输入等</li>
+</ul></li>
+<li>输出：一个或多个输出
+<ul>
+<li>返回值，被更新的参数，屏幕输出等</li>
+</ul></li>
+</ul>
+</section><section id="算法的设计要求" class="slide level2">
+<h2>算法的设计要求</h2>
+<ul>
+<li>正确性
+<ul>
+<li>（a）无语法错误</li>
+<li>（b）对几组输入数据</li>
+<li>（c）对精心选择的几组数据</li>
+<li>（d）对一切合法的输入数据</li>
+</ul></li>
+<li>可读性：便于阅读和理解
+<ul>
+<li>格式规范（缩进，注释等）</li>
+</ul></li>
+<li>健壮性：错误处理</li>
+<li>效率与低存储量
+<ul>
+<li>如何评价？</li>
+</ul></li>
+</ul>
+</section><section id="算法效率的度量" class="slide level2">
+<h2>算法效率的度量</h2>
+<ul>
+<li>事后统计
+<ul>
+<li>利用计算机计时</li>
+<li>受到实际软硬件环境的影响</li>
+</ul></li>
+<li>事前分析
+<ul>
+<li>时间复杂度：计算量与问题规模的关系</li>
+</ul></li>
+</ul>
+</section><section id="时间复杂度" class="slide level2">
+<h2>时间复杂度</h2>
+<dl>
+<dt>时间复杂度</dt>
+<dd>基本操作的执行次数
+</dd>
+<dd>是问题规模 <span class="math inline">\(n\)</span> 的某个函数 <span class="math inline">\(f(n)\)</span>
+</dd>
+<dd>算法的时间度量记作 <span class="math inline">\(T(n)=O(f(n))\)</span>
+</dd>
+<dd>表示增长率相同
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>语句频度</dt>
+<dd>语句重复执行的次数，如 <span class="math inline">\(f(n)=3n^2+5n+7\)</span>
+</dd>
+<dt>大 <span class="math inline">\(O\)</span> 记号</dt>
+<dd>表示增长率相同，如：<span class="math inline">\(O(3n^2+5n+7)=O(n^2)\)</span>
+</dd>
+<dd>写成化简形式：
+</dd>
+<dd>（1）忽略正的常系数，如 <span class="math inline">\(O(3n)=O(n)\)</span>
+</dd>
+<dd>（2）忽略多项式中的低次项，如 <span class="math inline">\(O(3n^2+5n)=O(n^2)\)</span>
+</dd>
+</dl>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
