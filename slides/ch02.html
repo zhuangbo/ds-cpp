@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="滨州学院　庄波">
+  <title>数据结构</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showMathMenu:false,
+  TeX:{equationNumbers:{autoNumber:'AMS'}}});
+  </script>
+  <script type="text/javascript" async 
+  src="MathJax/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">数据结构</h1>
+  <p class="subtitle">CH2 线性表</p>
+  <p class="author">滨州学院　庄波</p>
+</section>
+
+<section id="目标要求" class="slide level2">
+<h2>目标要求</h2>
+<ul>
+<li>掌握线性表的类型定义；</li>
+<li>熟练掌握顺序表的表示、基本操作和算法实现；</li>
+<li>熟练掌握链表的表示、基本操作和算法实现。</li>
+</ul>
+</section>
+<section><section id="线性表的类型定义" class="titleslide slide level1"><h1>2.1 线性表的类型定义</h1></section><section id="线性结构" class="slide level2">
+<h2>线性结构</h2>
+<dl>
+<dt>线性结构的特点</dt>
+<dd>“第一个”
+</dd>
+<dd>“最后一个”
+</dd>
+<dd><strong>前驱</strong>
+</dd>
+<dd><strong>后继</strong>
+</dd>
+</dl>
+<figure>
+<img src="images/ch01/2.svg" />
+</figure>
+</section><section class="slide level2">
+
+<dl>
+<dt>线性表</dt>
+<dd><span class="math inline">\(n\)</span> 个数据元素的有限序列
+</dd>
+<dt>线性表的长度</dt>
+<dd>线性表中元素的个数 <span class="math inline">\(n\)</span> (<span class="math inline">\(n \ge 0\)</span>)
+</dd>
+<dt>空表</dt>
+<dd>长度为零的线性表
+</dd>
+<dt>位序</dt>
+<dd>元素 <span class="math inline">\(a_i\)</span> 在表 <span class="math inline">\((a_1, a_2, \ldots, a_n)\)</span> 中的位置 <span class="math inline">\(i\)</span>
+</dd>
+</dl>
+</section><section id="线性表-adt" class="slide level2">
+<h2>线性表 ADT</h2>
+<ul>
+<li>数据对象：相同类型的 <span class="math inline">\(n\)</span> 个数据元素的集合</li>
+<li>数据关系：前驱、后继关系的集合</li>
+<li>基本操作：......</li>
+</ul>
+</section><section class="slide level2">
+
+<p>基本操作</p>
+<ul>
+<li class="fragment"><strong>InitList(&amp;L)</strong> 构造空的线性表</li>
+<li class="fragment"><strong>DestroyList(&amp;L)</strong> 销毁线性表</li>
+<li class="fragment"><strong>ClearList(&amp;L)</strong> 清空线性表</li>
+<li class="fragment"><strong>ListEmpty(L)</strong> 判断线性表是否为空</li>
+<li class="fragment"><strong>ListLength(L)</strong> 返回线性表的长度</li>
+<li class="fragment"><strong>GetElem(L,i,&amp;e)</strong> 取元素</li>
+<li class="fragment"><strong>LocateElem(L,e,compare)</strong> 元素定位</li>
+<li class="fragment"><strong>ListInsert(&amp;L,i,e)</strong> 插入元素</li>
+<li class="fragment"><strong>ListDelete(&amp;L,i,&amp;e)</strong> 删除元素</li>
+<li class="fragment"><strong>ListTraverse(L,visit)</strong> 遍历线性表</li>
+</ul>
+</section><section id="线性表的应用" class="slide level2">
+<h2>线性表的应用</h2>
+<ul>
+<li>例2-1：求集合的并集 <span class="math inline">\(A\Leftarrow A \cup B\)</span></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 将所有在线性表 Lb 中但不在 La 中的数据元素插入到 La 中</span>
+<span class="dt">void</span> <span class="kw">union</span>(List&amp; La, List Lb)
+{
+  <span class="cf">for</span>(i=<span class="dv">1</span>; i&lt;=ListLength(Lb); i++) {
+    GetElem(Lb,i,e);
+    <span class="cf">if</span>(!LocateElem(La,e,equal))
+      ListInsert(La,ListLength(La)<span class="dv">+1</span>,e);
+  }
+}</code></pre></div>
+<div class="fragment">
+<p>时间复杂度： <span class="math inline">\(O(n_a \times n_b)\)</span></p>
+</div>
+</section><section class="slide level2">
+
+<ul>
+<li>例2-2：归并有序表</li>
+</ul>
+<blockquote>
+<p>问题描述：线性表 la 和 lb 中的数据元素按值非递减有序排列，要求将 la 和 lb <strong>归并</strong>成一个新的线性表 lc，且 lc 中的数据元素仍按值非递减有序排列。</p>
+</blockquote>
+<div class="fragment">
+<ul>
+<li>算法思路：
+<ol type="1">
+<li>创建新表 lc</li>
+<li>同时遍历线性表 La 和 lb，将较小的元素插入新表 lc 末尾</li>
+<li>若表 la 或 lb 有剩余元素，则逐个插入表 lc 末尾</li>
+</ol></li>
+</ul>
+</div>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 将非递减有序的线性表 la 和 lb 归并到新的线性表 lc 中，保持非递减有序</span>
+<span class="dt">void</span> MergeList(List la, List lb, List&amp; lc)
+{
+  <span class="co">// 创建线性表 lc</span>
+  InitList(lc);
+  <span class="co">// 同时遍历线性表 La 和 lb，将较小的元素插入新表 lc 末尾</span>
+  i = j = k = <span class="dv">1</span>;
+  na = ListLength(la); nb = ListLength(lb);
+  <span class="cf">while</span>( i&lt;=na &amp;&amp; j&lt;=nb ) {
+    GetElem(la,i,ai); GetElem(lb,j,bj);
+    <span class="cf">if</span>(ai&lt;=bj) { ListInsert(lc,k,ai); ++k; ++i; }
+    <span class="cf">else</span> { ListInsert(lc,k,bj); ++k; ++j; }
+  }
+  <span class="co">// 剩余元素逐个插入表 lc 末尾</span>
+  <span class="cf">while</span>( i&lt;=na ) {
+    GetElem(la,i,ai); ListInsert(lc,k,ai); ++k; ++i;
+  }
+  <span class="cf">while</span>( j&lt;=nb ) {
+    GetElem(lb,j,bj); ListInsert(lc,k,bj); ++k; ++j;
+  }
+}</code></pre></div>
+<div class="fragment">
+<p>时间复杂度： <span class="math inline">\(O(n_a+n_b)\)</span></p>
+</div>
+</section></section>
+<section><section id="线性表的顺序表示和实现" class="titleslide slide level1"><h1>2.2 线性表的顺序表示和实现</h1></section><section id="顺序表" class="slide level2">
+<h2>顺序表</h2>
+<dl>
+<dt>顺序表</dt>
+<dd>线性表的顺序存储结构
+</dd>
+<dd>存储特点：a）逻辑上相邻的元素在物理位置上也是相邻的，b）随机存取。
+</dd>
+</dl>
+</section><section id="顺序表的类型定义" class="slide level2">
+<h2>顺序表的类型定义</h2>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 顺序表类型定义</span>
+<span class="kw">struct</span> SqList {
+    T elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
+    <span class="dt">int</span> length;  <span class="co">// 当前长度</span>
+};</code></pre></div>
+<div class="fragment">
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 顺序表类型定义（用 C++ 模板实现）</span>
+<span class="kw">template</span>&lt;<span class="kw">typename</span> T, <span class="dt">int</span> MAXSIZE&gt;
+<span class="kw">struct</span> SqList {
+    T elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
+    <span class="dt">int</span> length;  <span class="co">// 当前长度</span>
+};</code></pre></div>
+</div>
+</section><section id="顺序表的基本形态" class="slide level2">
+<h2>顺序表的基本形态</h2>
+<ul>
+<li>表空： L.length==0，无法删除</li>
+<li>表满： L.length==MAXSIZE，无法插入</li>
+<li>非空（非满）：可以插入和删除</li>
+</ul>
+<figure>
+<img src="images/ch02/sqlist.png" />
+</figure>
+</section><section id="顺序表基本操作的实现" class="slide level2">
+<h2>顺序表基本操作的实现</h2>
+<ul>
+<li>InitList(&amp;L)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> InitList(SqList&amp; L) {
+    L.length = <span class="dv">0</span>;  <span class="co">// 空表长度为 0</span>
+}</code></pre></div>
+<ul>
+<li>ClearList(&amp;L)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ClearList(SqList&amp; L)
+{
+    L.length = <span class="dv">0</span>;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>ListLength(L)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> ListLength(<span class="at">const</span> SqList&amp; L)
+{
+    <span class="cf">return</span> L.length;
+}</code></pre></div>
+<ul>
+<li>ListEmpty(L)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> ListEmpty(<span class="at">const</span> SqList&amp; L)
+{
+    <span class="cf">return</span> L.length == <span class="dv">0</span>;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>GetElem(L,i,&amp;e)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> GetElem(<span class="at">const</span> SqLis&amp; L, <span class="dt">int</span> i, T&amp; e)
+{
+    <span class="co">// 若 i 值不合法，则返回 false</span>
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length)  <span class="cf">return</span> <span class="kw">false</span>;
+
+    <span class="co">// 取第 i 个元素</span>
+    e = L.elem[i<span class="dv">-1</span>];
+
+    <span class="co">// 返回 true 表示操作成功</span>
+    <span class="cf">return</span> <span class="kw">true</span>;
+}
+
+<span class="co">// 另一种实现</span>
+T GetElem(<span class="at">const</span> SqList&lt;T,M&gt;&amp; L, <span class="dt">int</span> i)
+{
+    <span class="co">// 若 i 值不合法，不能取元素</span>
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+
+    <span class="co">// 返回第 i 个元素</span>
+    <span class="cf">return</span> L.elem[i<span class="dv">-1</span>];
+}</code></pre></div>
+</section><section id="插入元素-listinsertlie" class="slide level2">
+<h2>插入元素 ListInsert(&amp;L,i,e)</h2>
+<p>问题描述：</p>
+<p>算法思路：</p>
+</section><section class="slide level2">
+
+<p>算法实现：</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
+{
+    <span class="co">// 若表满，则不能插入</span>
+    <span class="cf">if</span>(L.length==MAXSIZE) <span class="cf">throw</span> length_error(<span class="st">&quot;L is full&quot;</span>);
+    <span class="co">// 若 i 值不合法，则不能插入</span>
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length<span class="dv">+1</span>) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+
+    <span class="co">// 插入位置及之后的元素后移</span>
+    <span class="cf">for</span>(<span class="dt">int</span> j=L.length<span class="dv">-1</span>; j&gt;=i<span class="dv">-1</span>; j--) {
+        L.elem[j<span class="dv">+1</span>] = L.elem[j];
+    }
+    <span class="co">// 插入元素</span>
+    L.elem[i<span class="dv">-1</span>] = e;
+    <span class="co">// 表长增 1</span>
+    L.length++;
+}</code></pre></div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
