@@ -10,6 +10,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -140,6 +177,26 @@
 </ol>
 </dd>
 </dl>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch01/1.svg" alt="集合" /><figcaption>集合</figcaption>
+</figure>
+<div class="fragment">
+<figure>
+<img src="images/ch01/2.svg" alt="线性结构" /><figcaption>线性结构</figcaption>
+</figure>
+</div>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch01/3.svg" alt="树形结构" /><figcaption>树形结构</figcaption>
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch01/4.svg" alt="图（网）状结构" /><figcaption>图（网）状结构</figcaption>
+</figure>
 </section><section id="section-2" class="slide level2">
 <h2></h2>
 <dl>
@@ -351,6 +408,197 @@
 <dd>（2）忽略多项式中的低次项，如 <span class="math inline">\(O(3n^2+5n)=O(n^2)\)</span>
 </dd>
 </dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>语句频度和时间复杂度的分析方法</dt>
+<dd>顺序：时间求和
+</dd>
+<dd>选择：判断 + 运行时间最长者
+</dd>
+<dd>循环：循环体时间 × 迭代次数
+</dd>
+<dd>嵌套循环：从里向外逐层分析
+</dd>
+<dd>函数调用：从调用到返回的时间
+</dd>
+<dd>与输入数据有关：（1）最好情况 （2）最坏情况 （3）平均情况
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>几种常见的时间复杂度</dt>
+<dd>常数： <span class="math inline">\(O(1)\)</span>
+</dd>
+<dd>对数： <span class="math inline">\(O(\log n)\)</span>
+</dd>
+<dd>线性： <span class="math inline">\(O(n)\)</span>
+</dd>
+<dd>多项式 <span class="math inline">\(O({\rm polynomial}(n))\)</span>： <span class="math inline">\(O(1)\)</span>, <span class="math inline">\(O(n)\)</span>, <span class="math inline">\(O(n^2)\)</span>, <span class="math inline">\(O(n^3)\)</span>...
+</dd>
+<dd>指数：<span class="math inline">\(O(2^n)\)</span>, <span class="math inline">\(O(3^n)\)</span>...
+</dd>
+</dl>
+</section><section id="时间复杂度分析举例" class="slide level2">
+<h2>时间复杂度分析举例</h2>
+<ul>
+<li>顺序搜索</li>
+<li>二分搜索</li>
+<li>最小值，最大值</li>
+<li>整数幂</li>
+<li>斐波那契数</li>
+<li>冒泡排序</li>
+</ul>
+</section><section id="section-10" class="slide level2">
+<h2></h2>
+<dl>
+<dt>顺序搜索</dt>
+<dd>在数组 <code>a[n]</code> 中查找 <code>x</code>
+</dd>
+<dd>若找到，返回下标，若找不到，返回 <code>-1</code>
+</dd>
+</dl>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> find(T a[], <span class="dt">int</span> n, T x)
+{
+  <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;n; i++) {
+    <span class="cf">if</span>(a[i]==x) <span class="cf">return</span> i;
+  }
+  <span class="cf">return</span> <span class="dv">-1</span>; <span class="co">// not found</span>
+}</code></pre></div>
+<div class="fragment">
+<ul>
+<li class="fragment">比较次数：<span class="math inline">\(n\)</span></li>
+<li class="fragment">时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+</ul>
+</div>
+</section><section id="section-11" class="slide level2">
+<h2></h2>
+<p><strong>二分搜索</strong>：在有序数组 <code>a[n]</code> 中查找元素 <code>x</code></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> binary_search(T a[], <span class="dt">int</span> n, <span class="at">const</span> T&amp; x)
+{
+    <span class="dt">int</span> low, mid, high;
+
+    low = <span class="dv">0</span>; high = n<span class="dv">-1</span>;
+    <span class="cf">while</span>(low &lt;= high) {
+        mid = (low + high) / <span class="dv">2</span>;
+        <span class="cf">if</span>(a[mid] &lt; x)
+            low = mid + <span class="dv">1</span>;
+        <span class="cf">else</span> <span class="cf">if</span>(a[mid] &gt; x)
+            high = mid - <span class="dv">1</span>;
+        <span class="cf">else</span>
+            <span class="cf">return</span> mid;
+    }
+
+    <span class="cf">return</span> <span class="dv">-1</span>; <span class="co">// not found</span>
+}</code></pre></div>
+<div class="fragment">
+<ul>
+<li class="fragment">比较次数：<span class="math inline">\(\lfloor\log_2 n\rfloor+1\)</span></li>
+<li class="fragment">时间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
+</ul>
+</div>
+</section><section id="section-12" class="slide level2">
+<h2></h2>
+<dl>
+<dt>最小值，最大值</dt>
+<dd>求数组 <code>a[n]</code> 中的最小值（最大值）
+</dd>
+</dl>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">T min(T a[], <span class="dt">int</span> n)
+{
+    T tmp = a[<span class="dv">0</span>];
+    <span class="cf">for</span>(<span class="dt">int</span> i=<span class="dv">1</span>; i&lt;n; i++)
+        <span class="cf">if</span>(a[i] &lt; tmp)
+            tmp = a[i];
+    <span class="cf">return</span> tmp;
+}</code></pre></div>
+<div class="fragment">
+<ul>
+<li class="fragment">比较次数：<span class="math inline">\(n-1\)</span></li>
+<li class="fragment">时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+</ul>
+</div>
+</section><section class="slide level2">
+
+<p>思考：若要求<em>同时</em>求出一个数组中的最小值和最大值，最少需要多少次比较呢？</p>
+<div class="fragment">
+<p><span class="math inline">\(\lceil \frac{3n}{2} \rceil -1\)</span></p>
+</div>
+</section><section id="section-13" class="slide level2">
+<h2></h2>
+<p><strong>整数幂</strong>：求 <span class="math inline">\(x^n\)</span>，其中 <span class="math inline">\(n\)</span> 为非负整数</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">double</span> power(<span class="dt">double</span> x, <span class="dt">int</span> n) {
+    <span class="cf">if</span>(n&lt;<span class="dv">0</span>) <span class="cf">throw</span> <span class="bu">std::</span>invalid_argument(<span class="st">&quot;n&lt;0&quot;</span>);
+    
+    <span class="cf">if</span>(n==<span class="dv">0</span>) <span class="cf">return</span> <span class="dv">1</span>;
+    <span class="cf">else</span> <span class="cf">if</span>(n&amp;<span class="dv">1</span>)  <span class="co">// odd or not</span>
+        <span class="cf">return</span> power(x*x, n/<span class="dv">2</span>)*x;
+    <span class="cf">else</span>
+        <span class="cf">return</span> power(x*x, n/<span class="dv">2</span>);
+}</code></pre></div>
+<div class="fragment">
+<blockquote>
+<p>乘法次数：<span class="math inline">\(\log_2 n\)</span> 时间复杂度：<span class="math inline">\(O(\log n)\)</span></p>
+</blockquote>
+</div>
+</section><section id="section-14" class="slide level2">
+<h2></h2>
+<p>斐波那契数</p>
+<p><span class="math display">\[f(n) = \begin{cases} 0 &amp; n=0 \\ 1 &amp; n=1 \\ f(n-1)+f(n-2) &amp; n&gt;1 \end{cases}\]</span></p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">long</span> <span class="dt">long</span> fib1(<span class="dt">int</span> n)
+{
+    <span class="cf">if</span>(n&lt;=<span class="dv">1</span>)
+        <span class="cf">return</span> n;
+    <span class="cf">else</span>
+        <span class="cf">return</span> fib1(n<span class="dv">-1</span>) + fib1(n<span class="dv">-2</span>);
+}</code></pre></div>
+<div class="fragment">
+<blockquote>
+<p>时间复杂度：<span class="math inline">\(O(2^n)\)</span> 如何修改程序，使得时间复杂度降低为 <span class="math inline">\(O(n)\)</span>？</p>
+</blockquote>
+</div>
+</section><section id="section-15" class="slide level2">
+<h2></h2>
+<p>冒泡排序</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> bubble_sort(T a[], <span class="dt">int</span> n)
+{
+    <span class="cf">for</span>(<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n<span class="dv">-1</span>; i++) {
+        <span class="dt">bool</span> change = <span class="kw">false</span>;
+        <span class="cf">for</span>(<span class="dt">int</span> j=<span class="dv">0</span>; j&lt;n-i<span class="dv">-1</span>; j++) {
+            <span class="cf">if</span>(a[j] &gt; a[j<span class="dv">+1</span>]) {
+                T temp = a[j];
+                a[j] = a[j<span class="dv">+1</span>];
+                a[j<span class="dv">+1</span>] = temp;
+
+                change = <span class="kw">true</span>;
+            }
+        }
+        <span class="cf">if</span>(!change) <span class="cf">break</span>;
+    }
+}</code></pre></div>
+<blockquote>
+<p>时间复杂度：<span class="math inline">\(O(n^2)\)</span> 与输入数据有关：最好情况 <span class="math inline">\(O(n)\)</span></p>
+</blockquote>
+</section><section id="空间复杂度" class="slide level2">
+<h2>空间复杂度</h2>
+<dl>
+<dt>空间复杂度</dt>
+<dd>算法所需存储空间的度量
+</dd>
+<dd>大 <span class="math inline">\(O\)</span> 记号
+</dd>
+</dl>
+</section><section id="总结" class="slide level2">
+<h2>总结</h2>
+<ul>
+<li>掌握数据结构的基本概念和术语；</li>
+<li>了解抽象数据类型的表示与实现；</li>
+<li>掌握算法的概念；</li>
+<li>理解算法的五个重要特征的确切含义；</li>
+<li>了解算法设计的要求；</li>
+<li>熟练掌握算法时间复杂度的分析方法。</li>
+</ul>
 </section></section>
     </div>
   </div>
