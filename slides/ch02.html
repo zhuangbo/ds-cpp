@@ -228,8 +228,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section id="顺序表的基本形态" class="slide level2">
 <h2>顺序表的基本形态</h2>
 <ul>
-<li>表空： L.length==0，无法删除</li>
-<li>表满： L.length==MAXSIZE，无法插入</li>
+<li><strong>表空</strong>： L.length==0，无法删除</li>
+<li><strong>表满</strong>： L.length==MAXSIZE，无法插入</li>
 <li>非空（非满）：可以插入和删除</li>
 </ul>
 <figure>
@@ -238,13 +238,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section id="顺序表基本操作的实现" class="slide level2">
 <h2>顺序表基本操作的实现</h2>
 <ul>
-<li>InitList(&amp;L)</li>
+<li><strong>InitList(&amp;L) 初始化顺序表</strong></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> InitList(SqList&amp; L) {
     L.length = <span class="dv">0</span>;  <span class="co">// 空表长度为 0</span>
 }</code></pre></div>
 <ul>
-<li>ClearList(&amp;L)</li>
+<li><strong>ClearList(&amp;L) 清空顺序表</strong></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ClearList(SqList&amp; L)
 {
@@ -253,14 +253,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section class="slide level2">
 
 <ul>
-<li>ListLength(L)</li>
+<li><strong>ListLength(L) 求长度</strong></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> ListLength(<span class="at">const</span> SqList&amp; L)
 {
     <span class="cf">return</span> L.length;
 }</code></pre></div>
 <ul>
-<li>ListEmpty(L)</li>
+<li><strong>ListEmpty(L) 判空</strong></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> ListEmpty(<span class="at">const</span> SqList&amp; L)
 {
@@ -269,7 +269,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section class="slide level2">
 
 <ul>
-<li>GetElem(L,i,&amp;e)</li>
+<li><strong>GetElem(L,i,&amp;e) 取元素</strong></li>
+<li>随机访问 O(1)</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> GetElem(<span class="at">const</span> SqLis&amp; L, <span class="dt">int</span> i, T&amp; e)
 {
@@ -284,22 +285,115 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }
 
 <span class="co">// 另一种实现</span>
-T GetElem(<span class="at">const</span> SqList&lt;T,M&gt;&amp; L, <span class="dt">int</span> i)
+T GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</span> i)
 {
     <span class="co">// 若 i 值不合法，不能取元素</span>
-    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length)
+        <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
 
     <span class="co">// 返回第 i 个元素</span>
     <span class="cf">return</span> L.elem[i<span class="dv">-1</span>];
 }</code></pre></div>
-</section><section id="插入元素-listinsertlie" class="slide level2">
-<h2>插入元素 ListInsert(&amp;L,i,e)</h2>
-<p>问题描述：</p>
-<p>算法思路：</p>
 </section><section class="slide level2">
 
-<p>算法实现：</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
+<ul>
+<li><strong>LocateElem(L,e) 元素定位</strong>
+<ul>
+<li>在顺序表 L 中查找数据元素 e</li>
+<li>若找到，返回位序，否则返回 0</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, T e)
+{
+    <span class="co">// 逐个取出元素与 e 比较</span>
+    <span class="cf">for</span>(i = <span class="dv">0</span>; i &lt; L.length; i++) {
+        <span class="co">// 若满足条件，则返回位序</span>
+        <span class="cf">if</span>(L.elem[i] == e)  <span class="cf">return</span> i<span class="dv">+1</span>;
+    }
+
+    <span class="cf">return</span> <span class="dv">0</span>; <span class="co">// 不存在</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>LocateElem(L,e,cond) 元素定位</strong>
+<ul>
+<li>返回顺序表 L 中第一个与 e 满足关系 cond 的数据元素的位序</li>
+<li>若找到，返回位序，否则返回 0</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, T e, C cond)
+{
+    <span class="co">// 逐个取出元素与 e 比较</span>
+    <span class="cf">for</span>(i = <span class="dv">0</span>; i &lt; L.length; i++) {
+        <span class="co">// 若满足条件，则返回位序</span>
+        <span class="cf">if</span>(cond(L.elem[i],e))  <span class="cf">return</span> i<span class="dv">+1</span>;
+    }
+
+    <span class="cf">return</span> <span class="dv">0</span>; <span class="co">// 不存在</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>LocateElem(L,e,cond) 元素定位</strong>
+<ul>
+<li>其中比较条件 cond 可以使用自定义函数，非常灵活</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 自定义比较条件</span>
+<span class="dt">bool</span> eq(T a, T b) { <span class="cf">return</span> a == b; }
+<span class="dt">bool</span> lt(T a, T b) { <span class="cf">return</span> a &lt; b; }
+<span class="dt">bool</span> gt(T a, T b) { <span class="cf">return</span> a &gt; b; }
+<span class="dt">bool</span> le(T a, T b) { <span class="cf">return</span> a &lt;= b; }
+<span class="dt">bool</span> ge(T a, T b) { <span class="cf">return</span> a &gt;= b; }
+
+<span class="co">// 用不同条件进行元素定位</span>
+LocateElem(L,e,eq)  <span class="co">// 定位第一个等于 e 的元素</span>
+LocateElem(L,e,lt)  <span class="co">// 定位第一个小于 e 的元素</span>
+LocateElem(L,e,gt)  <span class="co">// 定位第一个大于 e 的元素</span>
+LocateElem(L,e,le)  <span class="co">// 定位第一个小于等于 e 的元素</span>
+LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素</span></code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>ListTraverse(L,visit) 遍历顺序表</strong>
+<ul>
+<li>遍历顺序表，依次对 L 中的每个数据元素调用函数 visit</li>
+<li>定义不同的 visit 函数即可实现不同的功能</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ListTraverse(<span class="at">const</span> SqList&amp; L, Func visit)
+{
+    <span class="cf">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; L.length; i++) {
+        visit(L.elem[i]);
+    }
+}</code></pre></div>
+</section><section id="插入元素-listinsertlie" class="slide level2">
+<h2>插入元素 ListInsert(&amp;L,i,e)</h2>
+<ul>
+<li><strong>问题描述</strong>：在顺序表 L 中第 i 个位置插入元素 e</li>
+<li><strong>算法思路</strong>：
+<ul>
+<li><em>异常情况</em>
+<ul>
+<li>表满：L.length==MAXSIZE</li>
+<li>参数 i 不合理：i&lt;1 || i&gt;L.length+1</li>
+</ul></li>
+<li><em>一般步骤</em>
+<ul>
+<li>（1）移动元素（哪些元素？如何移动？）</li>
+<li>（2）插入元素</li>
+<li>（3）表长增 1</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>算法实现</strong>：</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e</span>
+<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
 {
     <span class="co">// 若表满，则不能插入</span>
     <span class="cf">if</span>(L.length==MAXSIZE) <span class="cf">throw</span> length_error(<span class="st">&quot;L is full&quot;</span>);
@@ -315,6 +409,207 @@ T GetElem(<span class="at">const</span> SqList&lt;T,M&gt;&amp; L, <span class="d
     <span class="co">// 表长增 1</span>
     L.length++;
 }</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>插入算法的时间复杂度分析</strong>
+<ul>
+<li><em>基本操作</em>：移动元素</li>
+<li><em>移动次数</em>与插入位置 <span class="math inline">\(i\)</span> 及表长 <span class="math inline">\(n\)</span> 有关
+<ul>
+<li>最好情况：表尾插入（移动 <span class="math inline">\(0\)</span> 次）</li>
+<li>最坏情况：表头插入（移动 <span class="math inline">\(n\)</span> 次）</li>
+<li>平均（等概率）情况：<span class="math display">\[\frac{1}{n+1} \sum_{i=1}^{n+1} (n-i+1) = \frac{n}{2}\]</span> 即平均移动 <span class="math inline">\(\frac{n}{2}\)</span> 个元素</li>
+</ul></li>
+<li><em>时间复杂度（平均情况）</em>：<span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+</ul>
+</section><section id="删除元素-listdeletelie" class="slide level2">
+<h2>删除元素 ListDelete(&amp;L,i,&amp;e)</h2>
+<ul>
+<li><strong>问题描述</strong>：在顺序表 L 中删除第 i 个元素，用 e 返回</li>
+<li><strong>算法思路</strong>：
+<ul>
+<li><em>异常情况</em>：
+<ul>
+<li>表空：L.length==0</li>
+<li>参数 i 不合理：i&lt;1 || i&gt;L.length</li>
+</ul></li>
+<li><em>一般步骤</em>：
+<ul>
+<li>（1）取出数据</li>
+<li>（2）移动元素（哪些元素？如何移动？）</li>
+<li>（3）表长减 1</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>算法实现</strong>：</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中删除第 i 个元素，用 e 返回</span>
+<span class="dt">void</span> ListDelete(SqList&amp; L, <span class="dt">int</span> i, T&amp; e)
+{
+    <span class="co">// 若表空，则不能删除，抛出异常</span>
+    <span class="cf">if</span>(L.length==<span class="dv">0</span>) <span class="cf">throw</span> length_error(<span class="st">&quot;L is empty&quot;</span>);
+    <span class="co">// 若 i 值不合法，则不能删除</span>
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    
+    <span class="co">// 取出被删除元素</span>
+    e = L.elem[i<span class="dv">-1</span>];
+    <span class="co">// 被删除元素之后的元素前移</span>
+    <span class="cf">for</span>(<span class="dt">int</span> j=i; j&lt;L.length; j++) {
+        L.elem[j<span class="dv">-1</span>] = L.elem[j];
+    }
+    <span class="co">// 表长减 1</span>
+    L.length--;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>删除算法的时间复杂度分析</strong>
+<ul>
+<li><em>基本操作</em>：移动元素</li>
+<li><em>移动次数</em>与删除位置 <span class="math inline">\(i\)</span> 及表长 <span class="math inline">\(n\)</span> 有关
+<ul>
+<li>最好情况：表尾删除（移动 <span class="math inline">\(0\)</span> 次）</li>
+<li>最坏情况：表头删除（移动 <span class="math inline">\(n-1\)</span> 次）</li>
+<li>平均（等概率）情况：<span class="math display">\[\frac{1}{n} \sum_{i=1}^{n} (n-i) = \frac{n-1}{2}\]</span> 即平均移动 <span class="math inline">\(\frac{n-1}{2}\)</span> 个元素</li>
+</ul></li>
+<li><em>时间复杂度（平均情况）</em>：<span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+</ul>
+</section><section id="动态分配空间的顺序表" class="slide level2">
+<h2>动态分配空间的顺序表</h2>
+<ul>
+<li><strong>类型定义</strong></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 顺序表类型定义</span>
+<span class="kw">struct</span> SqList {
+  T *elem;      <span class="co">// 动态分配的存储空间</span>
+  <span class="dt">int</span> listsize; <span class="co">// 当前分配的存储容量</span>
+  <span class="dt">int</span> length;   <span class="co">// 当前长度</span>
+};</code></pre></div>
+<ul>
+<li><strong>动态分配空间</strong>
+<ul>
+<li>表满后可扩大空间（倍增）</li>
+<li>初始化、销毁、插入等操作时管理存储空间</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>InitList(&amp;L) 初始化顺序表</strong>
+<ul>
+<li>动态分配内存（初始容量）</li>
+<li>置空表 L.length = 0</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> InitList(SqList&amp; L)
+{
+  L.elem = <span class="kw">new</span> T [INIT_SIZE];  <span class="co">// 按初始容量分配空间</span>
+  L.listsize = INIT_SIZE;
+  L.length = <span class="dv">0</span>;  <span class="co">// 置空表</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>DestroyList(&amp;L) 销毁顺序表</strong></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> DestroyList(SqList&amp; L)
+{
+  <span class="kw">delete</span>[] L.elem;  <span class="co">// 释放存储空间</span>
+  L.listsize = <span class="dv">0</span>;
+  L.length = <span class="dv">0</span>;
+}</code></pre></div>
+<ul>
+<li class="fragment">用 <code>new</code> 分配空间，则用 <code>delete</code> 释放空间。</li>
+<li class="fragment">用 <code>new []</code> 分配空间，对应地用 <code>delete[]</code> 释放空间。</li>
+</ul>
+</section><section id="分配空间失败如何处理" class="slide level2">
+<h2>分配空间失败如何处理？</h2>
+<ul>
+<li>C 语言：检查是否返回空指针 <code>NULL</code>，需处理。
+<ul>
+<li>一般是调用 exit() 退出程序</li>
+</ul></li>
+<li>C++：抛出异常 <code>std::bad_alloc</code>，一般不处理。
+<ul>
+<li>必要时可以在函数外部捕获异常进行处理</li>
+</ul></li>
+<li>实际上
+<ul>
+<li>动态分配内存失败极少出现</li>
+<li>系统已接近崩溃，程序已无计可施</li>
+<li>与其痛苦地挣扎，不如痛快地结束（崩溃）</li>
+</ul></li>
+<li>总结：用 C++ 的 new 而不是 C 语言的 malloc()。</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>扩展存储空间</strong>
+<ul>
+<li>（1）分配新空间</li>
+<li>（2）复制旧元素</li>
+<li>（3）释放旧空间</li>
+<li>（4）指向新空间</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 为顺序表 L 重新分配空间更多空间（加倍）</span>
+<span class="dt">void</span> expand(SqList&amp; L)
+{
+  <span class="co">// 分配新空间</span>
+  n = L.listsize * <span class="dv">2</span>;
+  p = <span class="kw">new</span> T [n];
+  <span class="co">// 复制元素</span>
+  <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;L.length; i++) p[i] = L.elem[i];
+  <span class="co">// 释放旧空间</span>
+  <span class="kw">delete</span>[] L.elem;
+  <span class="co">// 指向新空间</span>
+  L.elem = p;
+  L.listsize = n;
+}</code></pre></div>
+</section><section id="插入元素-listinsertlie-1" class="slide level2">
+<h2>插入元素 ListInsert(&amp;L,i,e)</h2>
+<ul>
+<li>在动态分配空间的顺序表中插入元素
+<ul>
+<li>表满（L.length==L.listsize）时先扩展存储空间再插入</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e</span>
+<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
+{
+    <span class="co">// 若 i 值不合法，则不能插入</span>
+    <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length<span class="dv">+1</span>) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    <span class="co">// 若表满，则扩展空间</span>
+    <span class="cf">if</span>(L.length==L.listsize) expand(L);
+
+    <span class="co">// 插入位置及之后的元素后移</span>
+    <span class="cf">for</span>(<span class="dt">int</span> j=L.length<span class="dv">-1</span>; j&gt;=i<span class="dv">-1</span>; j--) {
+        L.elem[j<span class="dv">+1</span>] = L.elem[j];
+    }
+    <span class="co">// 插入元素</span>
+    L.elem[i<span class="dv">-1</span>] = e;
+    <span class="co">// 表长增 1</span>
+    L.length++;
+}</code></pre></div>
+</section><section id="顺序表应用举例" class="slide level2">
+<h2>顺序表应用举例</h2>
+<ul>
+<li>求集合的并集
+<ul>
+<li>插入在表尾</li>
+<li><span class="math inline">\(O(m\times n)\)</span></li>
+</ul></li>
+<li>归并有序表
+<ul>
+<li><span class="math inline">\(O(m+n)\)</span></li>
+</ul></li>
+</ul>
 </section></section>
     </div>
   </div>
