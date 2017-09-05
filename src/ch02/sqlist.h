@@ -120,6 +120,7 @@ void ListInsert(SqList<T,MAXSIZE>& L, int i, T e)
 
 ///
 /// 在顺序表 L 中删除第 i 个元素，用 e 返回
+///
 template<typename T, int M>
 void ListDelete(SqList<T,M>& L, int i, T& e)
 {
