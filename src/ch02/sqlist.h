@@ -124,8 +124,6 @@ void ListInsert(SqList<T,MAXSIZE>& L, int i, T e)
 template<typename T, int M>
 void ListDelete(SqList<T,M>& L, int i, T& e)
 {
-    // 若表空，则不能删除，抛出异常
-    if(L.length==0) throw length_error("L is empty");
     // 若 i 值不合法，则不能删除
     if(i<1 || i>L.length) throw out_of_range("i out of range");
     
