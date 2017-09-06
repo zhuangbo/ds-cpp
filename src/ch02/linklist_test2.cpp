@@ -1,5 +1,5 @@
 ///////////////////////////////////////
-/// file: linklist_test.cpp
+/// file: linklist_test2.cpp
 ///////////////////////////////////////
 
 #include <iostream>
@@ -31,6 +31,9 @@ void print(int x)
     cout << " " << x;
 }
 
+///
+/// 在单链表中定位元素，遍历顺序表
+///
 int main()
 {
     // 建立链表
