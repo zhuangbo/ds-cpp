@@ -233,7 +233,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>非空（非满）：可以插入和删除</li>
 </ul>
 <figure>
-<img src="images/ch02/sqlist.png" />
+<img src="images/ch02/sqlist.svg" />
 </figure>
 </section><section id="顺序表基本操作的实现" class="slide level2">
 <h2>顺序表基本操作的实现</h2>
@@ -389,6 +389,19 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul>
 </section><section class="slide level2">
 
+<figure>
+<img src="images/ch02/sqlist-insert.svg" />
+</figure>
+<ul>
+<li><em>一般步骤</em>
+<ul>
+<li>（1）移动元素（哪些元素？如何移动？）</li>
+<li>（2）插入元素</li>
+<li>（3）表长增 1</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
 <ul>
 <li><strong>算法实现</strong>：</li>
 </ul>
@@ -445,6 +458,19 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul>
 </section><section class="slide level2">
 
+<figure>
+<img src="images/ch02/sqlist-delete.svg" />
+</figure>
+<ul>
+<li><em>一般步骤</em>：
+<ul>
+<li>（1）取出数据</li>
+<li>（2）移动元素（哪些元素？如何移动？）</li>
+<li>（3）表长减 1</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
 <ul>
 <li><strong>算法实现</strong>：</li>
 </ul>
@@ -491,6 +517,18 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
   <span class="dt">int</span> listsize; <span class="co">// 当前分配的存储容量</span>
   <span class="dt">int</span> length;   <span class="co">// 当前长度</span>
 };</code></pre></div>
+<ul>
+<li><strong>动态分配空间</strong>
+<ul>
+<li>表满后可扩大空间（倍增）</li>
+<li>初始化、销毁、插入等操作时管理存储空间</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch02/sqlist-dynamic.svg" />
+</figure>
 <ul>
 <li><strong>动态分配空间</strong>
 <ul>
@@ -610,6 +648,459 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 <li><span class="math inline">\(O(m+n)\)</span></li>
 </ul></li>
 </ul>
+</section></section>
+<section><section id="线性表的链式存储结构" class="titleslide slide level1"><h1>2.3 线性表的链式存储结构</h1></section><section id="线性链表" class="slide level2">
+<h2>线性链表</h2>
+<dl>
+<dt>线性链表</dt>
+<dd>用一组任意的存储单元存储线性表的数据元素
+</dd>
+<dd>存储空间不一定是连续的
+</dd>
+<dd>特点：（1）只能顺序访问，不能随机存取 （2）插入、删除时无需移动元素
+</dd>
+<dt>结点</dt>
+<dd><strong>数据域</strong>存储数据元素
+</dd>
+<dd><strong>指针域</strong>存储直接后继的存储位置
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>链表</dt>
+<dd><span class="math inline">\(n\)</span> 个结点链结成<strong>链表</strong>
+</dd>
+<dt>单链表</dt>
+<dd><strong>头指针</strong>指向第一个结点
+</dd>
+<dd><strong>头结点</strong>是附设在第一个数据结点之前的结点
+</dd>
+<dd>最后一个结点的指针域为<strong>空指针</strong>
+</dd>
+</dl>
+<figure>
+<img src="images/ch02/linklist.svg" />
+</figure>
+</section><section id="单链表类型定义" class="slide level2">
+<h2>单链表类型定义</h2>
+<dl>
+<dt>类型定义</dt>
+<dd><strong>结点</strong>结构 LNode
+</dd>
+<dd>指针代表的<strong>链表</strong>类型 LinkList
+</dd>
+</dl>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 单链表结点结构</span>
+<span class="kw">struct</span> LNode {
+    T  data;  <span class="co">// 数据域</span>
+    LNode *next;  <span class="co">// 指针域</span>
+};
+
+<span class="co">/// 链表类型</span>
+<span class="kw">typedef</span> LNode *LinkList;</code></pre></div>
+</section><section id="单链表基本形态" class="slide level2">
+<h2>单链表基本形态</h2>
+<dl>
+<dt>不带头结点的单链表</dt>
+<dd>没有头结点
+</dd>
+<dd>头指针指向第一个数据结点
+</dd>
+<dt>基本形态</dt>
+<dd>空表：<code>L == NULL</code>
+</dd>
+<dd>非空表
+</dd>
+</dl>
+<figure>
+<img src="images/ch02/linklist-samples-n.svg" />
+</figure>
+</section><section id="单链表基本形态-1" class="slide level2">
+<h2>单链表基本形态</h2>
+<dl>
+<dt>带头结点的单链表</dt>
+<dd>附设头结点
+</dd>
+<dd>头指针指向头结点
+</dd>
+<dd>某些情况下可简化编程，更常用
+</dd>
+<dt>基本形态</dt>
+<dd>空表：<code>L-&gt;next == NULL</code>
+</dd>
+<dd>非空表
+</dd>
+</dl>
+<figure>
+<img src="images/ch02/linklist-samples.svg" />
+</figure>
+<p>（以下假设采用带头结点的单链表）</p>
+</section><section id="遍历单链表的方法" class="slide level2">
+<h2>遍历单链表的方法</h2>
+<ul>
+<li><strong>遍历单链表</strong>
+<ul>
+<li>（1）逐个访问数据元素</li>
+<li>（2）查找元素</li>
+<li>（3）查找第 i 个元素</li>
+<li>（4）查找第 i-1 个元素</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>（1）逐个访问数据元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">p = L-&gt;next;
+<span class="cf">while</span>(p!=NULL) {
+    visit(p-&gt;data);
+    p = p-&gt;next;
+}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="cf">for</span>(p=L-&gt;next; p; p=p-&gt;next)
+    visit(p-&gt;data);</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（2）查找元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在单链表 L 中查找元素 x</span>
+<span class="co">/// 若找到，返回指向该结点的指针，否则返回空指针</span>
+LinkList Find(LinkList L, T x)
+{
+  p = L-&gt;next;
+  <span class="cf">while</span>(p!=NULL) {
+    <span class="cf">if</span>(p-&gt;data == x) <span class="cf">return</span> p; <span class="co">// 找到 x</span>
+    p = p-&gt;next;
+  }
+
+  <span class="cf">return</span> NULL; <span class="co">// 未找到</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（3）查找第 i 个元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在单链表 L 中查找第 i 个元素</span>
+<span class="co">/// 若找到，返回指向结点的指针，否则返回空指针</span>
+LinkList Get(LinkList L, <span class="dt">int</span> i)
+{
+  p = L-&gt;next; j = <span class="dv">1</span>;
+  <span class="cf">while</span>(p!=NULL &amp;&amp; j&lt;i) {
+    p = p-&gt;next; j++;  <span class="co">// 遍历链表，同时用 j 计数</span>
+  }
+
+  <span class="cf">if</span>(p &amp;&amp; j==i) <span class="cf">return</span> p;
+  <span class="cf">else</span> <span class="cf">return</span> NULL;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（4）查找第 i-1 个元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  p = L; j = <span class="dv">0</span>;  <span class="co">// 从头结点开始计数</span>
+  <span class="cf">while</span>(p &amp;&amp; j&lt;i<span class="dv">-1</span>) {
+    p = p-&gt;next; j++;
+  }
+
+  <span class="cf">if</span>(p &amp;&amp; j==i<span class="dv">-1</span>) <span class="cf">return</span> p;
+  <span class="cf">else</span> <span class="cf">return</span> NULL;</code></pre></div>
+</section><section id="单链表的基本操作" class="slide level2">
+<h2>单链表的基本操作</h2>
+<ul>
+<li><strong>InitList(&amp;L)</strong> 初始化空表</li>
+</ul>
+<figure>
+<img src="images/ch02/empty-linklist.svg" />
+</figure>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 初始化（带头结点的）空链表</span>
+<span class="dt">void</span> InitList(LinkList &amp;L)
+{
+    <span class="co">// 创建头结点</span>
+    L = <span class="kw">new</span> LNode;
+    <span class="co">// 初始化为空表</span>
+    L-&gt;next = NULL;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>ListEmpty(L)</strong> 链表判空</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 判断链表 L 是否为空表</span>
+<span class="dt">bool</span> ListEmpty(LinkList&lt;T&gt; L)
+{
+    <span class="cf">return</span> L-&gt;next==NULL;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>ClearList(&amp;L)</strong> 清空链表</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 清空链表</span>
+<span class="dt">void</span> ClearList(LinkList&amp; L)
+{
+    <span class="co">// 当表不空时，逐个删除结点</span>
+    <span class="cf">while</span>(L-&gt;next) {
+        p = L-&gt;next;  <span class="co">// p 指向第一个数据结点</span>
+        L-&gt;next = p-&gt;next;  <span class="co">// 从链表中解除结点</span>
+        <span class="kw">delete</span> p;  <span class="co">// 释放结点存储空间</span>
+    }
+}</code></pre></div>
+<ul>
+<li><strong>DestroyList(&amp;L)</strong> 销毁链表</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 销毁链表</span>
+<span class="dt">void</span> DestroyList(LinkList&amp; L)
+{
+    ClearList(L);  <span class="co">// 清空链表</span>
+    <span class="kw">delete</span> L;  <span class="co">// 释放头结点</span>
+    L = NULL;  <span class="co">// 指针置空（防野指针）</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>ListLength(L)</strong> 链表求长度</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 求表长</span>
+<span class="dt">int</span> ListLength(LinkList L)
+{
+    n = <span class="dv">0</span>;
+    p = L;
+    <span class="cf">while</span>(p-&gt;next) {
+        ++n;
+        p = p-&gt;next;
+    }
+    <span class="cf">return</span> n;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>GetElem(L,i,&amp;e)</strong> 取元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取元素</span>
+<span class="dt">void</span> GetElem(LinkList L, <span class="dt">int</span> i, T&amp; e)
+{
+    <span class="co">// 找到第 i 个结点 p</span>
+    p = L-&gt;next;  j = <span class="dv">1</span>;
+    <span class="cf">while</span>(p &amp;&amp; j&lt;i) {
+        p = p-&gt;next; ++j;
+    }
+    
+    <span class="co">// 若存在，则取数据，否则抛出异常</span>
+    <span class="cf">if</span>(p &amp;&amp; j==i) {  <span class="co">// 找到第 i 个结点</span>
+        e = p-&gt;data;  <span class="co">// 取出结点数据</span>
+    } <span class="cf">else</span> {  <span class="co">// 不存在第 i 个结点</span>
+        <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    }
+}</code></pre></div>
+</section><section id="单链表插入-listinsertlie" class="slide level2">
+<h2>单链表插入 ListInsert(&amp;L,i,e)</h2>
+<ul>
+<li><strong>问题</strong>：在单链表 L 中第 i 个位置插入元素 e</li>
+<li><strong>算法思路</strong>：
+<ul>
+<li><em>异常情况</em>：参数 i 不合理（第 i-1 个结点不存在）</li>
+<li><em>一般步骤</em>：
+<ul>
+<li>（1）找到第 i-1 个结点（为何不是 i？）</li>
+<li>（2）在其后插入元素</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch02/linklist-insert.svg" alt="在 p 之后插入结点 s" /><figcaption>在 p 之后插入结点 s</figcaption>
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>单链表插入算法</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在单链表 L 中第 i 个位置插入数据元素 e</span>
+<span class="dt">void</span> ListInsert(LinkList&amp; L, <span class="dt">int</span> i, T e)
+{
+    <span class="co">// 找到第 i-1 个结点 p</span>
+    p = L;  j = <span class="dv">0</span>;
+    <span class="cf">while</span>(p &amp;&amp; j&lt;i<span class="dv">-1</span>) {
+        p = p-&gt;next; ++j;
+    }
+    
+    <span class="co">// 若找到，则在 p 后插入 e，否则抛出异常</span>
+    <span class="cf">if</span>(p &amp;&amp; j==i<span class="dv">-1</span>) {
+        <span class="co">// 新建结点</span>
+        s = <span class="kw">new</span> LNode&lt;T&gt;();
+        s-&gt;data = e;
+        <span class="co">// 在链表中插入结点</span>
+        s-&gt;next = p-&gt;next;  <span class="co">//①</span>
+        p-&gt;next = s;        <span class="co">//②</span>
+    } <span class="cf">else</span> {
+        <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    }
+}</code></pre></div>
+<div class="fragment">
+<p>时间复杂度：<span class="math inline">\(O(n)\)</span> （插入前查找第 i-1 个结点）</p>
+</div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>算法分析</strong>
+<ul>
+<li>基本操作：遍历链表，查找第 i-1 个结点</li>
+<li>与插入位置有关
+<ul>
+<li>最好情况：插入在开头 <span class="math inline">\(O(1)\)</span></li>
+<li>最坏情况：插入在末尾 <span class="math inline">\(O(n)\)</span></li>
+<li>平均情况：时间复杂度 <span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+<li>特点：整个插入过程，不需要移动结点</li>
+</ul></li>
+</ul>
+</section><section id="单链表删除-listdeletelie" class="slide level2">
+<h2>单链表删除 ListDelete(&amp;L,i,&amp;e)</h2>
+<ul>
+<li><strong>问题</strong>：删除单链表 L 中第 i 个数据元素并用 e 返回</li>
+<li><strong>算法思路</strong>
+<ul>
+<li><em>异常情况</em>：参数 i 不合理（第 i 个结点不存在）</li>
+<li><em>一般步骤</em>：
+<ul>
+<li>（1）找到第 i-1 个结点（为何不是 i？）</li>
+<li>（2）删除下一个（第 i 个）结点</li>
+</ul></li>
+<li>特点：整个插入过程，不需要移动结点</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/ch02/linklist-delete.svg" alt="删除 p 的下一个结点 q" /><figcaption>删除 p 的下一个结点 q</figcaption>
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>单链表删除算法</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 删除单链表 L 中第 i 个数据元素并用 e 返回</span>
+<span class="dt">void</span> ListDelete(LinkList&amp; L, <span class="dt">int</span> i, T&amp; e)
+{
+    <span class="co">// 寻找找第 i-1 个结点 p</span>
+    p = L;  j = <span class="dv">0</span>;
+    <span class="cf">while</span>(p &amp;&amp; j&lt;i<span class="dv">-1</span>) {
+        p = p-&gt;next; ++j;
+    }
+    
+    <span class="co">// 若找到且存在第 i 个结点，则删除 p 的下一个结点，否则抛出异常</span>
+    <span class="cf">if</span>(p &amp;&amp; p-&gt;next &amp;&amp; j==i<span class="dv">-1</span>) {
+        <span class="co">// 删除第 i 个结点 q</span>
+        q = p-&gt;next;   <span class="co">//① q 指向第 i 个结点</span>
+        p-&gt;next = q-&gt;next;  <span class="co">//② 从链表中移除结点 q</span>
+        <span class="co">// 取出数据，释放结点</span>
+        e = q-&gt;data;        <span class="co">// 取被删除结点的数据</span>
+        <span class="kw">delete</span> q;           <span class="co">// 释放结点的存储空间</span>
+    } <span class="cf">else</span> {
+        <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
+    }
+}</code></pre></div>
+<div class="fragment">
+<p>时间复杂度：<span class="math inline">\(O(n)\)</span> （删除前查找第 i-1 个结点）</p>
+</div>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>算法分析</strong>
+<ul>
+<li>基本操作：遍历链表，查找第 i-1 个结点</li>
+<li>与删除位置有关
+<ul>
+<li>最好情况：删除第一个 <span class="math inline">\(O(1)\)</span></li>
+<li>最坏情况：删除最后一个 <span class="math inline">\(O(n)\)</span></li>
+<li>平均情况：时间复杂度 <span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+<li>特点：整个删除过程，不需要移动结点</li>
+</ul></li>
+</ul>
+</section><section id="输入数据创建链表" class="slide level2">
+<h2>输入数据创建链表</h2>
+<ul>
+<li><strong>CreateList(&amp;L,n)</strong> 输入 n 个数据创建链表</li>
+<li><strong>算法思路</strong>：
+<ul>
+<li>（1）建立空表</li>
+<li>（2）逐个插入结点
+<ul>
+<li>插入表头（逆序建表）</li>
+<li>插入表尾（顺序建表）</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>建立链表算法（逆序）
+<ul>
+<li>在表头插入结点</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 输入 n 个数据，建立链表</span>
+<span class="dt">void</span> CreateList(LinkList &amp;L, <span class="dt">int</span> n)
+{
+  <span class="co">// 建立空表</span>
+  L = <span class="kw">new</span> LNode;
+  L-&gt;next = NULL;
+  <span class="co">// 输入数据，逐个插入表头</span>
+  <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;n; i++) {
+    <span class="co">// 输入数据</span>
+    cin &gt;&gt; e;
+    <span class="co">// 建立结点</span>
+    s = <span class="kw">new</span> LNode;
+    s-&gt;data = e;
+    <span class="co">// 插入表头</span>
+    s-&gt;next = L-&gt;next;
+    L-&gt;next = s;
+  }
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>建立链表算法（顺序）
+<ul>
+<li>在表尾插入结点</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 输入 n 个数据，建立链表</span>
+<span class="dt">void</span> CreateList(LinkList &amp;L, <span class="dt">int</span> n)
+{
+  <span class="co">// 建立空表</span>
+  L = <span class="kw">new</span> LNode;
+  L-&gt;next = NULL;
+  <span class="co">// 输入数据，逐个插入表尾</span>
+  p = L;  <span class="co">// 用 p 指示表尾</span>
+  <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;n; i++) {
+    <span class="co">// 输入数据</span>
+    cin &gt;&gt; e;
+    <span class="co">// 建立结点</span>
+    s = <span class="kw">new</span> LNode;
+    s-&gt;data = e;
+    <span class="co">// 插入表尾</span>
+    s-&gt;next = p-&gt;next;
+    p-&gt;next = s;
+    <span class="co">// p 指向新的表尾</span>
+    p = s;  <span class="co">// 或 p = p-&gt;next; 亦可</span>
+  }
+}</code></pre></div>
+</section><section id="链表归并算法" class="slide level2">
+<h2>链表归并算法</h2>
+</section><section id="静态链表" class="slide level2">
+<h2>静态链表</h2>
+</section><section id="循环链表" class="slide level2">
+<h2>循环链表</h2>
+</section><section id="双向链表" class="slide level2">
+<h2>双向链表</h2>
+</section><section id="线性表顺序存储与链式存储的比较" class="slide level2">
+<h2>线性表顺序存储与链式存储的比较</h2>
+</section><section id="习题" class="slide level2">
+<h2>习题</h2>
 </section></section>
     </div>
   </div>
