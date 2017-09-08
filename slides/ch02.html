@@ -968,7 +968,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <li>（1）找到第 i-1 个结点（为何不是 i？）</li>
 <li>（2）删除下一个（第 i 个）结点</li>
 </ul></li>
-<li>特点：整个插入过程，不需要移动结点</li>
+<li>特点：整个删除过程，不需要移动结点</li>
 </ul></li>
 </ul>
 </section><section class="slide level2">
@@ -1113,7 +1113,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
   pb = lb-&gt;next;
   pc = lc;
   <span class="cf">while</span>(pa &amp;&amp; pb) {
-    <span class="cf">if</span>(pa-&gt;data &lt; pb-&gt;data) {
+    <span class="cf">if</span>(pa-&gt;data &lt;= pb-&gt;data) {
       pc-&gt;next = pa;
       pa = pa-&gt;next;
       pc = pc-&gt;next;  <span class="co">// or pc = pa;</span>
@@ -1136,7 +1136,11 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <ul>
 <li>仅修改结点之间的逻辑关系，不移动结点。</li>
 <li>链表的剩余部分可以在 <span class="math inline">\(O(1)\)</span> 时间内完成插入。</li>
-<li>时间复杂度：<span class="math inline">\(O(\min(m,n))\)</span></li>
+<li>时间复杂度 <span class="math inline">\(O(\max(m,n))\)</span>
+<ul>
+<li>最好情况 <span class="math inline">\(O(\min(m,n))\)</span></li>
+<li>最坏情况 <span class="math inline">\(O(\max(m,n))\)</span></li>
+</ul></li>
 </ul></li>
 </ul>
 </section><section id="静态链表" class="slide level2">
@@ -1218,12 +1222,13 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <span class="dt">void</span> ListInsert(List&amp; L, <span class="dt">int</span> i, T e)
 {
     <span class="co">// 找到第 i 个结点 p</span>
-    <span class="dt">int</span> j = <span class="dv">1</span>;
+    j = <span class="dv">1</span>;
     p = L-&gt;next;
     <span class="cf">while</span>(p!=L &amp;&amp; j&lt;i) {  <span class="co">// 注意表尾的判别</span>
         p = p-&gt;next;
         ++j;
     }
+
     <span class="co">// 若找到，则在 p 之前插入 e，否则抛出异常</span>
     <span class="cf">if</span>(j==i) { <span class="co">// 若 p==L 则在表尾插入</span>
         <span class="co">// 新建结点</span>
@@ -1250,12 +1255,13 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <span class="dt">void</span> ListDelete(List&amp; L, <span class="dt">int</span> i, T&amp; e)
 {
     <span class="co">// 寻找找第 i 个结点 p</span>
-    <span class="dt">int</span> j = <span class="dv">1</span>;
-    <span class="kw">auto</span> p = L-&gt;next;
+    j = <span class="dv">1</span>;
+    p = L-&gt;next;
     <span class="cf">while</span>(p!=L &amp;&amp; j&lt;i) {
         p = p-&gt;next;
         ++j;
     }
+
     <span class="co">// 若找到第 i 个结点，则删除之，否则抛出异常</span>
     <span class="cf">if</span>(p!=L &amp;&amp; j==i) {  <span class="co">// 第 i 个结点必须存在</span>
         <span class="co">// 从链表上移除结点</span>
@@ -1300,6 +1306,15 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 </figure>
 </section><section id="习题" class="slide level2">
 <h2>习题</h2>
+<ul>
+<li>2.1 将顺序表中的元素反转顺序。</li>
+<li>2.2 在非递减有序的顺序表中插入元素x，并保持有序。</li>
+<li>2.3 删除顺序表中所有等于x的元素。</li>
+<li>2.4 编写算法实现顺序表元素唯一化(即使顺序表中重复的元素只保留一个)，给出算法的时间复杂度。</li>
+<li>2.5 非递减有序的顺序表元素唯一化(参见习题2.4)，要求算法的时间复杂度为O(n)。</li>
+<li>2.6 将单链表就地逆置，即不另外开辟结点空间，而将链表元素翻转顺序。</li>
+<li>2.9 将两个非递减有序的单链表归并成一个，仍并保持非递减有序。</li>
+</ul>
 </section></section>
     </div>
   </div>
