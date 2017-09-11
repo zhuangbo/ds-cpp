@@ -4,7 +4,6 @@
 ///////////////////////////////////////
 
 #include <iostream>
-#include <iomanip>  // for std::setw
 #include "sqstack.h"
 
 using namespace std;
@@ -20,69 +19,42 @@ bool match(const char *expr)
     for(int i = 0; expr[i]; i++) {
         char c = expr[i];
         if(c=='(' || c=='[' || c=='{') {
+            // 左括号入栈
             Push(s,c);
-        } else if(c==')') {
-            if(StackEmpty(s)) {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 多余的 )" << endl;
-                return false;
-            }
+        } else if(c==')' || c==']' || c=='}') {
+            // 右括号与栈顶括号进行匹配
+            if(StackEmpty(s)) return false; // 栈空则匹配失败
+            // 出栈
             char b;
             Pop(s,b);
-            if(b!='(') {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 匹配错误 )" << endl;
+            // 匹配失败则返回
+            if(( c==')' && b!='(' ) ||
+              ( c==']' && b!='[' ) ||
+              ( c=='{' &&b !='}' ))
                 return false;
-            }
-        } else if(c==']') {
-            if(StackEmpty(s)) {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 多余的 ]" << endl;
-                return false;
-            }
-            char b;
-            Pop(s,b);
-            if(b!='[') {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 匹配错误 ]" << endl;
-                return false;
-            }
-        } else if(c=='}') {
-            if(StackEmpty(s)) {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 多余的 }" << endl;
-                return false;
-            }
-            char b;
-            Pop(s,b);
-            if(b!='{') {
-                cout << expr << endl;
-                cout << setw(i+1) << '^' << " : 匹配错误 }" << endl;
-                return false;
-            }
         }
     }
 
     // 若栈空，则匹配成功
-    if(StackEmpty(s)) {
-        cout << expr << endl;
-        cout << "匹配成功" << endl;
-        return true;
-    } else {
-        cout << expr << endl;
-        cout << "缺少右括号" << endl;;
-        return  false;
-    }
+    return StackEmpty(s);
 }
 
 
 int main()
 {
-    match("([]())");
-    match("[([][])]");
-    match("[([][]]");
-    match("[([][])])");
-    match("(([][])]");
+    const int N = 5;
+    const char *expr[N] = {
+        "([]())",
+        "[([][])]",
+        "[([][]]",
+        "[([][])])",
+        "(([][])]",
+    };
+
+    for(int i=0; i<N; i++) {
+        cout << expr[i] << " match = "
+            << boolalpha << match(expr[i]) << endl;
+    }
     
     return 0;
 }
