@@ -3,6 +3,8 @@
 /// 链队列
 ///////////////////////////////////////
 
+#pragma once
+
 #include <stdexcept>
 using std::underflow_error;
 
