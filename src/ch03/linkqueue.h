@@ -99,7 +99,7 @@ void DeQueue(LinkQueue<T>& Q, T& e)
 {
     // 如果队列空则出错
     if(Q.front==Q.rear)
-        throw underflow_error("Queue underflow.");
+        throw underflow_error("Queue empty");
     // 取队头元素
     auto p = Q.front->next;
     e = p->data;
@@ -121,6 +121,31 @@ T DeQueue(LinkQueue<T>& Q)
     DeQueue(Q,e);
     return e;
 }
+
+///
+/// 取队头元素
+///
+template<typename T>
+void GetHead(const LinkQueue<T>& Q, T& e)
+{
+    // 如果队列空则出错
+    if(Q.front==Q.rear)
+        throw underflow_error("Queue empty");
+    // 取队头元素
+    e = Q.front->next->data;
+}
+
+///
+/// 取队头元素
+///
+template<typename T>
+T GetHead(const LinkQueue<T>& Q)
+{
+    T e;
+    GetHead(Q,e);
+    return e;
+}
+
 
 ///
 /// 遍历队列中的元素
