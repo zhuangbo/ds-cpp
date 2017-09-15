@@ -30,7 +30,7 @@ bool match(const char *expr)
             // 匹配失败则返回
             if(( c==')' && b!='(' ) ||
               ( c==']' && b!='[' ) ||
-              ( c=='{' &&b !='}' ))
+              ( c=='}' && b!='{' ))
                 return false;
         }
     }
