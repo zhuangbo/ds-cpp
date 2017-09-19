@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="939" height="1142" viewBox="0 0 939 1142">
+<style type="text/css"><![CDATA[
+text { font:12px Dialog; }
+]]></style>
+<rect x="-485" y="-485" width="1909" height="2112" style="fill:rgb(255,255,255);stroke:none" />
+<clipPath id="clip1"><path d="M15,15 L924,15 L924,1127 L15,1127 Z M26,474 C21.5820313,474 18,477.5820313 18,482 L18,533 C18,537.4179688 21.5820313,541 26,541 L127,541 C131.4179688,541 135,537.4179688 135,533 L135,482 C135,477.5820313 131.4179688,474 127,474 Z M26,474 Z M26,474" /></clipPath>
+<path d="M82.7773438,474 C95.2734375,274 114.0117188,174 139,174" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip1)" />
+<clipPath id="clip2"><path d="M15,15 L924,15 L924,1127 L15,1127 Z M26,474 C21.5820313,474 18,477.5820313 18,482 L18,533 C18,537.4179688 21.5820313,541 26,541 L127,541 C131.4179688,541 135,537.4179688 135,533 L135,482 C135,477.5820313 131.4179688,474 127,474 Z M26,474 Z M26,474" /></clipPath>
+<path d="M135,484.1484375 C149,467.3828125 170,459 198,459" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip2)" />
+<clipPath id="clip3"><path d="M15,15 L924,15 L924,1127 L15,1127 Z M26,474 C21.5820313,474 18,477.5820313 18,482 L18,533 C18,537.4179688 21.5820313,541 26,541 L127,541 C131.4179688,541 135,537.4179688 135,533 L135,482 C135,477.5820313 131.4179688,474 127,474 Z M26,474 Z M26,474" /></clipPath>
+<path d="M82.875,541 C95.3476563,737.6679688 114.0546875,836 139,836" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip3)" />
+<clipPath id="clip4"><path d="M14,470 L140,470 L140,546 L14,546 L14,470 Z" /></clipPath>
+<path d="M26,474 C21.5820313,474 18,477.5820313 18,482 L18,533 C18,537.4179688 21.5820313,541 26,541 L127,541 C131.4179688,541 135,537.4179688 135,533 L135,482 C135,477.5820313 131.4179688,474 127,474 Z M26,474" style="fill:rgb(220,230,242);stroke:none" clip-path="url(#clip4)" />
+<clipPath id="clip5"><path d="M14,470 L140,470 L140,546 L14,546 L14,470 Z" /></clipPath>
+<path d="M26,474 C21.5820313,474 18,477.5820313 18,482 L18,533 C18,537.4179688 21.5820313,541 26,541 L127,541 C131.4179688,541 135,537.4179688 135,533 L135,482 C135,477.5820313 131.4179688,474 127,474 Z M26,474" style="fill:none;stroke:rgb(85,142,213);stroke-width:5" clip-path="url(#clip5)" />
+<text x="53" y="512" style="font:18px 微软雅黑">数组</text>
+<clipPath id="clip6"><path d="M138,15 L688,15 L688,293 L138,293 Z M144,154 C141.2382813,154 139,156.2382813 139,159 L139,189 C139,191.7617188 141.2382813,194 144,194 L248,194 C250.7617188,194 253,191.7617188 253,189 L253,159 C253,156.2382813 250.7617188,154 248,154 Z M144,154 Z M144,154" /></clipPath>
+<path d="M266,174 C268.2226563,128 271.5546875,105 276,105" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip6)" />
+<clipPath id="clip7"><path d="M138,15 L688,15 L688,293 L138,293 Z M144,154 C141.2382813,154 139,156.2382813 139,159 L139,189 C139,191.7617188 141.2382813,194 144,194 L248,194 C250.7617188,194 253,191.7617188 253,189 L253,159 C253,156.2382813 250.7617188,154 248,154 Z M144,154 Z M144,154" /></clipPath>
+<path d="M266,174 C268.2226563,220.6679688 271.5546875,244 276,244" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip7)" />
+<clipPath id="clip8"><path d="M137,14 L689,14 L689,294 L137,294 L137,14 Z" /></clipPath>
+<path d="M253,174 L266,174" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip8)" />
+<clipPath id="clip9"><path d="M137,152 L256,152 L256,197 L137,197 L137,152 Z" /></clipPath>
+<path d="M144,154 C141.2382813,154 139,156.2382813 139,159 L139,189 C139,191.7617188 141.2382813,194 144,194 L248,194 C250.7617188,194 253,191.7617188 253,189 L253,159 C253,156.2382813 250.7617188,154 248,154 Z M144,154" style="fill:rgb(220,230,242);stroke:none" clip-path="url(#clip9)" />
+<clipPath id="clip10"><path d="M137,152 L256,152 L256,197 L137,197 L137,152 Z" /></clipPath>
+<path d="M144,154 C141.2382813,154 139,156.2382813 139,159 L139,189 C139,191.7617188 141.2382813,194 144,194 L248,194 C250.7617188,194 253,191.7617188 253,189 L253,159 C253,156.2382813 250.7617188,154 248,154 Z M144,154" style="fill:none;stroke:rgb(85,142,213);stroke-width:2" clip-path="url(#clip10)" />
+<text x="153" y="178" style="font:13px 微软雅黑">数组的定义</text>
+<clipPath id="clip11"><path d="M254,168 L267,168 L267,181 L254,181 L254,168 Z" /></clipPath>
+<path d="M264.5,174 C264.5,171.515625 262.484375,169.5 260,169.5 C257.515625,169.5 255.5,171.515625 255.5,174 C255.5,176.484375 257.515625,178.5 260,178.5 C262.484375,178.5 264.5,176.484375 264.5,174 Z M264.5,174" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip11)" />
+<clipPath id="clip12"><path d="M254,168 L267,168 L267,181 L254,181 L254,168 Z" /></clipPath>
+<path d="M264.5,174 C264.5,171.515625 262.484375,169.5 260,169.5 C257.515625,169.5 255.5,171.515625 255.5,174 C255.5,176.484375 257.515625,178.5 260,178.5 C262.484375,178.5 264.5,176.484375 264.5,174 Z M264.5,174" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip12)" />
+<clipPath id="clip13"><path d="M254,168 L267,168 L267,181 L254,181 L254,168 Z" /></clipPath>
+<path d="M258,174 L262,174" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip13)" />
+<clipPath id="clip14"><path d="M274,15 L688,15 L688,169 L274,169 Z M276,79 L276,104 L350,104 L350,79 Z M276,79 Z M276,79" /></clipPath>
+<path d="M363,105 C365.4453125,63.6679688 369.109375,43 374,43" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip14)" />
+<clipPath id="clip15"><path d="M274,15 L688,15 L688,169 L274,169 Z M276,79 L276,104 L350,104 L350,79 Z M276,79 Z M276,79" /></clipPath>
+<path d="M363,105 C365.4453125,105 369.109375,105 374,105" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip15)" />
+<clipPath id="clip16"><path d="M274,15 L688,15 L688,169 L274,169 Z M276,79 L276,104 L350,104 L350,79 Z M276,79 Z M276,79" /></clipPath>
+<path d="M363,105 C365.4453125,146.3320313 369.109375,167 374,167" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip16)" />
+<clipPath id="clip17"><path d="M273,14 L689,14 L689,170 L273,170 L273,14 Z" /></clipPath>
+<path d="M350,105 L363,105" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip17)" />
+<clipPath id="clip18"><path d="M273,76 L354,76 L354,108 L273,108 L273,76 Z" /></clipPath>
+<path d="M276,105 L350,105 Z M276,105" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip18)" />
+<text x="287" y="95" style="font:10px 微软雅黑">n 维数组</text>
+<clipPath id="clip19"><path d="M352,86 L365,86 L365,99 L352,99 L352,86 Z" /></clipPath>
+<path d="M362.5,92 C362.5,89.515625 360.484375,87.5 358,87.5 C355.515625,87.5 353.5,89.515625 353.5,92 C353.5,94.484375 355.515625,96.5 358,96.5 C360.484375,96.5 362.5,94.484375 362.5,92 Z M362.5,92" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip19)" />
+<clipPath id="clip20"><path d="M352,86 L365,86 L365,99 L352,99 L352,86 Z" /></clipPath>
+<path d="M362.5,92 C362.5,89.515625 360.484375,87.5 358,87.5 C355.515625,87.5 353.5,89.515625 353.5,92 C353.5,94.484375 355.515625,96.5 358,96.5 C360.484375,96.5 362.5,94.484375 362.5,92 Z M362.5,92" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip20)" />
+<clipPath id="clip21"><path d="M352,86 L365,86 L365,99 L352,99 L352,86 Z" /></clipPath>
+<path d="M356,92 L360,92" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip21)" />
+<clipPath id="clip22"><path d="M371,14 L518,14 L518,46 L371,46 L371,14 Z" /></clipPath>
+<path d="M374,43 L514,43 Z M374,43" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip22)" />
+<text x="385" y="33" style="font:10px 微软雅黑">类型相同的数据元素</text>
+<clipPath id="clip23"><path d="M372,46 L688,46 L688,138 L372,138 Z M374,79 L374,104 L448,104 L448,79 Z M374,79 Z M374,79" /></clipPath>
+<path d="M461,105 C463.4453125,84.3320313 467.109375,74 472,74" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip23)" />
+<clipPath id="clip24"><path d="M372,46 L688,46 L688,138 L372,138 Z M374,79 L374,104 L448,104 L448,79 Z M374,79 Z M374,79" /></clipPath>
+<path d="M461,105 C463.4453125,105 467.109375,105 472,105" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip24)" />
+<clipPath id="clip25"><path d="M372,46 L688,46 L688,138 L372,138 Z M374,79 L374,104 L448,104 L448,79 Z M374,79 Z M374,79" /></clipPath>
+<path d="M461,105 C463.4453125,125.6679688 467.109375,136 472,136" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip25)" />
+<clipPath id="clip26"><path d="M371,45 L689,45 L689,139 L371,139 L371,45 Z" /></clipPath>
+<path d="M448,105 L461,105" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip26)" />
+<clipPath id="clip27"><path d="M371,76 L452,76 L452,108 L371,108 L371,76 Z" /></clipPath>
+<path d="M374,105 L448,105 Z M374,105" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip27)" />
+<text x="385" y="95" style="font:10px 微软雅黑">n 维下标</text>
+<clipPath id="clip28"><path d="M450,86 L463,86 L463,99 L450,99 L450,86 Z" /></clipPath>
+<path d="M460.5,92 C460.5,89.515625 458.484375,87.5 456,87.5 C453.515625,87.5 451.5,89.515625 451.5,92 C451.5,94.484375 453.515625,96.5 456,96.5 C458.484375,96.5 460.5,94.484375 460.5,92 Z M460.5,92" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip28)" />
+<clipPath id="clip29"><path d="M450,86 L463,86 L463,99 L450,99 L450,86 Z" /></clipPath>
+<path d="M460.5,92 C460.5,89.515625 458.484375,87.5 456,87.5 C453.515625,87.5 451.5,89.515625 451.5,92 C451.5,94.484375 453.515625,96.5 456,96.5 C458.484375,96.5 460.5,94.484375 460.5,92 Z M460.5,92" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip29)" />
+<clipPath id="clip30"><path d="M450,86 L463,86 L463,99 L450,99 L450,86 Z" /></clipPath>
+<path d="M454,92 L458,92" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip30)" />
+<clipPath id="clip31"><path d="M469,45 L629,45 L629,77 L469,77 L469,45 Z" /></clipPath>
+<path d="M472,74 L625,74 Z M472,74" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip31)" />
+<text x="483" y="64" style="font:10px 微软雅黑">创建之后维数不再改变</text>
+<clipPath id="clip32"><path d="M469,76 L575,76 L575,108 L469,108 L469,76 Z" /></clipPath>
+<path d="M472,105 L571,105 Z M472,105" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip32)" />
+<text x="483" y="95" style="font:10px 微软雅黑">第 i 维的长度</text>
+<clipPath id="clip33"><path d="M470,108 L688,108 L688,138 L470,138 Z M472,110 L472,135 L547,135 L547,110 Z M472,110 Z M472,110" /></clipPath>
+<path d="M560,136 C562.4453125,136 566.109375,136 571,136" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip33)" />
+<clipPath id="clip34"><path d="M469,107 L689,107 L689,139 L469,139 L469,107 Z" /></clipPath>
+<path d="M547,136 L560,136" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip34)" />
+<clipPath id="clip35"><path d="M469,107 L551,107 L551,139 L469,139 L469,107 Z" /></clipPath>
+<path d="M472,136 L547,136 Z M472,136" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip35)" />
+<text x="483" y="126" style="font:10px 微软雅黑">元素个数</text>
+<clipPath id="clip36"><path d="M549,117 L562,117 L562,130 L549,130 L549,117 Z" /></clipPath>
+<path d="M559.5,123 C559.5,120.515625 557.484375,118.5 555,118.5 C552.515625,118.5 550.5,120.515625 550.5,123 C550.5,125.484375 552.515625,127.5 555,127.5 C557.484375,127.5 559.5,125.484375 559.5,123 Z M559.5,123" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip36)" />
+<clipPath id="clip37"><path d="M549,117 L562,117 L562,130 L549,130 L549,117 Z" /></clipPath>
+<path d="M559.5,123 C559.5,120.515625 557.484375,118.5 555,118.5 C552.515625,118.5 550.5,120.515625 550.5,123 C550.5,125.484375 552.515625,127.5 555,127.5 C557.484375,127.5 559.5,125.484375 559.5,123 Z M559.5,123" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip37)" />
+<clipPath id="clip38"><path d="M549,117 L562,117 L562,130 L549,130 L549,117 Z" /></clipPath>
+<path d="M553,123 L557,123" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip38)" />
+<clipPath id="clip39"><path d="M568,107 L689,107 L689,139 L568,139 L568,107 Z" /></clipPath>
+<path d="M571,136 L685,136 Z M571,136" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip39)" />
+<text x="582" y="126" style="font:10px 微软雅黑">各维长度的乘积</text>
+<clipPath id="clip40"><path d="M371,138 L478,138 L478,170 L371,170 L371,138 Z" /></clipPath>
+<path d="M374,167 L474,167 Z M374,167" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip40)" />
+<text x="385" y="157" style="font:10px 微软雅黑">n 个线性关系</text>
+<clipPath id="clip41"><path d="M274,170 L569,170 L569,293 L274,293 Z M276,218 L276,243 L355,243 L355,218 Z M276,218 Z M276,218" /></clipPath>
+<path d="M368,244 C370.4453125,244 374.109375,244 379,244" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip41)" />
+<clipPath id="clip42"><path d="M273,169 L570,169 L570,294 L273,294 L273,169 Z" /></clipPath>
+<path d="M355,244 L368,244" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip42)" />
+<clipPath id="clip43"><path d="M273,215 L359,215 L359,247 L273,247 L273,215 Z" /></clipPath>
+<path d="M276,244 L355,244 Z M276,244" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip43)" />
+<text x="287" y="234" style="font:10px 微软雅黑">ADT 定义</text>
+<clipPath id="clip44"><path d="M357,225 L370,225 L370,238 L357,238 L357,225 Z" /></clipPath>
+<path d="M367.5,231 C367.5,228.515625 365.484375,226.5 363,226.5 C360.515625,226.5 358.5,228.515625 358.5,231 C358.5,233.484375 360.515625,235.5 363,235.5 C365.484375,235.5 367.5,233.484375 367.5,231 Z M367.5,231" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip44)" />
+<clipPath id="clip45"><path d="M357,225 L370,225 L370,238 L357,238 L357,225 Z" /></clipPath>
+<path d="M367.5,231 C367.5,228.515625 365.484375,226.5 363,226.5 C360.515625,226.5 358.5,228.515625 358.5,231 C358.5,233.484375 360.515625,235.5 363,235.5 C365.484375,235.5 367.5,233.484375 367.5,231 Z M367.5,231" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip45)" />
+<clipPath id="clip46"><path d="M357,225 L370,225 L370,238 L357,238 L357,225 Z" /></clipPath>
+<path d="M361,231 L365,231" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip46)" />
+<clipPath id="clip47"><path d="M377,170 L569,170 L569,293 L377,293 Z M379,218 L379,243 L454,243 L454,218 Z M379,218 Z M379,218" /></clipPath>
+<path d="M467,244 C469.4453125,213.3320313 473.109375,198 478,198" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip47)" />
+<clipPath id="clip48"><path d="M377,170 L569,170 L569,293 L377,293 Z M379,218 L379,243 L454,243 L454,218 Z M379,218 Z M379,218" /></clipPath>
+<path d="M467,244 C469.4453125,234 473.109375,229 478,229" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip48)" />
+<clipPath id="clip49"><path d="M377,170 L569,170 L569,293 L377,293 Z M379,218 L379,243 L454,243 L454,218 Z M379,218 Z M379,218" /></clipPath>
+<path d="M467,244 C469.4453125,254.6679688 473.109375,260 478,260" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip49)" />
+<clipPath id="clip50"><path d="M377,170 L569,170 L569,293 L377,293 Z M379,218 L379,243 L454,243 L454,218 Z M379,218 Z M379,218" /></clipPath>
+<path d="M467,244 C469.4453125,275.3320313 473.109375,291 478,291" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip50)" />
+<clipPath id="clip51"><path d="M376,169 L570,169 L570,294 L376,294 L376,169 Z" /></clipPath>
+<path d="M454,244 L467,244" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip51)" />
+<clipPath id="clip52"><path d="M376,215 L458,215 L458,247 L376,247 L376,215 Z" /></clipPath>
+<path d="M379,244 L454,244 Z M379,244" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip52)" />
+<text x="390" y="234" style="font:10px 微软雅黑">基本操作</text>
+<clipPath id="clip53"><path d="M456,225 L469,225 L469,238 L456,238 L456,225 Z" /></clipPath>
+<path d="M466.5,231 C466.5,228.515625 464.484375,226.5 462,226.5 C459.515625,226.5 457.5,228.515625 457.5,231 C457.5,233.484375 459.515625,235.5 462,235.5 C464.484375,235.5 466.5,233.484375 466.5,231 Z M466.5,231" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip53)" />
+<clipPath id="clip54"><path d="M456,225 L469,225 L469,238 L456,238 L456,225 Z" /></clipPath>
+<path d="M466.5,231 C466.5,228.515625 464.484375,226.5 462,226.5 C459.515625,226.5 457.5,228.515625 457.5,231 C457.5,233.484375 459.515625,235.5 462,235.5 C464.484375,235.5 466.5,233.484375 466.5,231 Z M466.5,231" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip54)" />
+<clipPath id="clip55"><path d="M456,225 L469,225 L469,238 L456,238 L456,225 Z" /></clipPath>
+<path d="M460,231 L464,231" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip55)" />
+<clipPath id="clip56"><path d="M475,169 L544,169 L544,201 L475,201 L475,169 Z" /></clipPath>
+<path d="M478,198 L540,198 Z M478,198" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip56)" />
+<text x="489" y="188" style="font:10px 微软雅黑">初始化</text>
+<clipPath id="clip57"><path d="M475,200 L531,200 L531,232 L475,232 L475,200 Z" /></clipPath>
+<path d="M478,229 L527,229 Z M478,229" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip57)" />
+<text x="489" y="219" style="font:10px 微软雅黑">销毁</text>
+<clipPath id="clip58"><path d="M475,231 L557,231 L557,263 L475,263 L475,231 Z" /></clipPath>
+<path d="M478,260 L553,260 Z M478,260" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip58)" />
+<text x="489" y="250" style="font:10px 微软雅黑">存取元素</text>
+<clipPath id="clip59"><path d="M475,262 L570,262 L570,294 L475,294 L475,262 Z" /></clipPath>
+<path d="M478,291 L566,291 Z M478,291" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip59)" />
+<text x="489" y="281" style="font:10px 微软雅黑">修改元素值</text>
+<clipPath id="clip60"><path d="M197,323 L848,323 L848,570 L197,570 Z M203,439 C200.2382813,439 198,441.2382813 198,444 L198,474 C198,476.7617188 200.2382813,479 203,479 L341,479 C343.7617188,479 346,476.7617188 346,474 L346,444 C346,441.2382813 343.7617188,439 341,439 Z M203,439 Z M203,439" /></clipPath>
+<path d="M359,459 C361.2226563,387 364.5546875,351 369,351" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip60)" />
+<clipPath id="clip61"><path d="M197,323 L848,323 L848,570 L197,570 Z M203,439 C200.2382813,439 198,441.2382813 198,444 L198,474 C198,476.7617188 200.2382813,479 203,479 L341,479 C343.7617188,479 346,476.7617188 346,474 L346,444 C346,441.2382813 343.7617188,439 341,439 Z M203,439 Z M203,439" /></clipPath>
+<path d="M359,459 C361.2226563,453.6679688 364.5546875,451 369,451" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip61)" />
+<clipPath id="clip62"><path d="M197,323 L848,323 L848,570 L197,570 Z M203,439 C200.2382813,439 198,441.2382813 198,444 L198,474 C198,476.7617188 200.2382813,479 203,479 L341,479 C343.7617188,479 346,476.7617188 346,474 L346,444 C346,441.2382813 343.7617188,439 341,439 Z M203,439 Z M203,439" /></clipPath>
+<path d="M359,459 C361.2226563,531.6679688 364.5546875,568 369,568" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip62)" />
+<clipPath id="clip63"><path d="M196,322 L849,322 L849,571 L196,571 L196,322 Z" /></clipPath>
+<path d="M346,459 L359,459" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip63)" />
+<clipPath id="clip64"><path d="M196,437 L349,437 L349,482 L196,482 L196,437 Z" /></clipPath>
+<path d="M203,439 C200.2382813,439 198,441.2382813 198,444 L198,474 C198,476.7617188 200.2382813,479 203,479 L341,479 C343.7617188,479 346,476.7617188 346,474 L346,444 C346,441.2382813 343.7617188,439 341,439 Z M203,439" style="fill:rgb(220,230,242);stroke:none" clip-path="url(#clip64)" />
+<clipPath id="clip65"><path d="M196,437 L349,437 L349,482 L196,482 L196,437 Z" /></clipPath>
+<path d="M203,439 C200.2382813,439 198,441.2382813 198,444 L198,474 C198,476.7617188 200.2382813,479 203,479 L341,479 C343.7617188,479 346,476.7617188 346,474 L346,444 C346,441.2382813 343.7617188,439 341,439 Z M203,439" style="fill:none;stroke:rgb(85,142,213);stroke-width:2" clip-path="url(#clip65)" />
+<text x="212" y="463" style="font:13px 微软雅黑">数组的顺序存储</text>
+<clipPath id="clip66"><path d="M347,453 L360,453 L360,466 L347,466 L347,453 Z" /></clipPath>
+<path d="M357.5,459 C357.5,456.515625 355.484375,454.5 353,454.5 C350.515625,454.5 348.5,456.515625 348.5,459 C348.5,461.484375 350.515625,463.5 353,463.5 C355.484375,463.5 357.5,461.484375 357.5,459 Z M357.5,459" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip66)" />
+<clipPath id="clip67"><path d="M347,453 L360,453 L360,466 L347,466 L347,453 Z" /></clipPath>
+<path d="M357.5,459 C357.5,456.515625 355.484375,454.5 353,454.5 C350.515625,454.5 348.5,456.515625 348.5,459 C348.5,461.484375 350.515625,463.5 353,463.5 C355.484375,463.5 357.5,461.484375 357.5,459 Z M357.5,459" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip67)" />
+<clipPath id="clip68"><path d="M347,453 L360,453 L360,466 L347,466 L347,453 Z" /></clipPath>
+<path d="M351,459 L355,459" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip68)" />
+<clipPath id="clip69"><path d="M366,322 L565,322 L565,354 L366,354 L366,322 Z" /></clipPath>
+<path d="M369,351 L561,351 Z M369,351" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip69)" />
+<text x="380" y="341" style="font:10px 微软雅黑">多维数组映射到一维存储空间</text>
+<clipPath id="clip70"><path d="M367,354 L848,354 L848,539 L367,539 Z M369,425 L369,450 L444,450 L444,425 Z M369,425 Z M369,425" /></clipPath>
+<path d="M457,451 C459.4453125,420.3320313 463.109375,405 468,405" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip70)" />
+<clipPath id="clip71"><path d="M367,354 L848,354 L848,539 L367,539 Z M369,425 L369,450 L444,450 L444,425 Z M369,425 Z M369,425" /></clipPath>
+<path d="M457,451 C459.4453125,482.3320313 463.109375,498 468,498" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip71)" />
+<clipPath id="clip72"><path d="M366,353 L849,353 L849,540 L366,540 L366,353 Z" /></clipPath>
+<path d="M444,451 L457,451" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip72)" />
+<clipPath id="clip73"><path d="M366,422 L448,422 L448,454 L366,454 L366,422 Z" /></clipPath>
+<path d="M369,451 L444,451 Z M369,451" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip73)" />
+<text x="380" y="441" style="font:10px 微软雅黑">次序约定</text>
+<clipPath id="clip74"><path d="M446,432 L459,432 L459,445 L446,445 L446,432 Z" /></clipPath>
+<path d="M456.5,438 C456.5,435.515625 454.484375,433.5 452,433.5 C449.515625,433.5 447.5,435.515625 447.5,438 C447.5,440.484375 449.515625,442.5 452,442.5 C454.484375,442.5 456.5,440.484375 456.5,438 Z M456.5,438" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip74)" />
+<clipPath id="clip75"><path d="M446,432 L459,432 L459,445 L446,445 L446,432 Z" /></clipPath>
+<path d="M456.5,438 C456.5,435.515625 454.484375,433.5 452,433.5 C449.515625,433.5 447.5,435.515625 447.5,438 C447.5,440.484375 449.515625,442.5 452,442.5 C454.484375,442.5 456.5,440.484375 456.5,438 Z M456.5,438" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip75)" />
+<clipPath id="clip76"><path d="M446,432 L459,432 L459,445 L446,445 L446,432 Z" /></clipPath>
+<path d="M450,438 L454,438" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip76)" />
+<clipPath id="clip77"><path d="M466,354 L848,354 L848,446 L466,446 Z M468,379 L468,404 L556,404 L556,379 Z M468,379 Z M468,379" /></clipPath>
+<path d="M569,405 C571.4453125,389.6679688 575.109375,382 580,382" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip77)" />
+<clipPath id="clip78"><path d="M466,354 L848,354 L848,446 L466,446 Z M468,379 L468,404 L556,404 L556,379 Z M468,379 Z M468,379" /></clipPath>
+<path d="M569,405 C571.4453125,420.3320313 575.109375,428 580,428" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip78)" />
+<clipPath id="clip79"><path d="M465,353 L849,353 L849,447 L465,447 L465,353 Z" /></clipPath>
+<path d="M556,405 L569,405" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip79)" />
+<clipPath id="clip80"><path d="M465,376 L560,376 L560,408 L465,408 L465,376 Z" /></clipPath>
+<path d="M468,405 L556,405 Z M468,405" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip80)" />
+<text x="479" y="395" style="font:10px 微软雅黑">低下标优先</text>
+<clipPath id="clip81"><path d="M558,386 L571,386 L571,399 L558,399 L558,386 Z" /></clipPath>
+<path d="M568.5,392 C568.5,389.515625 566.484375,387.5 564,387.5 C561.515625,387.5 559.5,389.515625 559.5,392 C559.5,394.484375 561.515625,396.5 564,396.5 C566.484375,396.5 568.5,394.484375 568.5,392 Z M568.5,392" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip81)" />
+<clipPath id="clip82"><path d="M558,386 L571,386 L571,399 L558,399 L558,386 Z" /></clipPath>
+<path d="M568.5,392 C568.5,389.515625 566.484375,387.5 564,387.5 C561.515625,387.5 559.5,389.515625 559.5,392 C559.5,394.484375 561.515625,396.5 564,396.5 C566.484375,396.5 568.5,394.484375 568.5,392 Z M568.5,392" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip82)" />
+<clipPath id="clip83"><path d="M558,386 L571,386 L571,399 L558,399 L558,386 Z" /></clipPath>
+<path d="M562,392 L566,392" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip83)" />
+<clipPath id="clip84"><path d="M577,353 L815,353 L815,385 L577,385 L577,353 Z" /></clipPath>
+<path d="M580,382 L811,382 Z M580,382" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip84)" />
+<text x="591" y="372" style="font:10px 微软雅黑">优先按低维下标的大小安排存储空间</text>
+<clipPath id="clip85"><path d="M578,385 L848,385 L848,446 L578,446 Z M580,402 L580,427 L655,427 L655,402 Z M580,402 Z M580,402" /></clipPath>
+<path d="M668,428 C670.4453125,418 674.109375,413 679,413" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip85)" />
+<clipPath id="clip86"><path d="M578,385 L848,385 L848,446 L578,446 Z M580,402 L580,427 L655,427 L655,402 Z M580,402 Z M580,402" /></clipPath>
+<path d="M668,428 C670.4453125,438.6679688 674.109375,444 679,444" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip86)" />
+<clipPath id="clip87"><path d="M577,384 L849,384 L849,447 L577,447 L577,384 Z" /></clipPath>
+<path d="M655,428 L668,428" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip87)" />
+<clipPath id="clip88"><path d="M577,399 L659,399 L659,431 L577,431 L577,399 Z" /></clipPath>
+<path d="M580,428 L655,428 Z M580,428" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip88)" />
+<text x="591" y="418" style="font:10px 微软雅黑">二维数组</text>
+<clipPath id="clip89"><path d="M657,409 L670,409 L670,422 L657,422 L657,409 Z" /></clipPath>
+<path d="M667.5,415 C667.5,412.515625 665.484375,410.5 663,410.5 C660.515625,410.5 658.5,412.515625 658.5,415 C658.5,417.484375 660.515625,419.5 663,419.5 C665.484375,419.5 667.5,417.484375 667.5,415 Z M667.5,415" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip89)" />
+<clipPath id="clip90"><path d="M657,409 L670,409 L670,422 L657,422 L657,409 Z" /></clipPath>
+<path d="M667.5,415 C667.5,412.515625 665.484375,410.5 663,410.5 C660.515625,410.5 658.5,412.515625 658.5,415 C658.5,417.484375 660.515625,419.5 663,419.5 C665.484375,419.5 667.5,417.484375 667.5,415 Z M667.5,415" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip90)" />
+<clipPath id="clip91"><path d="M657,409 L670,409 L670,422 L657,422 L657,409 Z" /></clipPath>
+<path d="M661,415 L665,415" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip91)" />
+<clipPath id="clip92"><path d="M676,384 L784,384 L784,416 L676,416 L676,384 Z" /></clipPath>
+<path d="M679,413 L780,413 Z M679,413" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip92)" />
+<text x="690" y="403" style="font:10px 微软雅黑">以行序为主序</text>
+<clipPath id="clip93"><path d="M676,415 L849,415 L849,447 L676,447 L676,415 Z" /></clipPath>
+<path d="M679,444 L845,444 Z M679,444" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip93)" />
+<text x="690" y="434" style="font:10px 微软雅黑">如 C/C++ 等大多数语言</text>
+<clipPath id="clip94"><path d="M466,447 L814,447 L814,539 L466,539 Z M468,472 L468,497 L556,497 L556,472 Z M468,472 Z M468,472" /></clipPath>
+<path d="M569,498 C571.4453125,482.6679688 575.109375,475 580,475" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip94)" />
+<clipPath id="clip95"><path d="M466,447 L814,447 L814,539 L466,539 Z M468,472 L468,497 L556,497 L556,472 Z M468,472 Z M468,472" /></clipPath>
+<path d="M569,498 C571.4453125,513.3320313 575.109375,521 580,521" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip95)" />
+<clipPath id="clip96"><path d="M465,446 L815,446 L815,540 L465,540 L465,446 Z" /></clipPath>
+<path d="M556,498 L569,498" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip96)" />
+<clipPath id="clip97"><path d="M465,469 L560,469 L560,501 L465,501 L465,469 Z" /></clipPath>
+<path d="M468,498 L556,498 Z M468,498" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip97)" />
+<text x="479" y="488" style="font:10px 微软雅黑">高下标优先</text>
+<clipPath id="clip98"><path d="M558,479 L571,479 L571,492 L558,492 L558,479 Z" /></clipPath>
+<path d="M568.5,485 C568.5,482.515625 566.484375,480.5 564,480.5 C561.515625,480.5 559.5,482.515625 559.5,485 C559.5,487.484375 561.515625,489.5 564,489.5 C566.484375,489.5 568.5,487.484375 568.5,485 Z M568.5,485" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip98)" />
+<clipPath id="clip99"><path d="M558,479 L571,479 L571,492 L558,492 L558,479 Z" /></clipPath>
+<path d="M568.5,485 C568.5,482.515625 566.484375,480.5 564,480.5 C561.515625,480.5 559.5,482.515625 559.5,485 C559.5,487.484375 561.515625,489.5 564,489.5 C566.484375,489.5 568.5,487.484375 568.5,485 Z M568.5,485" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip99)" />
+<clipPath id="clip100"><path d="M558,479 L571,479 L571,492 L558,492 L558,479 Z" /></clipPath>
+<path d="M562,485 L566,485" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip100)" />
+<clipPath id="clip101"><path d="M577,446 L815,446 L815,478 L577,478 L577,446 Z" /></clipPath>
+<path d="M580,475 L811,475 Z M580,475" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip101)" />
+<text x="591" y="465" style="font:10px 微软雅黑">优先按高维下标的大小安排存储空间</text>
+<clipPath id="clip102"><path d="M578,478 L783,478 L783,539 L578,539 Z M580,495 L580,520 L655,520 L655,495 Z M580,495 Z M580,495" /></clipPath>
+<path d="M668,521 C670.4453125,511 674.109375,506 679,506" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip102)" />
+<clipPath id="clip103"><path d="M578,478 L783,478 L783,539 L578,539 Z M580,495 L580,520 L655,520 L655,495 Z M580,495 Z M580,495" /></clipPath>
+<path d="M668,521 C670.4453125,531.6679688 674.109375,537 679,537" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip103)" />
+<clipPath id="clip104"><path d="M577,477 L784,477 L784,540 L577,540 L577,477 Z" /></clipPath>
+<path d="M655,521 L668,521" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip104)" />
+<clipPath id="clip105"><path d="M577,492 L659,492 L659,524 L577,524 L577,492 Z" /></clipPath>
+<path d="M580,521 L655,521 Z M580,521" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip105)" />
+<text x="591" y="511" style="font:10px 微软雅黑">二维数组</text>
+<clipPath id="clip106"><path d="M657,502 L670,502 L670,515 L657,515 L657,502 Z" /></clipPath>
+<path d="M667.5,508 C667.5,505.515625 665.484375,503.5 663,503.5 C660.515625,503.5 658.5,505.515625 658.5,508 C658.5,510.484375 660.515625,512.5 663,512.5 C665.484375,512.5 667.5,510.484375 667.5,508 Z M667.5,508" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip106)" />
+<clipPath id="clip107"><path d="M657,502 L670,502 L670,515 L657,515 L657,502 Z" /></clipPath>
+<path d="M667.5,508 C667.5,505.515625 665.484375,503.5 663,503.5 C660.515625,503.5 658.5,505.515625 658.5,508 C658.5,510.484375 660.515625,512.5 663,512.5 C665.484375,512.5 667.5,510.484375 667.5,508 Z M667.5,508" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip107)" />
+<clipPath id="clip108"><path d="M657,502 L670,502 L670,515 L657,515 L657,502 Z" /></clipPath>
+<path d="M661,508 L665,508" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip108)" />
+<clipPath id="clip109"><path d="M676,477 L784,477 L784,509 L676,509 L676,477 Z" /></clipPath>
+<path d="M679,506 L780,506 Z M679,506" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip109)" />
+<text x="690" y="496" style="font:10px 微软雅黑">以列序为主序</text>
+<clipPath id="clip110"><path d="M676,508 L768,508 L768,540 L676,540 L676,508 Z" /></clipPath>
+<path d="M679,537 L764,537 Z M679,537" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip110)" />
+<text x="690" y="526" style="font:10px 微软雅黑">如 Fortran</text>
+<clipPath id="clip111"><path d="M367,540 L663,540 L663,570 L367,570 Z M369,542 L369,567 L444,567 L444,542 Z M369,542 Z M369,542" /></clipPath>
+<path d="M457,568 C459.4453125,568 463.109375,568 468,568" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip111)" />
+<clipPath id="clip112"><path d="M366,539 L664,539 L664,571 L366,571 L366,539 Z" /></clipPath>
+<path d="M444,568 L457,568" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip112)" />
+<clipPath id="clip113"><path d="M366,539 L448,539 L448,571 L366,571 L366,539 Z" /></clipPath>
+<path d="M369,568 L444,568 Z M369,568" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip113)" />
+<text x="380" y="557" style="font:10px 微软雅黑">随机存取</text>
+<clipPath id="clip114"><path d="M446,549 L459,549 L459,562 L446,562 L446,549 Z" /></clipPath>
+<path d="M456.5,555 C456.5,552.515625 454.484375,550.5 452,550.5 C449.515625,550.5 447.5,552.515625 447.5,555 C447.5,557.484375 449.515625,559.5 452,559.5 C454.484375,559.5 456.5,557.484375 456.5,555 Z M456.5,555" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip114)" />
+<clipPath id="clip115"><path d="M446,549 L459,549 L459,562 L446,562 L446,549 Z" /></clipPath>
+<path d="M456.5,555 C456.5,552.515625 454.484375,550.5 452,550.5 C449.515625,550.5 447.5,552.515625 447.5,555 C447.5,557.484375 449.515625,559.5 452,559.5 C454.484375,559.5 456.5,557.484375 456.5,555 Z M456.5,555" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip115)" />
+<clipPath id="clip116"><path d="M446,549 L459,549 L459,562 L446,562 L446,549 Z" /></clipPath>
+<path d="M450,555 L454,555" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip116)" />
+<clipPath id="clip117"><path d="M465,539 L664,539 L664,571 L465,571 L465,539 Z" /></clipPath>
+<path d="M468,568 L660,568 Z M468,568" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip117)" />
+<text x="479" y="557" style="font:10px 微软雅黑">存取数组中任一元素时间相等</text>
+<clipPath id="clip118"><path d="M138,600 L924,600 L924,1127 L138,1127 Z M144,816 C141.2382813,816 139,818.2382813 139,821 L139,851 C139,853.7617188 141.2382813,856 144,856 L282,856 C284.7617188,856 287,853.7617188 287,851 L287,821 C287,818.2382813 284.7617188,816 282,816 Z M144,816 Z M144,816" /></clipPath>
+<path d="M300,836 C302.2226563,768 305.5546875,734 310,734" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip118)" />
+<clipPath id="clip119"><path d="M138,600 L924,600 L924,1127 L138,1127 Z M144,816 C141.2382813,816 139,818.2382813 139,821 L139,851 C139,853.7617188 141.2382813,856 144,856 L282,856 C284.7617188,856 287,853.7617188 287,851 L287,821 C287,818.2382813 284.7617188,816 282,816 Z M144,816 Z M144,816" /></clipPath>
+<path d="M300,836 C302.2226563,904 305.5546875,938 310,938" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip119)" />
+<clipPath id="clip120"><path d="M137,599 L925,599 L925,1128 L137,1128 L137,599 Z" /></clipPath>
+<path d="M287,836 L300,836" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip120)" />
+<clipPath id="clip121"><path d="M137,814 L290,814 L290,859 L137,859 L137,814 Z" /></clipPath>
+<path d="M144,816 C141.2382813,816 139,818.2382813 139,821 L139,851 C139,853.7617188 141.2382813,856 144,856 L282,856 C284.7617188,856 287,853.7617188 287,851 L287,821 C287,818.2382813 284.7617188,816 282,816 Z M144,816" style="fill:rgb(220,230,242);stroke:none" clip-path="url(#clip121)" />
+<clipPath id="clip122"><path d="M137,814 L290,814 L290,859 L137,859 L137,814 Z" /></clipPath>
+<path d="M144,816 C141.2382813,816 139,818.2382813 139,821 L139,851 C139,853.7617188 141.2382813,856 144,856 L282,856 C284.7617188,856 287,853.7617188 287,851 L287,821 C287,818.2382813 284.7617188,816 282,816 Z M144,816" style="fill:none;stroke:rgb(85,142,213);stroke-width:2" clip-path="url(#clip122)" />
+<text x="153" y="839" style="font:13px 微软雅黑">矩阵的压缩存储</text>
+<clipPath id="clip123"><path d="M288,830 L301,830 L301,843 L288,843 L288,830 Z" /></clipPath>
+<path d="M298.5,836 C298.5,833.515625 296.484375,831.5 294,831.5 C291.515625,831.5 289.5,833.515625 289.5,836 C289.5,838.484375 291.515625,840.5 294,840.5 C296.484375,840.5 298.5,838.484375 298.5,836 Z M298.5,836" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip123)" />
+<clipPath id="clip124"><path d="M288,830 L301,830 L301,843 L288,843 L288,830 Z" /></clipPath>
+<path d="M298.5,836 C298.5,833.515625 296.484375,831.5 294,831.5 C291.515625,831.5 289.5,833.515625 289.5,836 C289.5,838.484375 291.515625,840.5 294,840.5 C296.484375,840.5 298.5,838.484375 298.5,836 Z M298.5,836" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip124)" />
+<clipPath id="clip125"><path d="M288,830 L301,830 L301,843 L288,843 L288,830 Z" /></clipPath>
+<path d="M292,836 L296,836" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip125)" />
+<clipPath id="clip126"><path d="M308,600 L774,600 L774,793 L308,793 Z M310,708 L310,733 L385,733 L385,708 Z M310,708 Z M310,708" /></clipPath>
+<path d="M398,734 C400.4453125,696.6679688 404.109375,678 409,678" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip126)" />
+<clipPath id="clip127"><path d="M308,600 L774,600 L774,793 L308,793 Z M310,708 L310,733 L385,733 L385,708 Z M310,708 Z M310,708" /></clipPath>
+<path d="M398,734 C400.4453125,751.3320313 404.109375,760 409,760" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip127)" />
+<clipPath id="clip128"><path d="M308,600 L774,600 L774,793 L308,793 Z M310,708 L310,733 L385,733 L385,708 Z M310,708 Z M310,708" /></clipPath>
+<path d="M398,734 C400.4453125,772 404.109375,791 409,791" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip128)" />
+<clipPath id="clip129"><path d="M307,599 L775,599 L775,794 L307,794 L307,599 Z" /></clipPath>
+<path d="M385,734 L398,734" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip129)" />
+<clipPath id="clip130"><path d="M307,705 L389,705 L389,737 L307,737 L307,705 Z" /></clipPath>
+<path d="M310,734 L385,734 Z M310,734" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip130)" />
+<text x="321" y="723" style="font:10px 微软雅黑">特殊矩阵</text>
+<clipPath id="clip131"><path d="M387,715 L400,715 L400,728 L387,728 L387,715 Z" /></clipPath>
+<path d="M397.5,721 C397.5,718.515625 395.484375,716.5 393,716.5 C390.515625,716.5 388.5,718.515625 388.5,721 C388.5,723.484375 390.515625,725.5 393,725.5 C395.484375,725.5 397.5,723.484375 397.5,721 Z M397.5,721" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip131)" />
+<clipPath id="clip132"><path d="M387,715 L400,715 L400,728 L387,728 L387,715 Z" /></clipPath>
+<path d="M397.5,721 C397.5,718.515625 395.484375,716.5 393,716.5 C390.515625,716.5 388.5,718.515625 388.5,721 C388.5,723.484375 390.515625,725.5 393,725.5 C395.484375,725.5 397.5,723.484375 397.5,721 Z M397.5,721" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip132)" />
+<clipPath id="clip133"><path d="M387,715 L400,715 L400,728 L387,728 L387,715 Z" /></clipPath>
+<path d="M391,721 L395,721" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip133)" />
+<clipPath id="clip134"><path d="M407,600 L774,600 L774,731 L407,731 Z M409,652 L409,677 L484,677 L484,652 Z M409,652 Z M409,652" /></clipPath>
+<path d="M497,678 C499.4453125,644.6679688 503.109375,628 508,628" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip134)" />
+<clipPath id="clip135"><path d="M407,600 L774,600 L774,731 L407,731 Z M409,652 L409,677 L484,677 L484,652 Z M409,652 Z M409,652" /></clipPath>
+<path d="M497,678 C499.4453125,712 503.109375,729 508,729" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip135)" />
+<clipPath id="clip136"><path d="M406,599 L775,599 L775,732 L406,732 L406,599 Z" /></clipPath>
+<path d="M484,678 L497,678" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip136)" />
+<clipPath id="clip137"><path d="M406,649 L488,649 L488,681 L406,681 L406,649 Z" /></clipPath>
+<path d="M409,678 L484,678 Z M409,678" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip137)" />
+<text x="420" y="667" style="font:10px 微软雅黑">对称矩阵</text>
+<clipPath id="clip138"><path d="M486,659 L499,659 L499,672 L486,672 L486,659 Z" /></clipPath>
+<path d="M496.5,665 C496.5,662.515625 494.484375,660.5 492,660.5 C489.515625,660.5 487.5,662.515625 487.5,665 C487.5,667.484375 489.515625,669.5 492,669.5 C494.484375,669.5 496.5,667.484375 496.5,665 Z M496.5,665" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip138)" />
+<clipPath id="clip139"><path d="M486,659 L499,659 L499,672 L486,672 L486,659 Z" /></clipPath>
+<path d="M496.5,665 C496.5,662.515625 494.484375,660.5 492,660.5 C489.515625,660.5 487.5,662.515625 487.5,665 C487.5,667.484375 489.515625,669.5 492,669.5 C494.484375,669.5 496.5,667.484375 496.5,665 Z M496.5,665" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip139)" />
+<clipPath id="clip140"><path d="M486,659 L499,659 L499,672 L486,672 L486,659 Z" /></clipPath>
+<path d="M490,665 L494,665" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip140)" />
+<clipPath id="clip141"><path d="M505,599 L634,599 L634,631 L505,631 L505,599 Z" /></clipPath>
+<path d="M508,628 L630,628 Z M508,628" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip141)" />
+<text x="519" y="617" style="font:10px 微软雅黑">a[i,j] 存储在 sa[k]</text>
+<clipPath id="clip142"><path d="M505,630 L775,630 L775,732 L505,732 L505,630 Z" /></clipPath>
+<path d="M508,729 L771,729 Z M508,729" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip142)" />
+<image x="0" y="0" width="762" height="726" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvoAAALWCAYAAAA3cTeYAAAZpklEQVR42u3di48V5RkH4P5TFC0QRSi1UoSgJihUgorckhZEDJKyXIRKlxAkSyqlYrfUUIUSWBEVBBQqCkICDajcvLJghXITUVDha94vOZuFhd1z9nL27O7zJJPsnp0zZ2YgJ7+Zeb/3+9nPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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" /><clipPath id="clip143"><path d="M407,732 L625,732 L625,762 L407,762 Z M409,734 L409,759 L484,759 L484,734 Z M409,734 Z M409,734" /></clipPath>
+<path d="M497,760 C499.4453125,760 503.109375,760 508,760" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip143)" />
+<clipPath id="clip144"><path d="M406,731 L626,731 L626,763 L406,763 L406,731 Z" /></clipPath>
+<path d="M484,760 L497,760" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip144)" />
+<clipPath id="clip145"><path d="M406,731 L488,731 L488,763 L406,763 L406,731 Z" /></clipPath>
+<path d="M409,760 L484,760 Z M409,760" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip145)" />
+<text x="420" y="749" style="font:10px 微软雅黑">三角矩阵</text>
+<clipPath id="clip146"><path d="M486,741 L499,741 L499,754 L486,754 L486,741 Z" /></clipPath>
+<path d="M496.5,747 C496.5,744.515625 494.484375,742.5 492,742.5 C489.515625,742.5 487.5,744.515625 487.5,747 C487.5,749.484375 489.515625,751.5 492,751.5 C494.484375,751.5 496.5,749.484375 496.5,747 Z M496.5,747" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip146)" />
+<clipPath id="clip147"><path d="M486,741 L499,741 L499,754 L486,754 L486,741 Z" /></clipPath>
+<path d="M496.5,747 C496.5,744.515625 494.484375,742.5 492,742.5 C489.515625,742.5 487.5,744.515625 487.5,747 C487.5,749.484375 489.515625,751.5 492,751.5 C494.484375,751.5 496.5,749.484375 496.5,747 Z M496.5,747" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip147)" />
+<clipPath id="clip148"><path d="M486,741 L499,741 L499,754 L486,754 L486,741 Z" /></clipPath>
+<path d="M490,747 L494,747" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip148)" />
+<clipPath id="clip149"><path d="M505,731 L626,731 L626,763 L505,763 L505,731 Z" /></clipPath>
+<path d="M508,760 L622,760 Z M508,760" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip149)" />
+<text x="519" y="749" style="font:10px 微软雅黑">与对称矩阵类似</text>
+<clipPath id="clip150"><path d="M407,763 L768,763 L768,793 L407,793 Z M409,765 L409,790 L484,790 L484,765 Z M409,765 Z M409,765" /></clipPath>
+<path d="M497,791 C499.4453125,791 503.109375,791 508,791" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip150)" />
+<clipPath id="clip151"><path d="M406,762 L769,762 L769,794 L406,794 L406,762 Z" /></clipPath>
+<path d="M484,791 L497,791" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip151)" />
+<clipPath id="clip152"><path d="M406,762 L488,762 L488,794 L406,794 L406,762 Z" /></clipPath>
+<path d="M409,791 L484,791 Z M409,791" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip152)" />
+<text x="420" y="780" style="font:10px 微软雅黑">对角矩阵</text>
+<clipPath id="clip153"><path d="M486,772 L499,772 L499,785 L486,785 L486,772 Z" /></clipPath>
+<path d="M496.5,778 C496.5,775.515625 494.484375,773.5 492,773.5 C489.515625,773.5 487.5,775.515625 487.5,778 C487.5,780.484375 489.515625,782.5 492,782.5 C494.484375,782.5 496.5,780.484375 496.5,778 Z M496.5,778" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip153)" />
+<clipPath id="clip154"><path d="M486,772 L499,772 L499,785 L486,785 L486,772 Z" /></clipPath>
+<path d="M496.5,778 C496.5,775.515625 494.484375,773.5 492,773.5 C489.515625,773.5 487.5,775.515625 487.5,778 C487.5,780.484375 489.515625,782.5 492,782.5 C494.484375,782.5 496.5,780.484375 496.5,778 Z M496.5,778" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip154)" />
+<clipPath id="clip155"><path d="M486,772 L499,772 L499,785 L486,785 L486,772 Z" /></clipPath>
+<path d="M490,778 L494,778" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip155)" />
+<clipPath id="clip156"><path d="M505,762 L769,762 L769,794 L505,794 L505,762 Z" /></clipPath>
+<path d="M508,791 L765,791 Z M508,791" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip156)" />
+<text x="519" y="780" style="font:10px 微软雅黑">非零元集中在主对角线为中心的带状区域</text>
+<clipPath id="clip157"><path d="M308,794 L924,794 L924,1127 L308,1127 Z M310,912 L310,937 L385,937 L385,912 Z M310,912 Z M310,912" /></clipPath>
+<path d="M398,938 C400.4453125,886.6679688 404.109375,861 409,861" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip157)" />
+<clipPath id="clip158"><path d="M308,794 L924,794 L924,1127 L308,1127 Z M310,912 L310,937 L385,937 L385,912 Z M310,912 Z M310,912" /></clipPath>
+<path d="M398,938 C400.4453125,990 404.109375,1016 409,1016" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip158)" />
+<clipPath id="clip159"><path d="M307,793 L925,793 L925,1128 L307,1128 L307,793 Z" /></clipPath>
+<path d="M385,938 L398,938" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip159)" />
+<clipPath id="clip160"><path d="M307,909 L389,909 L389,941 L307,941 L307,909 Z" /></clipPath>
+<path d="M310,938 L385,938 Z M310,938" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip160)" />
+<text x="321" y="927" style="font:10px 微软雅黑">稀疏矩阵</text>
+<clipPath id="clip161"><path d="M387,919 L400,919 L400,932 L387,932 L387,919 Z" /></clipPath>
+<path d="M397.5,925 C397.5,922.515625 395.484375,920.5 393,920.5 C390.515625,920.5 388.5,922.515625 388.5,925 C388.5,927.484375 390.515625,929.5 393,929.5 C395.484375,929.5 397.5,927.484375 397.5,925 Z M397.5,925" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip161)" />
+<clipPath id="clip162"><path d="M387,919 L400,919 L400,932 L387,932 L387,919 Z" /></clipPath>
+<path d="M397.5,925 C397.5,922.515625 395.484375,920.5 393,920.5 C390.515625,920.5 388.5,922.515625 388.5,925 C388.5,927.484375 390.515625,929.5 393,929.5 C395.484375,929.5 397.5,927.484375 397.5,925 Z M397.5,925" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip162)" />
+<clipPath id="clip163"><path d="M387,919 L400,919 L400,932 L387,932 L387,919 Z" /></clipPath>
+<path d="M391,925 L395,925" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip163)" />
+<clipPath id="clip164"><path d="M407,794 L619,794 L619,879 L407,879 Z M409,835 L409,860 L484,860 L484,835 Z M409,835 Z M409,835" /></clipPath>
+<path d="M497,861 C499.4453125,851 503.109375,846 508,846" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip164)" />
+<clipPath id="clip165"><path d="M407,794 L619,794 L619,879 L407,879 Z M409,835 L409,860 L484,860 L484,835 Z M409,835 Z M409,835" /></clipPath>
+<path d="M497,861 C499.4453125,871.6679688 503.109375,877 508,877" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip165)" />
+<clipPath id="clip166"><path d="M406,793 L620,793 L620,880 L406,880 L406,793 Z" /></clipPath>
+<path d="M484,861 L497,861" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip166)" />
+<clipPath id="clip167"><path d="M406,832 L488,832 L488,864 L406,864 L406,832 Z" /></clipPath>
+<path d="M409,861 L484,861 Z M409,861" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip167)" />
+<text x="420" y="850" style="font:10px 微软雅黑">稀疏因子</text>
+<clipPath id="clip168"><path d="M486,842 L499,842 L499,855 L486,855 L486,842 Z" /></clipPath>
+<path d="M496.5,848 C496.5,845.515625 494.484375,843.5 492,843.5 C489.515625,843.5 487.5,845.515625 487.5,848 C487.5,850.484375 489.515625,852.5 492,852.5 C494.484375,852.5 496.5,850.484375 496.5,848 Z M496.5,848" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip168)" />
+<clipPath id="clip169"><path d="M486,842 L499,842 L499,855 L486,855 L486,842 Z" /></clipPath>
+<path d="M496.5,848 C496.5,845.515625 494.484375,843.5 492,843.5 C489.515625,843.5 487.5,845.515625 487.5,848 C487.5,850.484375 489.515625,852.5 492,852.5 C494.484375,852.5 496.5,850.484375 496.5,848 Z M496.5,848" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip169)" />
+<clipPath id="clip170"><path d="M486,842 L499,842 L499,855 L486,855 L486,842 Z" /></clipPath>
+<path d="M490,848 L494,848" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip170)" />
+<clipPath id="clip171"><path d="M505,793 L620,793 L620,849 L505,849 L505,793 Z" /></clipPath>
+<path d="M508,846 L616,846 Z M508,846" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip171)" />
+<image x="0" y="0" width="607" height="843" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAl8AAANLCAYAAAB/j/gkAAAMqElEQVR42u3dy0vUXRzA4fev6mK4iW5EQSBZaGBBhBQVFQUtrFaWUZQF0X2RUREUCUn3giDssmjTzSIhocBIuimVpefle2CG1960gdeR13wemMWMzvxmMYsP55zfOX/9BQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjI1F2fmUAgPgSXwCA+Bo7X79+FV8AgPgaCx0dHWnnzp3iCwAQX+V269atNGvWrNTW1ia+AADxVe7wqq+vT5MmTUqNjY2ptbVVfAEA4qucdu3alWpray24BwDE11iorq5Ozc3N4gsAEF/l1t3dnacc29vbxRcAIL7K7eLFi2natGljus2E+AIAJmx8NTQ0pJUrV6bBwcHU09MjvgAA8VVO8+fPT4cOHUqXLl1KfX194gsAEF/l8uPHjzRv3ry0ZMmS1NXVZdoRABBffyq/MgDgt/H14MGDtHXr1lRTU5OqqqrS8ePHVZT4AgDKEV+xJUNLS0vxeVNT05hvTCq+AIAJE1/37t1L69atS/39/cpJfAEA5Y6vWJweWzLU1dWlV69eqSfxBQCUM75Cb29vWrRoUaqsrEzXr18fMS5ihOzJkyclPSZizPmVAQDDxleMeh08eDBt2bIlPXz4MB04cCBVVFSkly9fDhsXb968ycf2lPKor68XXwCA+AoDAwNpzZo1ae3atTnCwvfv39PkyZPTqVOnzB+KLwBgNOPr5MmTacqUKUM2IY1zEKdOnTrmW02UOpL2f3yILwCgpPiqrq7OC+1/3u8rguLu3bvWfBn5AgBGK75iejEia/fu3UPCYcOGDWnp0qV5StKaL/EFAIxSfIWFCxemhoaG4vO2trZ8GHVnZ6eFW+ILABjt+Hr69GkemYq7HU+fPp327t2bPn78qJ7EFwBQjvhCfAEA4kt8AQDiC/EFAIivYXV0dKTz588P+/fBwcF07Nix9O7dO/EFAIiv/+rmzZt5s9izZ8/+Mrx27NiRZs6cOeIxSuILAPjj4+vChQtp/fr1eQPYOPIoNn2NA7/jeey+H4/t27enOXPmpMuXL4/4WXFA+M8BFuEV758xY0Z6/vz5iO+Pa2/bti1f//79+6m7uzt/t4i2ka7tVwYAjJv4CosXL06bNm1Kjx49SidOnMgRFRu2vn79Ou3ZsyePVs2dOzc1Njb+9rOuXbtWDLAIr3hPKeFVEAeNT58+PX348CEdPXo09fb25vBramoSXwDA+I+vz58/5/Mm42zJ2PQ1HDlyJNXU1OTDvmMfsnjE4d+/G/kquHr1ag6w5cuX5/CK9WClioPHYyPalpaWfCpAjLzFtQvfTXwBAOM6vm7fvp1HuZqbm4uvrVixIlVVVaUXL17k5zdu3MgB9P79+5I+M0a8Vq1alT93//79JX+XCK3Kysq0evXq4sL8wtmXPT094gsAGP/xFdOKMUrV1dWVn3/58iVVVFQMmWKMxfLLli0rObwKU40xmhaffe7cuZLe297enkPrzJkzxdci3urq6iy4BwD+jPiqra1NGzdu/FcA/fOuxBgFO3z4cB6Z+vbt24jhVVhc/+zZsyGL8EsJsAjBWO/V399ffC2mP+M4prhuXF98AQDjNr7evn2bQ+vKlSvF1/bt25cWLFhQfB7TffE/EWVxZ2TcETlceMUI2a/WeMW0ZYym/S7A4i7HuNuxIKY549p37tzJ7x3u2n5lAMC4iK/W1ta8xqqvr2/InY8xAlUQ05GzZ8/OdxsON/IUYoH8SIvrYx+wCLBYw/Ursa1EhFasQSv49OlTvsty8+bN+cYA044AwLiOr9EUW0J0dnaO+D+PHz9OAwMDNlkFAMSXsx0BAPGF+AIAxJf4AgDE1wT2Nw+29j/pFXytAAAAAElFTkSuQmCC" /><clipPath id="clip172"><path d="M505,848 L588,848 L588,880 L505,880 L505,848 Z" /></clipPath>
+<path d="M508,877 L584,877 Z M508,877" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip172)" />
+<text x="519" y="866" style="font:10px 微软雅黑">δ ≤ 0.05</text>
+<clipPath id="clip173"><path d="M407,880 L924,880 L924,1127 L407,1127 Z M409,990 L409,1015 L484,1015 L484,990 Z M409,990 Z M409,990" /></clipPath>
+<path d="M497,1016 C499.4453125,964.6679688 503.109375,939 508,939" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip173)" />
+<clipPath id="clip174"><path d="M407,880 L924,880 L924,1127 L407,1127 Z M409,990 L409,1015 L484,1015 L484,990 Z M409,990 Z M409,990" /></clipPath>
+<path d="M497,1016 C499.4453125,1016 503.109375,1016 508,1016" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip174)" />
+<clipPath id="clip175"><path d="M407,880 L924,880 L924,1127 L407,1127 Z M409,990 L409,1015 L484,1015 L484,990 Z M409,990 Z M409,990" /></clipPath>
+<path d="M497,1016 C499.4453125,1068 503.109375,1094 508,1094" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip175)" />
+<clipPath id="clip176"><path d="M406,879 L925,879 L925,1128 L406,1128 L406,879 Z" /></clipPath>
+<path d="M484,1016 L497,1016" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip176)" />
+<clipPath id="clip177"><path d="M406,987 L488,987 L488,1019 L406,1019 L406,987 Z" /></clipPath>
+<path d="M409,1016 L484,1016 Z M409,1016" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip177)" />
+<text x="420" y="1005" style="font:10px 微软雅黑">压缩存储</text>
+<clipPath id="clip178"><path d="M486,997 L499,997 L499,1010 L486,1010 L486,997 Z" /></clipPath>
+<path d="M496.5,1003 C496.5,1000.515625 494.484375,998.5 492,998.5 C489.515625,998.5 487.5,1000.515625 487.5,1003 C487.5,1005.484375 489.515625,1007.5 492,1007.5 C494.484375,1007.5 496.5,1005.484375 496.5,1003 Z M496.5,1003" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip178)" />
+<clipPath id="clip179"><path d="M486,997 L499,997 L499,1010 L486,1010 L486,997 Z" /></clipPath>
+<path d="M496.5,1003 C496.5,1000.515625 494.484375,998.5 492,998.5 C489.515625,998.5 487.5,1000.515625 487.5,1003 C487.5,1005.484375 489.515625,1007.5 492,1007.5 C494.484375,1007.5 496.5,1005.484375 496.5,1003 Z M496.5,1003" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip179)" />
+<clipPath id="clip180"><path d="M486,997 L499,997 L499,1010 L486,1010 L486,997 Z" /></clipPath>
+<path d="M490,1003 L494,1003" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip180)" />
+<clipPath id="clip181"><path d="M506,880 L924,880 L924,972 L506,972 Z M508,913 L508,938 L609,938 L609,913 Z M508,913 Z M508,913" /></clipPath>
+<path d="M622,939 C624.4453125,918.3320313 628.109375,908 633,908" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip181)" />
+<clipPath id="clip182"><path d="M506,880 L924,880 L924,972 L506,972 Z M508,913 L508,938 L609,938 L609,913 Z M508,913 Z M508,913" /></clipPath>
+<path d="M622,939 C624.4453125,939 628.109375,939 633,939" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip182)" />
+<clipPath id="clip183"><path d="M506,880 L924,880 L924,972 L506,972 Z M508,913 L508,938 L609,938 L609,913 Z M508,913 Z M508,913" /></clipPath>
+<path d="M622,939 C624.4453125,959.6679688 628.109375,970 633,970" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip183)" />
+<clipPath id="clip184"><path d="M505,879 L925,879 L925,973 L505,973 L505,879 Z" /></clipPath>
+<path d="M609,939 L622,939" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip184)" />
+<clipPath id="clip185"><path d="M505,910 L613,910 L613,942 L505,942 L505,910 Z" /></clipPath>
+<path d="M508,939 L609,939 Z M508,939" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip185)" />
+<text x="519" y="928" style="font:10px 微软雅黑">三元组顺序表</text>
+<clipPath id="clip186"><path d="M611,920 L624,920 L624,933 L611,933 L611,920 Z" /></clipPath>
+<path d="M621.5,926 C621.5,923.515625 619.484375,921.5 617,921.5 C614.515625,921.5 612.5,923.515625 612.5,926 C612.5,928.484375 614.515625,930.5 617,930.5 C619.484375,930.5 621.5,928.484375 621.5,926 Z M621.5,926" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip186)" />
+<clipPath id="clip187"><path d="M611,920 L624,920 L624,933 L611,933 L611,920 Z" /></clipPath>
+<path d="M621.5,926 C621.5,923.515625 619.484375,921.5 617,921.5 C614.515625,921.5 612.5,923.515625 612.5,926 C612.5,928.484375 614.515625,930.5 617,930.5 C619.484375,930.5 621.5,928.484375 621.5,926 Z M621.5,926" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip187)" />
+<clipPath id="clip188"><path d="M611,920 L624,920 L624,933 L611,933 L611,920 Z" /></clipPath>
+<path d="M615,926 L619,926" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip188)" />
+<clipPath id="clip189"><path d="M630,879 L703,879 L703,911 L630,911 L630,879 Z" /></clipPath>
+<path d="M633,908 L699,908 Z M633,908" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip189)" />
+<text x="644" y="897" style="font:10px 微软雅黑">( i, j, e )</text>
+<clipPath id="clip190"><path d="M631,911 L923,911 L923,941 L631,941 Z M633,913 L633,938 L734,938 L734,913 Z M633,913 Z M633,913" /></clipPath>
+<path d="M747,939 C749.4453125,939 753.109375,939 758,939" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip190)" />
+<clipPath id="clip191"><path d="M630,910 L924,910 L924,942 L630,942 L630,910 Z" /></clipPath>
+<path d="M734,939 L747,939" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip191)" />
+<clipPath id="clip192"><path d="M630,910 L738,910 L738,942 L630,942 L630,910 Z" /></clipPath>
+<path d="M633,939 L734,939 Z M633,939" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip192)" />
+<text x="644" y="928" style="font:10px 微软雅黑">以行序为主序</text>
+<clipPath id="clip193"><path d="M736,920 L749,920 L749,933 L736,933 L736,920 Z" /></clipPath>
+<path d="M746.5,926 C746.5,923.515625 744.484375,921.5 742,921.5 C739.515625,921.5 737.5,923.515625 737.5,926 C737.5,928.484375 739.515625,930.5 742,930.5 C744.484375,930.5 746.5,928.484375 746.5,926 Z M746.5,926" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip193)" />
+<clipPath id="clip194"><path d="M736,920 L749,920 L749,933 L736,933 L736,920 Z" /></clipPath>
+<path d="M746.5,926 C746.5,923.515625 744.484375,921.5 742,921.5 C739.515625,921.5 737.5,923.515625 737.5,926 C737.5,928.484375 739.515625,930.5 742,930.5 C744.484375,930.5 746.5,928.484375 746.5,926 Z M746.5,926" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip194)" />
+<clipPath id="clip195"><path d="M736,920 L749,920 L749,933 L736,933 L736,920 Z" /></clipPath>
+<path d="M740,926 L744,926" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip195)" />
+<clipPath id="clip196"><path d="M755,910 L924,910 L924,942 L755,942 L755,910 Z" /></clipPath>
+<path d="M758,939 L920,939 Z M758,939" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip196)" />
+<text x="769" y="928" style="font:10px 微软雅黑">先按 i 排序，再按 j 排序</text>
+<clipPath id="clip197"><path d="M631,942 L924,942 L924,972 L631,972 Z M633,944 L633,969 L747,969 L747,944 Z M633,944 Z M633,944" /></clipPath>
+<path d="M760,970 C762.4453125,970 766.109375,970 771,970" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip197)" />
+<clipPath id="clip198"><path d="M630,941 L925,941 L925,973 L630,973 L630,941 Z" /></clipPath>
+<path d="M747,970 L760,970" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip198)" />
+<clipPath id="clip199"><path d="M630,941 L751,941 L751,973 L630,973 L630,941 Z" /></clipPath>
+<path d="M633,970 L747,970 Z M633,970" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip199)" />
+<text x="644" y="959" style="font:10px 微软雅黑">算法：矩阵转置</text>
+<clipPath id="clip200"><path d="M749,951 L762,951 L762,964 L749,964 L749,951 Z" /></clipPath>
+<path d="M759.5,957 C759.5,954.515625 757.484375,952.5 755,952.5 C752.515625,952.5 750.5,954.515625 750.5,957 C750.5,959.484375 752.515625,961.5 755,961.5 C757.484375,961.5 759.5,959.484375 759.5,957 Z M759.5,957" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip200)" />
+<clipPath id="clip201"><path d="M749,951 L762,951 L762,964 L749,964 L749,951 Z" /></clipPath>
+<path d="M759.5,957 C759.5,954.515625 757.484375,952.5 755,952.5 C752.515625,952.5 750.5,954.515625 750.5,957 C750.5,959.484375 752.515625,961.5 755,961.5 C757.484375,961.5 759.5,959.484375 759.5,957 Z M759.5,957" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip201)" />
+<clipPath id="clip202"><path d="M749,951 L762,951 L762,964 L749,964 L749,951 Z" /></clipPath>
+<path d="M753,957 L757,957" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip202)" />
+<clipPath id="clip203"><path d="M768,941 L925,941 L925,973 L768,973 L768,941 Z" /></clipPath>
+<path d="M771,970 L921,970 Z M771,970" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip203)" />
+<text x="782" y="959" style="font:10px 微软雅黑">时间复杂度 O(nu+tu)</text>
+<clipPath id="clip204"><path d="M506,973 L841,973 L841,1034 L506,1034 Z M508,990 L508,1015 L648,1015 L648,990 Z M508,990 Z M508,990" /></clipPath>
+<path d="M661,1016 C663.4453125,1006 667.109375,1001 672,1001" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip204)" />
+<clipPath id="clip205"><path d="M506,973 L841,973 L841,1034 L506,1034 Z M508,990 L508,1015 L648,1015 L648,990 Z M508,990 Z M508,990" /></clipPath>
+<path d="M661,1016 C663.4453125,1026.6679688 667.109375,1032 672,1032" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip205)" />
+<clipPath id="clip206"><path d="M505,972 L842,972 L842,1035 L505,1035 L505,972 Z" /></clipPath>
+<path d="M648,1016 L661,1016" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip206)" />
+<clipPath id="clip207"><path d="M505,987 L652,987 L652,1019 L505,1019 L505,987 Z" /></clipPath>
+<path d="M508,1016 L648,1016 Z M508,1016" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip207)" />
+<text x="519" y="1005" style="font:10px 微软雅黑">行逻辑链接的顺序表</text>
+<clipPath id="clip208"><path d="M650,997 L663,997 L663,1010 L650,1010 L650,997 Z" /></clipPath>
+<path d="M660.5,1003 C660.5,1000.515625 658.484375,998.5 656,998.5 C653.515625,998.5 651.5,1000.515625 651.5,1003 C651.5,1005.484375 653.515625,1007.5 656,1007.5 C658.484375,1007.5 660.5,1005.484375 660.5,1003 Z M660.5,1003" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip208)" />
+<clipPath id="clip209"><path d="M650,997 L663,997 L663,1010 L650,1010 L650,997 Z" /></clipPath>
+<path d="M660.5,1003 C660.5,1000.515625 658.484375,998.5 656,998.5 C653.515625,998.5 651.5,1000.515625 651.5,1003 C651.5,1005.484375 653.515625,1007.5 656,1007.5 C658.484375,1007.5 660.5,1005.484375 660.5,1003 Z M660.5,1003" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip209)" />
+<clipPath id="clip210"><path d="M650,997 L663,997 L663,1010 L650,1010 L650,997 Z" /></clipPath>
+<path d="M654,1003 L658,1003" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip210)" />
+<clipPath id="clip211"><path d="M669,972 L842,972 L842,1004 L669,1004 L669,972 Z" /></clipPath>
+<path d="M672,1001 L838,1001 Z M672,1001" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip211)" />
+<text x="683" y="990" style="font:10px 微软雅黑">各行第一个非零元的位置</text>
+<clipPath id="clip212"><path d="M669,1003 L790,1003 L790,1035 L669,1035 L669,1003 Z" /></clipPath>
+<path d="M672,1032 L786,1032 Z M672,1032" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip212)" />
+<text x="683" y="1021" style="font:10px 微软雅黑">算法：矩阵乘法</text>
+<clipPath id="clip213"><path d="M506,1035 L776,1035 L776,1127 L506,1127 Z M508,1068 L508,1093 L583,1093 L583,1068 Z M508,1068 Z M508,1068" /></clipPath>
+<path d="M596,1094 C598.4453125,1073.3320313 602.109375,1063 607,1063" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip213)" />
+<clipPath id="clip214"><path d="M506,1035 L776,1035 L776,1127 L506,1127 Z M508,1068 L508,1093 L583,1093 L583,1068 Z M508,1068 Z M508,1068" /></clipPath>
+<path d="M596,1094 C598.4453125,1094 602.109375,1094 607,1094" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip214)" />
+<clipPath id="clip215"><path d="M506,1035 L776,1035 L776,1127 L506,1127 Z M508,1068 L508,1093 L583,1093 L583,1068 Z M508,1068 Z M508,1068" /></clipPath>
+<path d="M596,1094 C598.4453125,1114.6679688 602.109375,1125 607,1125" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip215)" />
+<clipPath id="clip216"><path d="M505,1034 L777,1034 L777,1128 L505,1128 L505,1034 Z" /></clipPath>
+<path d="M583,1094 L596,1094" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip216)" />
+<clipPath id="clip217"><path d="M505,1065 L587,1065 L587,1097 L505,1097 L505,1065 Z" /></clipPath>
+<path d="M508,1094 L583,1094 Z M508,1094" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip217)" />
+<text x="519" y="1083" style="font:10px 微软雅黑">十字链表</text>
+<clipPath id="clip218"><path d="M585,1075 L598,1075 L598,1088 L585,1088 L585,1075 Z" /></clipPath>
+<path d="M595.5,1081 C595.5,1078.515625 593.484375,1076.5 591,1076.5 C588.515625,1076.5 586.5,1078.515625 586.5,1081 C586.5,1083.484375 588.515625,1085.5 591,1085.5 C593.484375,1085.5 595.5,1083.484375 595.5,1081 Z M595.5,1081" style="fill:rgb(250,250,250);stroke:none" clip-path="url(#clip218)" />
+<clipPath id="clip219"><path d="M585,1075 L598,1075 L598,1088 L585,1088 L585,1075 Z" /></clipPath>
+<path d="M595.5,1081 C595.5,1078.515625 593.484375,1076.5 591,1076.5 C588.515625,1076.5 586.5,1078.515625 586.5,1081 C586.5,1083.484375 588.515625,1085.5 591,1085.5 C593.484375,1085.5 595.5,1083.484375 595.5,1081 Z M595.5,1081" style="fill:none;stroke:rgb(85,142,213)" clip-path="url(#clip219)" />
+<clipPath id="clip220"><path d="M585,1075 L598,1075 L598,1088 L585,1088 L585,1075 Z" /></clipPath>
+<path d="M589,1081 L593,1081" style="fill:none;stroke:rgb(150,160,200)" clip-path="url(#clip220)" />
+<clipPath id="clip221"><path d="M604,1034 L754,1034 L754,1066 L604,1066 L604,1034 Z" /></clipPath>
+<path d="M607,1063 L750,1063 Z M607,1063" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip221)" />
+<text x="618" y="1052" style="font:10px 微软雅黑">( i, j, e, right, down )</text>
+<clipPath id="clip222"><path d="M604,1065 L777,1065 L777,1097 L604,1097 L604,1065 Z" /></clipPath>
+<path d="M607,1094 L773,1094 Z M607,1094" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip222)" />
+<text x="618" y="1083" style="font:10px 微软雅黑">非零元素组成行表和列表</text>
+<clipPath id="clip223"><path d="M604,1096 L751,1096 L751,1128 L604,1128 L604,1096 Z" /></clipPath>
+<path d="M607,1125 L747,1125 Z M607,1125" style="fill:none;stroke:rgb(85,142,213);stroke-width:3" clip-path="url(#clip223)" />
+<text x="618" y="1114" style="font:10px 微软雅黑">算法：创建十字链表</text>
+</svg>
