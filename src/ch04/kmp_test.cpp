@@ -1,10 +1,11 @@
 ///////////////////////////////////////
-/// file: sstring_test.cpp
-/// 定长顺序串测试
+/// file: kmp_test.cpp
+/// KMP算法测试
 ///////////////////////////////////////
 
 #include <iostream>
 #include "ssting.h"
+#include "kmp.h"
 using namespace std;
 
 int main()
@@ -20,6 +21,7 @@ int main()
     cout << S+1 << endl;
     cout << T+1 << endl;
     cout << Index(S,T,1) << endl;
+    cout << Index_KMP(S,T,1) << endl;
 
     return 0;
 }
