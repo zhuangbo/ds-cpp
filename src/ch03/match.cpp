@@ -9,7 +9,7 @@
 using namespace std;
 
 ///
-/// 输入一行字符串，检验其中括号是否匹配
+/// 检验表达式中的括号是否匹配
 ///
 bool match(const char *expr)
 {
