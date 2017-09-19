@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="滨州学院　庄波">
+  <title>数据结构</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showMathMenu:false,
+  TeX:{equationNumbers:{autoNumber:'AMS'}}});
+  </script>
+  <script type="text/javascript" async 
+  src="MathJax/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">数据结构</h1>
+  <p class="subtitle">CH2 线性表</p>
+  <p class="author">滨州学院　庄波</p>
+</section>
+
+<section id="目标要求" class="slide level2">
+<h2>目标要求</h2>
+<ul>
+<li>理解栈和队列的定义；</li>
+<li>熟练掌握栈的特点、栈的存储结构、基本操作和算法实现；</li>
+<li>熟练掌握队列的特点、队列的存储结构、基本操作和算法实现；</li>
+<li>会在相应的应用问题中正确选用栈和队列。</li>
+</ul>
+</section>
+<section><section id="栈" class="titleslide slide level1"><h1>3.1 栈</h1></section><section id="栈及其特点" class="slide level2">
+<h2>栈及其特点</h2>
+<dl>
+<dt>栈（Stack）</dt>
+<dd>栈是一种特殊的线性表
+</dd>
+<dd>仅在表尾进行插入和删除
+</dd>
+<dt>栈顶和栈底</dt>
+<dd>表尾（插入删除的一端）称为<strong>栈顶</strong>
+</dd>
+<dd>表头称为<strong>栈底</strong>
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>入栈和出栈</dt>
+<dd>插入元素称为入栈（push）
+</dd>
+<dd>删除元素称为出栈（pop）
+</dd>
+<dt>栈的操作有何特点？</dt>
+<dd>最先出栈的必定是最后进栈的栈顶元素
+</dd>
+<dd>栈的操作具有<strong>后进先出(LIFO)</strong>的特点
+</dd>
+</dl>
+</section><section id="栈的-adt-定义" class="slide level2">
+<h2>栈的 ADT 定义</h2>
+<ul>
+<li>数据对象：相同类型</li>
+<li>数据关系：线性关系</li>
+<li>基本操作：
+<ul>
+<li>InitStack (&amp;S) 初始化</li>
+<li>DestroyStack (&amp;S) 销毁</li>
+<li>ClearStack (&amp;S) 清空</li>
+<li>StackEmpty (S) 判空</li>
+<li>StackLength (S) 求长度</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>基本操作：
+<ul>
+<li>GetTop (S,&amp;e) / (S) 取栈顶</li>
+<li>Push (&amp;S,e) 入栈</li>
+<li>Pop (&amp;S,&amp;e) / (&amp;S) 出栈</li>
+<li>StackTraverse (S,visit) 遍历</li>
+</ul></li>
+</ul>
+</section><section id="栈的顺序存储结构顺序栈" class="slide level2">
+<h2>栈的顺序存储结构——顺序栈</h2>
+<ul>
+<li>（1）顺序栈的类型定义
+<ul>
+<li><code>elem</code> 保存数据元素，最大容量 <code>MAXSIZE</code></li>
+<li><code>top</code> 指示栈顶（这里约定为栈顶元素的下一个位置）</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">struct</span> SqStack {
+    T elem[MAXSIZE];
+    <span class="dt">int</span> top;
+};</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（2）顺序栈的基本形态
+<ul>
+<li>栈空：<code>S.top==0</code> 不能出栈，不能取栈顶元素</li>
+<li>栈满：<code>S.top==MAXSIZE</code> 不能入栈</li>
+<li>栈非空（非满）</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>（3）顺序栈基本操作的实现
+<ul>
+<li>InitStack(&amp;S) 构造空栈</li>
+<li>StackEmpty(S) 判空</li>
+<li>StackLength(S) 求长度</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 初始化空栈</span>
+<span class="dt">void</span> InitStack(SqStack&amp; S)
+{
+    S.top = <span class="dv">0</span>;
+}
+
+<span class="co">/// 判空</span>
+<span class="dt">bool</span> StackEmpty(<span class="at">const</span> SqStack&amp; S)
+{
+    <span class="cf">return</span> S.top == <span class="dv">0</span>;
+}
+
+<span class="co">/// 求长度</span>
+<span class="dt">int</span> StackLength(<span class="at">const</span> SqStack&amp; S)
+{
+    <span class="cf">return</span> S.top;
+}</code></pre></div>
+</section><section id="入栈-pushse" class="slide level2">
+<h2>入栈 Push(&amp;S,e)</h2>
+<ul>
+<li>算法思路：若栈满则出错，否则在栈顶插入元素</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入栈</span>
+<span class="dt">void</span> Push(SqStack&lt;T,MAXSIZE&gt;&amp; S, T e)
+{
+    <span class="co">// 栈满则溢出</span>
+    <span class="cf">if</span>(S.top == MAXSIZE)
+        <span class="cf">throw</span> overflow_error(<span class="st">&quot;Stack overflow&quot;</span>);
+    <span class="co">// 入栈（在栈顶插入元素）</span>
+    S.elem[S.top++] = e;
+}</code></pre></div>
+<div class="fragment">
+<blockquote>
+<p>入栈也可以写成两句：</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  S.elem[S.top] = e;
+  S.top++;</code></pre></div>
+</div>
+</section><section id="出栈-popse" class="slide level2">
+<h2>出栈 Pop(&amp;S,&amp;e)</h2>
+<p>算法思路：若栈空则出错，否则删除栈顶元素</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出栈</span>
+<span class="dt">void</span> Pop(SqStack&amp; S, T&amp; e)
+{
+    <span class="co">// 栈空则下溢</span>
+    <span class="cf">if</span>(S.top==<span class="dv">0</span>)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Stack underflow&quot;</span>);
+    <span class="co">// 出栈（删除栈顶元素）</span>
+    e = S.elem[--S.top];
+}</code></pre></div>
+<div class="fragment">
+<blockquote>
+<p>出栈也可以写成两句：</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">  e = S.elem[S.top<span class="dv">-1</span>];
+  S.top--;</code></pre></div>
+</div>
+</section><section id="取栈顶元素-topse" class="slide level2">
+<h2>取栈顶元素 Top(S,&amp;e)</h2>
+<p>算法思路：若栈空则出错，否则返回栈顶元素</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取栈顶元素</span>
+<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, T&amp; e)
+{
+    <span class="co">// 栈空则下溢</span>
+    <span class="cf">if</span>(S.top==<span class="dv">0</span>)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Stack underflow&quot;</span>);
+    <span class="co">// 返回栈顶元素</span>
+    e = S.elem[S.top - <span class="dv">1</span>];  <span class="co">// 栈顶元素的下标 top-1</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（4）顺序栈与顺序表
+<ul>
+<li>类型定义：顺序表作为顺序栈</li>
+<li>基本操作：初始化，入栈，出栈，取栈顶元素</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 用顺序表实现顺序栈</span>
+<span class="kw">typedef</span> SqList SqStack;
+
+<span class="co">/// 构造空栈</span>
+<span class="dt">void</span> InitStack(SqStack&amp; S) {
+    InitList(S);
+}
+
+<span class="co">/// 入栈</span>
+<span class="dt">void</span> Push(SqStack&amp; S, T e) {
+    ListInsert(S, ListLength(S)<span class="dv">+1</span>, e);
+}
+
+<span class="co">/// 出栈</span>
+<span class="dt">void</span> Pop(SqStack&amp; S, T&amp; e) {
+    ListDelete(S, ListLength(S), e);
+}
+
+<span class="co">/// 取栈顶元素</span>
+<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, T&amp; e) {
+    GetElem(S, ListLength(S), e);
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>顺序栈与顺序表
+<ul>
+<li>应将顺序表的表尾作为栈顶。</li>
+<li>所有操作(除了遍历)的时间复杂度都是：<span class="math inline">\(O(1)\)</span>。</li>
+</ul></li>
+</ul>
+</section><section id="栈的链式存储结构链栈" class="slide level2">
+<h2>栈的链式存储结构——链栈</h2>
+<ul>
+<li>（1）链栈结点结构的定义
+<ul>
+<li>与单链表相同</li>
+<li>链栈用单链表实现</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">struct</span> LNode
+{
+    T data;
+    LNode *next;
+};
+
+<span class="kw">typedef</span> LNode *LinkStack;</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（2）链栈的基本形态
+<ul>
+<li>带头结点的情况：</li>
+<li>栈空 S-&gt;next==NULL</li>
+<li>栈非空</li>
+<li>不带头结点的情况：</li>
+<li>栈空 S==NULL</li>
+<li>栈非空</li>
+</ul></li>
+<li>（3）基本操作的实现
+<ul>
+<li>将链表的表头视为栈顶，效率高。</li>
+<li>以下以不带头结点的情况为例</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>链栈的入栈操作 Push(&amp;S,e)
+<ul>
+<li>思路：新建结点，插入栈顶（链表表头）</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入栈（链栈）</span>
+<span class="dt">void</span> Push(LinkStack&amp; S, T e)
+{
+    <span class="co">// 新建结点</span>
+    p = <span class="kw">new</span> LNode&lt;T&gt;;
+    p-&gt;data = e;
+    <span class="co">// 插入栈顶（链表表头）</span>
+    p-&gt;next = S;
+    S = p;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>链栈的出栈操作 Pop(&amp;S,&amp;e)
+<ul>
+<li>思路：栈空则出错，否则删除并返回栈顶（链表头）元素</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出栈</span>
+<span class="co">///</span>
+<span class="dt">void</span> Pop(Stack&amp; S, T&amp; e)
+{
+    <span class="co">// 栈空则下溢</span>
+    <span class="cf">if</span>(S==NULL) <span class="cf">throw</span> underflow_error(<span class="st">&quot;Stack underflow&quot;</span>);
+    <span class="co">// 取栈顶元素</span>
+    e = S-&gt;data;
+    <span class="co">// 删除栈顶结点</span>
+    p = S;
+    S = S-&gt;next;
+    <span class="kw">delete</span> p;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>（4）链栈和链表
+<ul>
+<li>类型定义：链表作为链栈</li>
+<li>基本操作：入栈，出栈</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 链表作为链栈</span>
+<span class="kw">typedef</span> LinkList LinkStack;
+
+<span class="co">/// 初始化</span>
+<span class="dt">void</span> InitStack(LinkStack&amp; S) {
+    InitList(S);
+}
+
+<span class="co">/// 入栈</span>
+<span class="dt">void</span> Push(LinkStack&amp; S, T e) {
+    ListInsert(S, <span class="dv">1</span>, e);
+}
+
+<span class="co">/// 出栈</span>
+<span class="dt">void</span> Pop(LinkList&amp; S, T&amp; e) {
+    ListDelete(S, <span class="dv">1</span>, e);
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>链表作为链栈
+<ul>
+<li>令链表的表头作为栈顶具有较高的效率。</li>
+<li>遍历操作 <span class="math inline">\(O(n)\)</span>，求长度 <span class="math inline">\(O(n)\)</span>。</li>
+<li>其它操作都是 <span class="math inline">\(O(1)\)</span>。</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="栈的应用" class="titleslide slide level1"><h1>3.2 栈的应用</h1></section><section id="例1数制转换" class="slide level2">
+<h2>例1：数制转换</h2>
+<ul>
+<li>问题：将十进制非负整数转换为等值的八进制数</li>
+<li>方法：除基取余法（除基数，取余数，逆序排列）</li>
+<li>思路：借助栈保存得到的余数，最后出栈得到逆序排列的余数。</li>
+</ul>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 对于任意输入的一个非负十进制数，打印输出</span>
+<span class="co">/// 与其等值的八进制数</span>
+<span class="dt">void</span> conversion()
+{
+    <span class="co">// 输入十进制数</span>
+    cin &gt;&gt; n;
+
+    <span class="co">// 转换为八进制数</span>
+    InitStack(s); <span class="co">// 初始化为空栈</span>
+    <span class="cf">do</span> {
+        Push(s, n%<span class="dv">8</span>);  <span class="co">// 余数入栈</span>
+        n = n / <span class="dv">8</span>;
+    } <span class="cf">while</span>(n);
+
+    <span class="co">// 输出八进制数</span>
+    <span class="cf">while</span>(!StackEmpty(s)) {
+        Pop(s,e);  <span class="co">// 余数出栈</span>
+        cout &lt;&lt; e;
+    }
+}</code></pre></div>
+</section><section id="例2括号匹配" class="slide level2">
+<h2>例2：括号匹配</h2>
+<ul>
+<li>问题：检查一个表达式中的括号是否正确匹配</li>
+<li>思路：借助一个栈，保存期待匹配的左括号，遇到右括号时出栈匹配，最后栈空则完成匹配。</li>
+<li>算法：
+<ul>
+<li>设一栈</li>
+<li>遇到左括号则入栈，</li>
+<li>遇到右括号时，若栈空，则不匹配(右括号太多)，否则，如果栈顶元素与该右括号匹配，则出栈，否则不匹配(括号不配对)。</li>
+<li>输入结束后，若栈为空，则匹配，否则不匹配(左括号太多)。</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 检验表达式 expr 中的括号是否匹配</span>
+<span class="dt">bool</span> match(<span class="dt">char</span> *expr)
+{
+    <span class="co">// 匹配括号</span>
+    InitStack(s);
+    <span class="cf">for</span>(i = <span class="dv">0</span>; expr[i]; i++) {
+        <span class="co">// 从表达式中取一个字符 c</span>
+        c = expr[i];
+        <span class="co">// 按左括号和右括号分别处理</span>
+        <span class="cf">if</span>(c==<span class="st">&#39;(&#39;</span> || c==<span class="st">&#39;[&#39;</span> || c==<span class="st">&#39;{&#39;</span>) {
+            <span class="co">// 左括号入栈</span>
+            Push(s,c);
+        } <span class="cf">else</span> <span class="cf">if</span>(c==<span class="st">&#39;)&#39;</span> || c==<span class="st">&#39;]&#39;</span> || c==<span class="st">&#39;}&#39;</span>) {
+            <span class="co">// 右括号与栈顶括号进行匹配</span>
+            <span class="cf">if</span>(StackEmpty(s)) <span class="cf">return</span> <span class="kw">false</span>; <span class="co">// 栈空则匹配失败</span>
+            <span class="co">// 出栈</span>
+            Pop(s,b);
+            <span class="co">// 匹配失败则返回</span>
+            <span class="cf">if</span>(( c==<span class="st">&#39;)&#39;</span> &amp;&amp; b!=<span class="st">&#39;(&#39;</span> ) ||
+              ( c==<span class="st">&#39;]&#39;</span> &amp;&amp; b!=<span class="st">&#39;[&#39;</span> ) ||
+              ( c==<span class="st">&#39;}&#39;</span> &amp;&amp; b!=<span class="st">&#39;{&#39;</span> ))
+                <span class="cf">return</span> <span class="kw">false</span>;
+        }
+    }
+
+    <span class="co">// 若栈空，则匹配成功</span>
+    <span class="cf">return</span> StackEmpty(s);
+}</code></pre></div>
+</section><section id="例3计算后缀表达式" class="slide level2">
+<h2>例3：计算后缀表达式</h2>
+<ul>
+<li>中缀表达式和后缀表达式
+<ul>
+<li>中缀表达式： a@b</li>
+<li>后缀表达式： ab@</li>
+</ul></li>
+<li>问题：计算后缀表达式</li>
+<li>分析：
+<ul>
+<li>中缀表达式，如 <span class="math inline">\(1+2\times3+(4\times5+6)\times7\)</span></li>
+<li>要根据运算符的优先级进行计算</li>
+<li>后缀表达式，如 <span class="math inline">\(123\times+45\times6+7\times+\)</span></li>
+<li>按照运算符的顺序计算，不需要括号</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>算法：
+<ul>
+<li>设一栈存放操作数。</li>
+<li>遇到运算符，则取出栈顶的两个数进行运算，将结果入栈。</li>
+<li>最后出栈得到计算结果。</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 计算后缀表达式</span>
+<span class="dt">int</span> EvaluatePostfixExpression()
+{
+    <span class="co">// 初始化操作数栈</span>
+    InitStack(S);
+    <span class="co">// 读取一个运算符 op 或操作数 num</span>
+    isop = Read(op, num);
+    <span class="cf">while</span>(isop==OPERAND || op!=<span class="st">&#39;=&#39;</span>) {
+        <span class="co">// 处理运算符或操作数</span>
+        <span class="cf">if</span>(isop==OPERAND) {
+            <span class="co">// 遇到操作数直接入栈</span>
+            Push(S,num);
+        } <span class="cf">else</span> {
+            <span class="co">// 遇到运算符执行运算，结果入栈</span>
+            Pop(S,b);
+            Pop(S,a);
+            Push(S,Operate(a,op,b));
+        }
+        <span class="co">// 继续读取运算符或操作数</span>
+        isop = Read(op, num);
+    }
+
+    <span class="co">// 返回计算结果</span>
+    Pop(S,result);
+    <span class="cf">return</span> result;
+}</code></pre></div>
+</section><section id="例4计算中缀表达式" class="slide level2">
+<h2>例4：计算中缀表达式</h2>
+<ul>
+<li>思路：分别设操作数栈和运算符栈，根据运算符的优先级进行计算。</li>
+<li>算法：
+<ul>
+<li>分别设操作数栈和运算符栈。</li>
+<li>若读入操作数则进栈。</li>
+<li>如果读入运算符，则与栈顶运算符比较，</li>
+<li>若优先级高于栈顶运算符，则入栈；</li>
+<li>若优先级相等，则弹出栈顶匹配的括号；</li>
+<li>若优先级低于栈顶运算符，则不断弹出栈顶运算符和两个操作数并执行计算，直到栈顶运算符优先级更低。</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 输入表达式计算结果</span>
+<span class="co">/// 操作数为非负整数，运算符包括+-*/()，以#结尾</span>
+<span class="dt">int</span> EvaluateExpression() {
+    <span class="co">// 初始化运算符和操作数栈</span>
+    InitStack(optr);
+    InitStack(opnd);
+    <span class="co">// 表达式开始</span>
+    Push(optr, <span class="st">&#39;#&#39;</span>);
+    <span class="co">// 读取一个运算符 op 或操作数 num</span>
+    isop = Read(op, num);
+    <span class="co">// 当表达式未结束或还有未计算的运算符时继续</span>
+    <span class="cf">while</span>(isop==OPERAND || op!=<span class="st">&#39;#&#39;</span> || GetTop(optr)!=<span class="st">&#39;#&#39;</span>) {
+        <span class="co">// 处理运算符或操作数</span>
+        <span class="cf">if</span>(isop==OPERAND) { <span class="co">// 遇到操作数，直接入栈，继续读取</span>
+            Push(opnd, num);
+            isop = Read(op, num);
+        } <span class="cf">else</span> {  <span class="co">// 遇到运算符，根据优先级分别处理</span>
+            <span class="cf">switch</span>(Precede(GetTop(optr), op)) {
+            <span class="cf">case</span> <span class="st">&#39;&lt;&#39;</span>:  <span class="co">// 栈顶运算符优先级低，运算符入栈，继续读取</span>
+                Push(optr, op);
+                isop = Read(op, num);
+                <span class="cf">break</span>;
+            <span class="cf">case</span> <span class="st">&#39;=&#39;</span>:  <span class="co">// 脱括号，继续读取</span>
+                Pop(optr, x);
+                isop = Read(op, num);
+                <span class="cf">break</span>;
+            <span class="cf">case</span> <span class="st">&#39;&gt;&#39;</span>:  <span class="co">// 栈顶运算符优先级高，执行运算，结果入栈</span>
+                Pop(optr, theta);
+                Pop(opnd, b); Pop(opnd, a);
+                Push(opnd, Operate(a, theta, b));
+                <span class="cf">break</span>;
+            }
+        }
+    }
+
+    <span class="cf">return</span> GetTop(opnd);  <span class="co">// 返回运算结果</span>
+}</code></pre></div>
+</section><section id="例5中缀表达式转换为后缀表达式" class="slide level2">
+<h2>例5：中缀表达式转换为后缀表达式</h2>
+<ul>
+<li>问题：输入中缀表达式，转换为后缀表达式输出</li>
+<li>分析：
+<ul>
+<li>中缀表达式 1+2<em>3+(4</em>5+6)*7</li>
+<li>后缀表达式 123<em>+45</em>6+7*+</li>
+<li>操作数顺序相同，后缀表达式中运算符的顺序即运算顺序。</li>
+</ul></li>
+<li>思路：操作数直接输出，设运算符栈，根据优先级关系按运算顺序输出。</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>算法：
+<ul>
+<li>读到操作数时立即输出。</li>
+<li>操作符存放在栈中，遇到操作符时，从栈中弹出操作符直到遇到优先级更低的运算符为止。</li>
+<li>最后，若栈不空，则输出其中的运算符。</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 输入中缀表达式（操作数为单字母，等号=结束）</span>
+<span class="co">/// 转换为后缀表达式输出</span>
+<span class="dt">void</span> InfixToPostfix()
+{
+    <span class="co">// 初始化运算符栈为空</span>
+    InitStack(S);
+    <span class="co">// 读取一个字符（运算符或操作数）</span>
+    cin &gt;&gt; c;
+    <span class="co">// 转换表达式直到遇到等号</span>
+    <span class="cf">while</span>(c!=<span class="st">&#39;=&#39;</span>) {
+        <span class="cf">if</span>(! IsOperator(c)) { <span class="co">// 非运算符即操作数</span>
+            <span class="co">// 遇到操作数，直接输出，继续读下一个字符</span>
+            cout &lt;&lt; c;
+            cin &gt;&gt; c;
+        } <span class="cf">else</span> { <span class="co">// 遇到运算符</span>
+            <span class="cf">if</span>(StackEmpty(S)) { <span class="co">// 运算符栈空</span>
+                <span class="co">// 运算符入栈，继续读下一个字符</span>
+                Push(S,c);
+                cin &gt;&gt; c;
+            } <span class="cf">else</span> { <span class="co">// 运算符栈不空</span>
+                <span class="co">// 栈顶运算符与 c 比较优先级</span>
+                p = Precede(GetTop(S),c);
+                <span class="co">// 根据优先级分别处理</span>
+                <span class="cf">if</span>(p == <span class="st">&#39;&lt;&#39;</span>) { <span class="co">// 栈顶运算符优先级低</span>
+                    <span class="co">// 运算符入栈，继续读下一个字符</span>
+                    Push(S,c);
+                    cin &gt;&gt; c;
+                } <span class="cf">else</span> <span class="cf">if</span>(p == <span class="st">&#39;&gt;&#39;</span>) { <span class="co">// 栈顶运算符优先级高</span>
+                    <span class="co">// 栈顶运算符出栈并输出</span>
+                    Pop(S,op);
+                    cout &lt;&lt; op;
+                } <span class="cf">else</span> { <span class="co">// 优先级相等（括号匹配）</span>
+                    <span class="co">// 出栈不输出（脱括号），继续读下一个字符</span>
+                    Pop(S,op);
+                    cin &gt;&gt; c;
+                }
+            }
+        }
+    }
+
+    <span class="co">// 输出栈中剩余的运算符</span>
+    <span class="cf">while</span>(! StackEmpty(S)) {
+        Pop(S,op);
+        cout &lt;&lt; op;
+    }
+}</code></pre></div>
+</section><section id="例6迷宫求解" class="slide level2">
+<h2>例6：迷宫求解</h2>
+<ul>
+<li>问题：在迷宫中找出一条通道。</li>
+<li>分析：采用不断试探的方式，无法通行时，沿原路返回，并尝试其他可能的路径。</li>
+</ul>
+</section></section>
+<section><section id="栈与递归的实现" class="titleslide slide level1"><h1>3.3 栈与递归的实现</h1></section><section id="函数调用与返回的过程" class="slide level2">
+<h2>函数调用与返回的过程</h2>
+<ul>
+<li>（1）函数调用</li>
+<li>当在一个函数的运行期间调用另一个函数时，在运行该被调用函数之前，需先完成三项任务：
+<ul>
+<li>将<strong>返回地址</strong>、所有<strong>实参</strong>等信息传递给被调用函数保存；</li>
+<li>为被调用函数的<strong>局部变量</strong>分配存储区；</li>
+<li>将<strong>控制转移</strong>到被调用函数的入口。</li>
+</ul></li>
+</ul>
+</section><section id="函数调用与返回的过程-1" class="slide level2">
+<h2>函数调用与返回的过程</h2>
+<ul>
+<li>（2）函数返回</li>
+<li>从被调用函数返回调用函数之前，应该完成下列三项任务：
+<ul>
+<li>保存被调函数的计算结果；</li>
+<li>释放被调函数保存局部变量的数据区；</li>
+<li>依照被调函数保存的返回地址将控制转移到调用函数。</li>
+</ul></li>
+<li>函数嵌套调用时，后调用的函数先返回，因此系统使用栈管理函数调用和返回。</li>
+</ul>
+</section><section id="递归函数" class="slide level2">
+<h2>递归函数</h2>
+<ul>
+<li>函数直接或间接调用自身，称为<strong>递归</strong>(Recursion)。</li>
+<li>何时应用递归？
+<ul>
+<li>问题具有递归的数学定义</li>
+<li>使用了递归的数据结构</li>
+<li>问题存在递归的解决方法</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>问题具有递归的数学定义
+<ul>
+<li>例：计算 <span class="math inline">\(n!\)</span></li>
+<li><span class="math display">\[fact(n)=\begin{cases} 1, &amp; n=0 \\ n \cdot fact(n-1), &amp; n&gt;0. \end{cases}\]</span></li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">long</span> fact(<span class="dt">int</span> n)
+{
+    <span class="cf">if</span> (n==<span class="dv">0</span>)
+      <span class="cf">return</span> <span class="dv">1</span>;
+    <span class="cf">else</span>
+      <span class="cf">return</span> n*fact(n<span class="dv">-1</span>);
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>问题具有递归的数学定义
+<ul>
+<li>例：计算斐波那契数：0,1,1,2,3,5,8,13,...</li>
+<li><span class="math display">\[fib(n) = \begin{cases} 0, &amp; n=1, \\ 1, &amp; n=2, \\ fib(n-1)+fib(n-2), &amp; n&gt;2. \end{cases}\]</span></li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">long</span> fib(<span class="dt">int</span> n)
+{
+    <span class="cf">if</span> (n==<span class="dv">1</span>)  <span class="cf">return</span> <span class="dv">0</span>;
+    <span class="cf">if</span> (n==<span class="dv">2</span>)  <span class="cf">return</span> <span class="dv">1</span>;
+    <span class="cf">return</span> fib(n<span class="dv">-1</span>)+fib(n<span class="dv">-2</span>);
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>问题具有递归的数学定义
+<ul>
+<li>例：计算 <span class="math inline">\(x^n\)</span>，<span class="math inline">\(n \ge 0\)</span> 为整数</li>
+<li><span class="math display">\[x^n = \begin{cases} 1, &amp; n=0, \\ x, &amp; n=1, \\ (x^2)^{n/2}, &amp; n \text{ is even} \\ x \cdot (x^2)^{\lfloor n/2 \rfloor}, &amp; n \text{ is odd.} \end{cases}\]</span></li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">double</span> Power(<span class="dt">double</span> x, <span class="dt">int</span> n)
+{
+    <span class="cf">if</span> (n==<span class="dv">0</span>)  <span class="cf">return</span> <span class="dv">1</span>;
+    <span class="cf">if</span> (n==<span class="dv">1</span>)  <span class="cf">return</span> x;
+    <span class="cf">if</span> (n%<span class="dv">2</span>==<span class="dv">0</span>)
+        <span class="cf">return</span> Power(x*x, n/<span class="dv">2</span>); 
+    <span class="cf">else</span>
+        <span class="cf">return</span> x*Power(x*x, n/<span class="dv">2</span>);
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>使用了递归的数据结构
+<ul>
+<li>例：打印单链表</li>
+<li>L 是指针，可以表示一个链表</li>
+<li>L-&gt;next 也是指针，也可以表示一个链表</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 递归打印单链表</span>
+<span class="dt">void</span> PrintLinkList(LinkList L)
+{
+    <span class="cf">if</span> (L-&gt;next != NULL) {
+        print (L-&gt;next-&gt;data);
+        PrintLinkList (L-&gt;next);
+    }
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>问题存在递归的解决方法
+<ul>
+<li>例：汉诺塔问题。</li>
+<li>用 Hanoi(n,a,b,c) 表示把 n 个盘子从 a 搬到 c，可以借助 b。其解决方法：</li>
+<li>若 n=1，直接将盘子从 a 移动到 c 即可；</li>
+<li>否则，分解为以下三步：
+<ul>
+<li>Hanoi(n-1,a,c,b)</li>
+<li>move(n,a,c)</li>
+<li>Hanoi(n-1,b,a,c)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 求解汉诺塔问题：把 n 个盘子从 a 搬到 c，可以借助 b</span>
+<span class="dt">void</span> Hanoi(<span class="dt">int</span> n, <span class="dt">char</span> a, <span class="dt">char</span> b, <span class="dt">char</span> c)
+{
+    <span class="cf">if</span> (n==<span class="dv">1</span>)
+        move(n, a, c);
+    <span class="cf">else</span> {
+        Hanoi(n<span class="dv">-1</span>, a, c, b);
+        move(n, a, c);
+        Hanoi(n<span class="dv">-1</span>, b, a, c);
+    }
+}</code></pre></div>
+</section><section id="递归的设计原则" class="slide level2">
+<h2>递归的设计原则</h2>
+<ul>
+<li>如果递归设计不当</li>
+<li>可能造成无穷递归，最终会耗尽应用程序的栈空间，导致栈溢出错误，使程序失败。</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 无穷递归的例子</span>
+<span class="co">//   讲不完的故事</span>
+<span class="dt">void</span> Story ()
+{
+    cout &lt;&lt; “从前有座山，山上有个庙，庙里有个和尚在讲故事。他说：”;
+    Story();
+}</code></pre></div>
+</section><section id="递归的设计原则-1" class="slide level2">
+<h2>递归的设计原则</h2>
+<ul>
+<li>（1）<strong>基准情形</strong>：必须存在不用继续递归即可解决的情况。</li>
+<li>（2）<strong>不断推进</strong>：对于需要递归解决的情况，每一次递归都要使得求解朝着基准情况的方向推进。</li>
+<li>（3）<strong>设计法则</strong>：假设所有的递归调用都能运行。</li>
+<li>（4）<strong>合成效益</strong>：解决一个问题时，切勿在不同的递归调用中做重复的工作。</li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>递归计算斐波那契数 fib(n) 存在很多重复的递归调用，是一个不符合合成效益法则的例子。</p>
+</blockquote>
+</div>
+</section><section id="递归的优点和缺点" class="slide level2">
+<h2>递归的优点和缺点</h2>
+<ul>
+<li>优点：递归函数结构清晰，程序易读，正确性容易证明。</li>
+<li>缺点：反复的递归函数调用使得执行效率较低。</li>
+</ul>
+</section><section id="递归的消除" class="slide level2">
+<h2>递归的消除</h2>
+<ul>
+<li>为什么消除递归？
+<ul>
+<li>某些语言不支持函数的递归调用。</li>
+<li>在某些关键部分，递归算法影响了执行的效率。</li>
+</ul></li>
+<li>如何消除递归？
+<ul>
+<li>（1）转化为循环递推。</li>
+<li>（2）自己管理一个递归工作栈。</li>
+</ul></li>
+</ul>
+</section><section id="递归转化为循环递推" class="slide level2">
+<h2>（1）递归转化为循环递推</h2>
+<ul>
+<li>使用递推可以有效减少函数递归调用的次数，节省了时间和空间。</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//递推计算n!</span>
+<span class="dt">long</span> Fact ( <span class="dt">int</span> n )
+{
+    <span class="dt">long</span> factor = <span class="dv">1</span>;
+    <span class="cf">for</span> ( <span class="dt">int</span> i=<span class="dv">1</span>; i&lt;n; i++ )
+        factor = n*factor;
+    <span class="cf">return</span> factor;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 递推计算斐波那契数</span>
+<span class="dt">long</span> Fib ( <span class="dt">int</span> n )
+{
+    <span class="cf">if</span> ( n==<span class="dv">1</span> )  <span class="cf">return</span> <span class="dv">0</span>;
+    <span class="cf">if</span> ( n==<span class="dv">2</span> )  <span class="cf">return</span> <span class="dv">1</span>; 
+    <span class="dt">long</span> f1,f2,f3;
+    f1 = <span class="dv">0</span>, f2 = <span class="dv">1</span>;
+    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">3</span>; i&lt;=n; i++) {
+        f3 = f2+f1;
+        f1 = f2, f2 = f3;
+    }
+    <span class="cf">return</span> f3;
+}</code></pre></div>
+</section><section id="递归转化为循环递推-1" class="slide level2">
+<h2>（1）递归转化为循环递推</h2>
+<ul>
+<li><strong>尾递归</strong>：如果只在函数结尾处进行递归调用，称为尾递归。</li>
+<li>一般地，尾递归都可以转化为简单的循环。</li>
+</ul>
+<figure>
+<img src="images/ch03/tail-recursion.svg" />
+</figure>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 递归打印单链表</span>
+<span class="dt">void</span> PrintLinkList ( LinkList L )
+{
+    <span class="cf">if</span> ( L-&gt;next != NULL ) {
+        print (L-&gt;next-&gt;data);
+        PrintLinkList (L-&gt;next);
+    }
+}
+
+<span class="co">/// 循环打印单链表</span>
+<span class="dt">void</span> PrintLinkList ( LinkList L )
+{
+    LinkList p = L;
+    <span class="cf">while</span> ( p-&gt;next != NULL ) {
+        print (p-&gt;next-&gt;data);
+        p = p-&gt;next;
+    }
+}</code></pre></div>
+</section><section id="自己管理递归工作栈" class="slide level2">
+<h2>（2）自己管理递归工作栈</h2>
+<ul>
+<li>为什么使用栈？
+<ul>
+<li>递归函数的调用遵循后调用先返回的顺序。</li>
+<li>符合栈后进先出的规律。</li>
+</ul></li>
+<li>什么是递归工作栈？
+<ul>
+<li>在程序中管理一个<strong>递归工作栈</strong>，存放每次递归调用时需要保存的信息，从而模拟递归调用。</li>
+<li>每一层递归所需要的返回地址、参数、局部变量等信息称为一个<strong>递归工作记录</strong>。</li>
+<li>位于栈顶的递归工作记录，称为<strong>活动记录</strong>，代表当前递归调用的工作环境。</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>如何消除递归？
+<ul>
+<li>程序开始执行时，初始化<strong>递归工作栈</strong>为空。</li>
+<li>在程序开头和每一个递归返回处设立<strong>标号</strong>。</li>
+<li>每次<strong>递归调用</strong>替换成将含有返回标号和参数等信息的工作记录<strong>入栈</strong>，然后转移到程序开头继续执行。</li>
+<li><strong>递归调用返回</strong>替换成活动记录<strong>出栈</strong>，并转移到返回标号处继续执行。</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="队列" class="titleslide slide level1"><h1>3.4 队列</h1></section><section id="队列-1" class="slide level2">
+<h2>队列</h2>
+<dl>
+<dt>队列</dt>
+<dd>一种先进先出(FIFO)的线性表
+</dd>
+<dd>只允许在表的一端进行插入，而在另一端删除元素
+</dd>
+<dt>队尾</dt>
+<dd>允许插入的一端
+</dd>
+<dd>入队列
+</dd>
+<dt>队头</dt>
+<dd>允许删除的一端
+</dd>
+<dd>出队列
+</dd>
+</dl>
+</section><section id="队列的-adt-定义" class="slide level2">
+<h2>队列的 ADT 定义</h2>
+<ul>
+<li>数据对象：相同类型</li>
+<li>数据关系：线性关系</li>
+<li>基本操作：
+<ul>
+<li>InitStack (&amp;S) 初始化</li>
+<li>DestroyStack (&amp;S) 销毁</li>
+<li>ClearStack (&amp;S) 清空</li>
+<li>StackEmpty (S) 判空</li>
+<li>StackLength (S) 求长度</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>基本操作：
+<ul>
+<li>GetTop (S,&amp;e) 取栈顶</li>
+<li>Push (&amp;S,e) 入栈</li>
+<li>Pop (&amp;S,&amp;e) 出栈</li>
+<li>StackTraverse (S,visit) 遍历</li>
+</ul></li>
+</ul>
+</section><section id="链队列" class="slide level2">
+<h2>链队列</h2>
+<ul>
+<li><p>队列的链式存储结构</p></li>
+<li><p>类型定义：单链表 + 头尾指针</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 结点结构</span>
+<span class="kw">struct</span> QNode
+{
+    T data;
+    QNode *next;
+};
+
+<span class="co">/// 链队列结构</span>
+<span class="kw">struct</span> LinkQueue {
+    QNode *front;
+    QNode *rear;
+};</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>链队列的基本形态：
+<ul>
+<li>队列空：Q.front==Q.rear</li>
+<li>队列非空</li>
+</ul></li>
+</ul>
+<figure>
+<img src="images/ch03/linkqueue.svg" />
+</figure>
+</section><section id="链队列基本操作的实现" class="slide level2">
+<h2>链队列——基本操作的实现</h2>
+<ul>
+<li>InitQueue (&amp;Q) 初始化
+<ul>
+<li>构造带头结点的单链表</li>
+<li>头、尾指针指向头结点</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 初始化空队列</span>
+<span class="dt">void</span> InitQueue(LinkQueue&amp; Q)
+{
+    Q.front = <span class="kw">new</span> QNode;
+    Q.front-&gt;next = <span class="kw">nullptr</span>;
+    Q.rear = Q.front;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>EnQueue (&amp;Q,e) 入队列
+<ul>
+<li>在表尾 Q.rear 后插入</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入队列</span>
+<span class="dt">void</span> EnQueue(LinkQueue&amp; Q, T e)
+{
+    <span class="co">// 新建结点</span>
+    p = <span class="kw">new</span> QNode&lt;T&gt;;
+    p-&gt;data = e;
+    p-&gt;next = <span class="kw">nullptr</span>;
+    <span class="co">// 插入队尾</span>
+    Q.rear-&gt;next = p;
+    <span class="co">// 更新队尾</span>
+    Q.rear = p;  <span class="co">// 新队尾</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>DeQueue (&amp;Q,&amp;e) 出队列
+<ul>
+<li>删除表头 Q.front-&gt;next</li>
+<li>只有一个元素时要修改队尾指针</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出队列</span>
+<span class="dt">void</span> DeQueue(LinkQueue&amp; Q, T&amp; e)
+{
+    <span class="co">// 如果队列空则出错</span>
+    <span class="cf">if</span>(Q.front==Q.rear)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Queue empty&quot;</span>);
+    <span class="co">// 取队头元素</span>
+    p = Q.front-&gt;next;
+    e = p-&gt;data;
+    <span class="co">// 从队列中删除队头结点</span>
+    Q.front-&gt;next = p-&gt;next;
+    <span class="co">// 必要时更新队尾指针</span>
+    <span class="cf">if</span>(p==Q.rear) Q.rear = Q.front;
+    <span class="co">// 释放结点</span>
+    <span class="kw">delete</span> p;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>GetHead (Q,&amp;e) 取队头
+<ul>
+<li>Q.front-&gt;next-&gt;data</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取队头元素</span>
+<span class="dt">void</span> GetHead(<span class="at">const</span> LinkQueue&amp; Q, T&amp; e)
+{
+    <span class="co">// 如果队列空则出错</span>
+    <span class="cf">if</span>(Q.front==Q.rear)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Queue empty&quot;</span>);
+    <span class="co">// 取队头元素</span>
+    e = Q.front-&gt;next-&gt;data;
+}</code></pre></div>
+</section><section id="循环队列" class="slide level2">
+<h2>循环队列</h2>
+<ul>
+<li>队列的顺序存储结构</li>
+<li>类型定义
+<ul>
+<li>数组 + 头、尾位置</li>
+<li>在头、尾指针超出数组末尾时，自动回到数组开头</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 循环队列</span>
+<span class="kw">struct</span> SqQueue
+{
+    T elem[MAXSIZE];    <span class="co">// 数据元素</span>
+    <span class="dt">int</span> front, rear;    <span class="co">// 头尾位置</span>
+};</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>链队列的基本形态
+<ul>
+<li>front 指向队头元素</li>
+<li>rear 指向队尾元素的下一个位置</li>
+</ul></li>
+<li>少用一个元素区分队列空和队列满
+<ul>
+<li>队列空：Q.front==Q.rear</li>
+<li>队列满：(Q.rear+1) % MAXSIZE == Q.front</li>
+</ul></li>
+</ul>
+<figure>
+<img src="images/ch03/sqqueue.svg" />
+</figure>
+<blockquote>
+<p>若增加一个标志区分队列空和队列满，则： - 队列空：Q.front==Q.rear &amp;&amp; Q.tag==0 - 队列满：Q.front==Q.rear &amp;&amp; Q.tag==1</p>
+</blockquote>
+</section><section id="循环队列基本操作的实现" class="slide level2">
+<h2>循环队列——基本操作的实现</h2>
+<ul>
+<li>InitQueue (&amp;Q) 初始化
+<ul>
+<li>分配数组空间（如需要）</li>
+<li>初始化头、尾（位置）指针</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 初始化空队列</span>
+<span class="dt">void</span> InitQueue(SqQueue&amp; Q)
+{
+    Q.front = Q.rear = <span class="dv">0</span>;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>EnQueue (&amp;Q,e) 入队列
+<ul>
+<li>若队列满则出错（注意队列满的条件）</li>
+<li>否则，在表尾插入元素</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入队列</span>
+<span class="dt">void</span> EnQueue(SqQueue&amp; Q, T e)
+{
+    <span class="co">// 若队列满，则上溢</span>
+    <span class="cf">if</span>((Q.rear<span class="dv">+1</span>) % MAXSIZE == Q.front)
+        <span class="cf">throw</span> overflow_error(<span class="st">&quot;Queue full&quot;</span>);
+    <span class="co">// 在队尾插入元素</span>
+    Q.elem[Q.rear] = e;
+    Q.rear = (Q.rear<span class="dv">+1</span>) % MAXSIZE;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>DeQueue (&amp;Q,&amp;e) 出队列
+<ul>
+<li>若队列空则出错（注意队列空的条件）</li>
+<li>否则，返回并删除队头元素</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出队列</span>
+<span class="dt">void</span> DeQueue(SqQueue&amp; Q, T&amp; e)
+{
+    <span class="co">// 若队列空，则出错</span>
+    <span class="cf">if</span>(Q.front == Q.rear)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Queue empty&quot;</span>);
+    <span class="co">// 返回并删除队头元素</span>
+    e = Q.elem[Q.front];
+    Q.front = (Q.front<span class="dv">+1</span>) % MAXSIZE;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>GetTop(Q,&amp;e) 取队头元素
+<ul>
+<li>若队列空，则出错</li>
+<li>Q.front 指向队头元素</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取队头元素</span>
+<span class="dt">void</span> GetHead(SqQueue&amp; Q, T&amp; e)
+{
+    <span class="co">// 若队列空，则出错</span>
+    <span class="cf">if</span>(Q.front == Q.rear)
+        <span class="cf">throw</span> underflow_error(<span class="st">&quot;Queue empty&quot;</span>);
+    <span class="co">// 返回并删除队头元素</span>
+    e = Q.elem[Q.front];
+}</code></pre></div>
+</section></section>
+<section><section id="队列的应用" class="titleslide slide level1"><h1>3.5 队列的应用</h1></section><section id="队列的应用-1" class="slide level2">
+<h2>队列的应用</h2>
+<ul>
+<li>例：操作系统中的进程调度</li>
+<li>例：打印队列</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
