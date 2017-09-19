@@ -81,6 +81,19 @@ T DeQueue(SqQueue<T,MAXSIZE>& Q)
     return e;
 }
 
+///
+/// 取队头元素
+///
+template<typename T, int MAXSIZE>
+void GetHead(SqQueue<T,MAXSIZE>& Q, T& e)
+{
+    // 若队列空，则出错
+    if(Q.front == Q.rear)
+        throw underflow_error("Queue empty");
+    // 返回并删除队头元素
+    e = Q.elem[Q.front];
+}
+
 
 ///
 /// 遍历队列中的元素
