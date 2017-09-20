@@ -90,7 +90,7 @@ void GetHead(SqQueue<T,MAXSIZE>& Q, T& e)
     // 若队列空，则出错
     if(Q.front == Q.rear)
         throw underflow_error("Queue empty");
-    // 返回并删除队头元素
+    // 返回队头元素
     e = Q.elem[Q.front];
 }
 
