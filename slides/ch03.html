@@ -928,13 +928,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>数据对象：相同类型</li>
 <li>数据关系：线性关系</li>
-<li>基本操作：
+<li>基本操作
 <ul>
-<li>InitStack (&amp;S) 初始化</li>
-<li>DestroyStack (&amp;S) 销毁</li>
-<li>ClearStack (&amp;S) 清空</li>
-<li>StackEmpty (S) 判空</li>
-<li>StackLength (S) 求长度</li>
+<li>InitQueue (&amp;Q) 初始化</li>
+<li>DestroyQueue (&amp;Q) 销毁</li>
+<li>ClearQueue (&amp;Q) 清空</li>
+<li>QueueEmpty (Q) 判空</li>
+<li>QueueLength (Q) 求长度</li>
 </ul></li>
 </ul>
 </section><section class="slide level2">
@@ -942,10 +942,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>基本操作：
 <ul>
-<li>GetTop (S,&amp;e) 取栈顶</li>
-<li>Push (&amp;S,e) 入栈</li>
-<li>Pop (&amp;S,&amp;e) 出栈</li>
-<li>StackTraverse (S,visit) 遍历</li>
+<li>GetHead (Q,&amp;e) / (Q) 取队头</li>
+<li>EnQueue (&amp;Q,e) 入队列</li>
+<li>DeQueue (&amp;Q,&amp;e) / (&amp;Q) 出队列</li>
+<li>QueueTraverse (Q,visit) 遍历</li>
 </ul></li>
 </ul>
 </section><section id="链队列" class="slide level2">
@@ -1159,7 +1159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     <span class="co">// 若队列空，则出错</span>
     <span class="cf">if</span>(Q.front == Q.rear)
         <span class="cf">throw</span> underflow_error(<span class="st">&quot;Queue empty&quot;</span>);
-    <span class="co">// 返回并删除队头元素</span>
+    <span class="co">// 返回队头元素</span>
     e = Q.elem[Q.front];
 }</code></pre></div>
 </section></section>
