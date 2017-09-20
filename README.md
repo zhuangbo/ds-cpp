@@ -27,6 +27,7 @@
 
 ### CH03 栈和队列
 
+- [幻灯片](slides/ch03.md)
 - [代码](src/ch03)
     - sqstack 顺序栈
     - linkstack 链栈
