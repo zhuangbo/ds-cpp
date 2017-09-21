@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="82.318077mm"
+   height="63.975941mm"
+   viewBox="0 0 82.318077 63.975941"
+   version="1.1"
+   id="svg3128"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="string-kmp-next.svg">
+  <defs
+     id="defs3122">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#EMFimage0_ref"
+       id="pattern3475"
+       patternTransform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#EMFimage0_ref"
+       id="pattern3473"
+       patternTransform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)" />
+    <clipPath
+       id="clipEmfPath1"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3130"
+         d="M -177.31521,-0.6401271 H 376.39473 V 127.70536 h -553.70994 z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath2"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3133"
+         d="m 0,20.164004 h 12.162415 v 20.80413 H 0 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath3"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3136"
+         d="M 72.014299,-0.6401271 H 84.176714 V 20.164004 H 72.014299 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath4"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3139"
+         d="M 72.014299,72.334362 H 84.176714 V 92.818429 H 72.014299 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath5"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3142"
+         d="M 35.847118,51.210168 H 48.009532 V 72.334362 H 35.847118 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath6"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3145"
+         d="m 48.64966,20.804131 h 10.88216 v 19.84394 H 48.64966 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath7"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3148"
+         d="M 48.64966,51.850295 H 59.53182 V 72.014299 H 48.64966 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath8"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3151"
+         d="m 60.492011,20.804131 h 11.202224 v 19.84394 H 60.492011 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath9"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3154"
+         d="M 60.492011,51.850295 H 71.694235 V 72.014299 H 60.492011 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath10"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3157"
+         d="m 72.654426,51.850295 h 10.88216 v 20.164004 h -10.88216 z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath11"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3160"
+         d="m 72.654426,20.804131 h 10.88216 v 19.84394 h -10.88216 z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipEmfPath12"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3163"
+         d="M 0,92.818429 H 155.87095 V 124.18466 H 0 Z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+    <image
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAKUlEQVQImb3NoREAMAzDwHf239mlBcFhOgEpbYEkP89q285qEey1g8cDxWYwB6pTUwsAAAAASUVORK5CYII="
+       height="8"
+       width="8"
+       y="0"
+       x="0"
+       id="EMFimage0" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       height="8"
+       width="8"
+       y="0"
+       x="0"
+       id="EMFimage0_ref">
+      <use
+         xlink:href="#EMFimage0"
+         id="EMFimage0_ign" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-48.723989"
+     inkscape:cy="166.61367"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="979"
+     inkscape:window-height="634"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3125">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(10.920945,-128.94059)">
+    <text
+       id="text3176"
+       y="193.10881"
+       x="161.57445"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.44921875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.52916664"
+       xml:space="preserve"><tspan
+         id="tspan3174"
+         y="0"
+         x="0"
+         sodipodi:role="line"
+         style="stroke-width:0.52916664"><tspan
+           id="tspan3172"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.44921875px;font-family:Tahoma;fill:#000000;stroke-width:0.52916664"
+           dy="0"
+           dx="0" /></tspan></text>
+    <path
+       id="path3178"
+       d="m 33.024931,137.85283 0.06352,27.628"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3180"
+       d="m 13.971147,137.88459 0.06352,27.59624"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3182"
+       d="m -5.0826352,137.85283 v 11.00886 H 13.971147 v -11.00886 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3184"
+       d="m -5.0826352,137.85283 v 11.00886 H 13.971147 v -11.00886 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3194"
+       clip-path="url(#clipEmfPath2)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3192"
+         y="0"
+         x="0"
+         transform="translate(2.560508,32.966546)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3190"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3186"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">T</tspan><tspan
+             id="tspan3188"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3196"
+       d="m 33.024931,137.85283 v 11.00886 h 6.35126 v -11.00886 z"
+       style="fill:url(#pattern3473);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3198"
+       d="m 33.024931,137.85283 v 11.00886 h 6.35126 v -11.00886 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3200"
+       d="m 39.376191,137.85283 v 11.00886 h 12.702524 v -11.00886 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3202"
+       d="m 39.376191,137.85283 v 11.00886 h 12.702524 v -11.00886 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3204"
+       d="m 33.024931,154.32377 v 11.1147 h 6.35126 v -11.1147 z"
+       style="fill:url(#pattern3475);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3206"
+       d="m 33.024931,154.32377 v 11.1147 h 6.35126 v -11.1147 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3208"
+       d="m 39.376191,154.32377 v 11.1147 h 31.756308 v -11.1147 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3210"
+       d="m 39.376191,154.32377 v 11.1147 h 31.756308 v -11.1147 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3220"
+       clip-path="url(#clipEmfPath3)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3218"
+         y="0"
+         x="0"
+         transform="translate(76.495188,12.162415)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3216"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3212"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">i</tspan><tspan
+             id="tspan3214"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <g
+       id="g3230"
+       clip-path="url(#clipEmfPath4)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3228"
+         y="0"
+         x="0"
+         transform="translate(76.175125,85.136904)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3226"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3222"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">j</tspan><tspan
+             id="tspan3224"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <g
+       id="g3240"
+       clip-path="url(#clipEmfPath5)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3238"
+         y="0"
+         x="0"
+         transform="translate(38.407626,63.692646)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3236"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3232"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">T</tspan><tspan
+             id="tspan3234"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3242"
+       d="m 13.971147,137.85283 v 11.00886 h 6.351262 v -11.00886 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3244"
+       d="m 13.971147,137.85283 v 11.00886 h 6.351262 v -11.00886 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3254"
+       clip-path="url(#clipEmfPath6)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3252"
+         y="0"
+         x="0"
+         transform="translate(50.890104,33.286609)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3250"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3246"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">a</tspan><tspan
+             id="tspan3248"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3256"
+       d="m 13.971147,154.32377 v 11.1147 h 6.351262 v -11.1147 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3258"
+       d="m 13.971147,154.32377 v 11.1147 h 6.351262 v -11.1147 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3268"
+       clip-path="url(#clipEmfPath7)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3266"
+         y="0"
+         x="0"
+         transform="translate(50.890104,64.332774)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3264"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3260"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">a</tspan><tspan
+             id="tspan3262"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3270"
+       d="m 20.322409,137.85283 v 11.04062 h 6.35126 v -11.04062 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3272"
+       d="m 20.322409,137.85283 v 11.04062 h 6.35126 v -11.04062 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3282"
+       clip-path="url(#clipEmfPath8)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3280"
+         y="0"
+         x="0"
+         transform="translate(62.412392,33.606673)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3278"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3274"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">b</tspan><tspan
+             id="tspan3276"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3284"
+       d="m 20.322409,154.32377 v 11.1147 h 6.35126 v -11.1147 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3286"
+       d="m 20.322409,154.32377 v 11.1147 h 6.35126 v -11.1147 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3296"
+       clip-path="url(#clipEmfPath9)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3294"
+         y="0"
+         x="0"
+         transform="translate(62.412392,64.332774)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3292"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3288"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">b</tspan><tspan
+             id="tspan3290"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3298"
+       d="m 26.673669,154.32377 v 11.1147 h 6.351262 v -11.1147 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3300"
+       d="m 26.673669,154.32377 v 11.1147 h 6.351262 v -11.1147 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3310"
+       clip-path="url(#clipEmfPath10)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3308"
+         y="0"
+         x="0"
+         transform="translate(75.214934,64.332774)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3306"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3302"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">c</tspan><tspan
+             id="tspan3304"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <path
+       id="path3312"
+       d="m 26.673669,137.85283 v 11.04062 h 6.351262 v -11.04062 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52916664"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3314"
+       d="m 26.673669,137.85283 v 11.04062 h 6.351262 v -11.04062 z"
+       style="fill:none;stroke:#000000;stroke-width:0.52927178px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3324"
+       clip-path="url(#clipEmfPath11)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3322"
+         y="0"
+         x="0"
+         transform="translate(75.214934,33.606673)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3320"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3316"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">c</tspan><tspan
+             id="tspan3318"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0" /></tspan></text>
+    </g>
+    <g
+       id="g3348"
+       clip-path="url(#clipEmfPath12)"
+       transform="matrix(0.52916666,0,0,0.52916666,-11.349213,127.22505)">
+      <text
+         id="text3330"
+         y="0"
+         x="0"
+         transform="translate(0,105.62097)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3328"
+           y="0"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3326"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;fill:#000000"
+             dy="0"
+             dx="0">匹配至</tspan></tspan></text>
+      <text
+         id="text3338"
+         y="0"
+         x="53.13055"
+         transform="translate(0,105.62097)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3336"
+           y="0"
+           x="53.13055"
+           sodipodi:role="line"><tspan
+             id="tspan3332"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">T[i]==T[j]</tspan><tspan
+             id="tspan3334"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;fill:#000000"
+             dy="0"
+             dx="2.711076">时，有</tspan></tspan></text>
+      <text
+         id="text3346"
+         y="16.003178"
+         x="0"
+         transform="translate(0,105.62097)"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;line-height:125%;font-family:Tahoma;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3344"
+           y="16.003178"
+           x="0"
+           sodipodi:role="line"><tspan
+             id="tspan3340"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="0">next[i+1]=j+1</tspan><tspan
+             id="tspan3342"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:12.1875px;font-family:Tahoma;fill:#000000"
+             dy="0"
+             dx="-1.323002" /></tspan></text>
+    </g>
+  </g>
+</svg>

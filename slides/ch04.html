@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="滨州学院　庄波">
+  <title>数据结构</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showMathMenu:false,
+  TeX:{equationNumbers:{autoNumber:'AMS'}}});
+  </script>
+  <script type="text/javascript" async 
+  src="MathJax/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">数据结构</h1>
+  <p class="subtitle">CH4 串</p>
+  <p class="author">滨州学院　庄波</p>
+</section>
+
+<section id="目标要求" class="slide level2">
+<h2>目标要求</h2>
+<ul>
+<li>掌握串及串的一些相关概念；</li>
+<li>了解串的存储方法；</li>
+<li>掌握串的基本运算及实现算法。</li>
+</ul>
+</section>
+<section><section id="串类型的定义" class="titleslide slide level1"><h1>4.1 串类型的定义</h1></section><section id="串的相关概念" class="slide level2">
+<h2>串的相关概念</h2>
+<dl>
+<dt>串（字符串）</dt>
+<dd>由零个或多个字符组成的有限序列
+</dd>
+<dt>长度</dt>
+<dd>串中字符的数目
+</dd>
+<dd>零个字符的串称为<strong>空串</strong>（空串的长度为零）
+</dd>
+<dt>子串和主串</dt>
+<dd>串中任意个连续的字符组成的子序列称为该串的<strong>子串</strong>
+</dd>
+<dd>包含子串的串称为<strong>主串</strong>
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>位置</dt>
+<dd>字符在串中的<strong>位置</strong>：字符在序列中的序号
+</dd>
+<dd><strong>子串在主串中的位置</strong>：子串的第一个字符在主串中的位置
+</dd>
+<dt>串相等</dt>
+<dd>两个串的值相等
+</dd>
+<dd>各个对应位置的字符都相等
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>串常量</dt>
+<dd>字面常量，通常用引号括起来
+</dd>
+<dt>空格串</dt>
+<dd>一个或多个空格组成的串，不同于空串
+</dd>
+<dt>串的特点</dt>
+<dd>逻辑结构是线性的
+</dd>
+<dd>通常以串的整体作为操作对象
+</dd>
+</dl>
+</section><section id="串的-adt-定义" class="slide level2">
+<h2>串的 ADT 定义</h2>
+<ul>
+<li>数据对象：属于同一字符集</li>
+<li>数据关系：线性关系</li>
+<li>基本操作：
+<ul>
+<li>StrAssign (&amp;T,chars) 生成串</li>
+<li>StrCopy (&amp;T,S) 复制串</li>
+<li>StrEmpty (S) 判空</li>
+<li>StrLength (S) 求长度</li>
+<li>ClearString (&amp;S) 清空串</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>基本操作：
+<ul>
+<li>Concat (&amp;T,S1,S2) 连接串</li>
+<li>StrCompare (S,T) 比较串（+-0表示&gt;&lt;=）</li>
+<li>SubString (&amp;Sub,S,pos,len) 求子串</li>
+<li>Index (S,T,pos) 求子串位置（串的模式匹配）</li>
+<li>Replace (&amp;S,T,V) 字符串替换</li>
+<li>StrInsert (&amp;S,pos,T) 插入串</li>
+<li>StrDelete (&amp;S,pos,len) 删除串</li>
+<li>DestroyString (&amp;S) 销毁串</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="串的表示和实现" class="titleslide slide level1"><h1>4.2 串的表示和实现</h1></section><section id="串的存储结构" class="slide level2">
+<h2>串的存储结构</h2>
+<ul>
+<li>（1）<strong>定长顺序存储</strong>
+<ul>
+<li>连续的存储单元存储串值</li>
+<li>最大长度固定，超过最大长度则“截断”</li>
+</ul></li>
+<li>（2）<strong>堆分配存储</strong>
+<ul>
+<li>动态分配的连续存储单元存储串值</li>
+<li>长度几乎不受限制</li>
+</ul></li>
+<li>（3）<strong>块链存储</strong>
+<ul>
+<li>采用链表方式存储串值</li>
+<li>每个结点存放一个或多个字符</li>
+<li>存储密度较低，操作不够方便</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<p>串的定长顺序存储结构：</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 定长顺序串</span>
+<span class="at">const</span> <span class="dt">int</span> MAXSTRLEN = <span class="dv">254</span>;  <span class="co">// 串的最大长度</span>
+<span class="kw">typedef</span> <span class="dt">unsigned</span> <span class="dt">char</span> SString[MAXSTRLEN<span class="dv">+2</span>]; <span class="co">// [0] 表示串长度</span></code></pre></div>
+<blockquote>
+<p>[0] 表示串长度，串值从 [1] 开始。</p>
+</blockquote>
+</section></section>
+<section><section id="串的模式匹配算法" class="titleslide slide level1"><h1>4.3 串的模式匹配算法</h1></section><section id="子串定位函数-indexstpos" class="slide level2">
+<h2>子串定位函数 Index(S,T,pos)</h2>
+<ul>
+<li>功能：求子串在主串中的位置</li>
+<li>思路：模式串与主串逐个字符对比，匹配不成功时，再从主串中的下一个字符开始重新和模式串比较。</li>
+</ul>
+<figure>
+<img src="images/ch04/string-index.svg" />
+</figure>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 定位子串</span>
+<span class="dt">int</span> Index(SString S, SString T, <span class="dt">int</span> pos)
+{
+    i = pos, j = <span class="dv">1</span>;
+    <span class="cf">while</span> (i&lt;=S[<span class="dv">0</span>] &amp;&amp; j&lt;=T[<span class="dv">0</span>]) {
+        <span class="cf">if</span> (S[i] == T[j]) { ++i; ++j; }
+        <span class="cf">else</span> {
+            i = i-j<span class="dv">+2</span>;  <span class="co">// 主串回溯</span>
+            j = <span class="dv">1</span>;
+        }
+    }
+    <span class="cf">return</span> j&gt;T[<span class="dv">0</span>] ? i-T[<span class="dv">0</span>] : <span class="dv">0</span>;
+}</code></pre></div>
+</section><section id="kmp-算法" class="slide level2">
+<h2>KMP 算法</h2>
+<ul>
+<li>Index(S,T,pos) 算法在字符 S[i] 和 T[j] 失配时：
+<ul>
+<li>主串回溯 i = i-j+2</li>
+<li>模式串从头开始 j = 1</li>
+</ul></li>
+<li>KMP 算法的不同：
+<ul>
+<li>字符 S[i] 和 T[j] 失配时主串不回溯</li>
+<li>模式串不必从头开始，而是回溯到一个恰当的位置 next[j] = k+1</li>
+<li>使得 S[i] 前面 k 个字符恰好与 T 开头 k 个字符匹配</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>KMP 算法 S[i] 和 T[j] 失配时
+<ul>
+<li>模式串向右滑动</li>
+<li>回溯到“一个恰当的位置” next[j] = k+1</li>
+<li>此时 T[1..k] 与 T[j-k+1..j-1] 相等</li>
+</ul></li>
+</ul>
+<figure>
+<img src="images/ch04/string-kmp.svg" />
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>KMP 算法</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// KMP算法</span>
+<span class="dt">int</span> Index_KMP(SString S, SString T, <span class="dt">int</span> pos)
+{
+    get_next(T, next);  <span class="co">// 求失配函数值 next</span>
+
+    i = pos, j = <span class="dv">1</span>;
+    <span class="cf">while</span> (i&lt;=S[<span class="dv">0</span>] &amp;&amp; j&lt;=T[<span class="dv">0</span>]) {
+        <span class="cf">if</span> (j==<span class="dv">0</span> || S[i] == T[j]) { ++i; ++j; }
+        <span class="cf">else</span> j = next[j];  <span class="co">// 模式串滑动</span>
+    }
+    <span class="cf">return</span> j&gt;T[<span class="dv">0</span>] ? i-T[<span class="dv">0</span>] : <span class="dv">0</span>;
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li>求失配函数 next 的算法
+<ul>
+<li>定义 next[1] = 0 （第一个字符失配）</li>
+<li>若子串 T[..i] 与 T[1..j] 相等，可以得知 next[i+1] = j+1</li>
+</ul></li>
+</ul>
+<figure>
+<img src="images/ch04/string-kmp-next.svg" />
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>求失配函数 next 的算法</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 根据模式串 T 计算失配函数值 next[]</span>
+<span class="dt">void</span> get_next(SString T,<span class="dt">int</span> next[])
+{
+    i = <span class="dv">1</span>, j = <span class="dv">0</span>;
+    next[<span class="dv">1</span>] = <span class="dv">0</span>;
+    <span class="cf">while</span> (i &lt; T[<span class="dv">0</span>]) {
+        <span class="cf">if</span> (j==<span class="dv">0</span> || T[i]==T[j]) {
+            ++i; ++j;
+            next[i] = j;
+        } <span class="cf">else</span> {
+            j = next[j];
+        }
+    }
+}</code></pre></div>
+</section><section class="slide level2">
+
+<p>例：模式串 <code>T='ababaaab'</code> 对应的失配函数值 next 为<code>________</code>。</p>
+<figure>
+<img src="images/ch04/string-kmp-next-eg.svg" />
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>求失配函数的修正值 nextval
+<ul>
+<li>在 T[i+1]==T[j+1] 的情况下，若 T[i+1] 失配，回溯到 next[i+1] = j+1，必然导致再次失配。</li>
+<li>此时令 next[i+1] = next[j+1] 可以避免失配回溯后二次失配的情况。</li>
+</ul></li>
+</ul>
+<figure>
+<img src="images/ch04/string-kmp-nextval.svg" />
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>求失配函数的修正值 nextval</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 根据模式串 T 计算失配函数值 nextval[]</span>
+<span class="dt">void</span> get_nextval(SString T,<span class="dt">int</span> nextval[])
+{
+    <span class="dt">int</span> i = <span class="dv">1</span>, j = <span class="dv">0</span>;
+    nextval[<span class="dv">1</span>] = <span class="dv">0</span>;
+    <span class="cf">while</span> (i &lt; T[<span class="dv">0</span>]) {
+        <span class="cf">if</span> (j==<span class="dv">0</span> || T[i]==T[j]) {
+            ++i; ++j;
+            nextval[i] = T[i]!=T[j] ? j : nextval[j];
+        } <span class="cf">else</span> {
+            j = nextval[j];
+        }
+    }
+}</code></pre></div>
+</section><section class="slide level2">
+
+<p>例：模式串 <code>T='ababaaab'</code> 对应的失配函数修正值 nextval 为<code>________</code>。</p>
+<figure>
+<img src="images/ch04/string-kmp-nextval-eg.svg" />
+</figure>
+</section><section id="习题" class="slide level2">
+<h2>习题</h2>
+<ul>
+<li>4.1 长度为 n 的串的子串最多有多少个?</li>
+<li>4.2 （1）<code>SubString(&quot;data structure&quot;,3,5)=______</code>，（2）<code>Index(&quot;a bc&quot;,&quot;bc&quot;)=______</code>， （3）<code>Replace(&quot;aaa&quot;,&quot;aa&quot;,&quot;a&quot;)=______</code></li>
+<li>4.3 模式串 <code>P=‘abaabcac’</code> 的 next 函数值序列为<code>________</code>，修正值 nextval 为 <code>________</code>。</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
