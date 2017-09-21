@@ -85,13 +85,23 @@ T DeQueue(SqQueue<T,MAXSIZE>& Q)
 /// 取队头元素
 ///
 template<typename T, int MAXSIZE>
-void GetHead(SqQueue<T,MAXSIZE>& Q, T& e)
+void GetHead(const SqQueue<T,MAXSIZE>& Q, T& e)
 {
     // 若队列空，则出错
     if(Q.front == Q.rear)
         throw underflow_error("Queue empty");
     // 返回队头元素
     e = Q.elem[Q.front];
+}
+
+template<typename T, int MAXSIZE>
+T GetHead(const SqQueue<T,MAXSIZE>& Q)
+{
+    // 若队列空，则出错
+    if(Q.front == Q.rear)
+        throw underflow_error("Queue empty");
+    // 返回队头元素
+    return Q.elem[Q.front];
 }
 
 
