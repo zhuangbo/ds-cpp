@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="滨州学院　庄波">
+  <title>数据结构</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({showMathMenu:false,
+  TeX:{equationNumbers:{autoNumber:'AMS'}}});
+  </script>
+  <script type="text/javascript" async 
+  src="MathJax/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">数据结构</h1>
+  <p class="subtitle">CH5 数组和广义表</p>
+  <p class="author">滨州学院　庄波</p>
+</section>
+
+<section id="目标要求" class="slide level2">
+<h2>目标要求</h2>
+<ul>
+<li>掌握数组的存储结构及特殊矩阵的压缩存储；</li>
+<li>掌握广义表的概念；</li>
+<li>了解广义表的基本运算及存储结构。</li>
+</ul>
+</section>
+<section><section id="数组的定义" class="titleslide slide level1"><h1>5.1 数组的定义</h1></section><section id="数组-adt" class="slide level2">
+<h2>数组 ADT</h2>
+<ul>
+<li><strong>n 维数组</strong>
+<ul>
+<li>类型相同的数据元素</li>
+<li><span class="math inline">\(n\)</span> 维下标
+<ul>
+<li>创建之后维数不再改变</li>
+<li>第 <span class="math inline">\(i\)</span> 维的长度 <span class="math inline">\(b_i\)</span></li>
+<li>元素个数 <span class="math inline">\(b_1 \times b_2 \times \cdots \times b_n\)</span></li>
+</ul></li>
+<li><span class="math inline">\(n\)</span> 个线性关系</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>基本操作
+<ul>
+<li>初始化</li>
+<li>销毁</li>
+<li>存取元素</li>
+<li>修改元素值</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="数组的顺序表示和实现" class="titleslide slide level1"><h1>5.2 数组的顺序表示和实现</h1></section><section id="数组的顺序存储" class="slide level2">
+<h2>数组的顺序存储</h2>
+<ul>
+<li>多维数组映射到一维存储空间</li>
+<li>次序约定
+<ul>
+<li>低下标优先</li>
+<li>高下标优先</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>低下标优先</strong>
+<ul>
+<li>优先按低维下标的大小安排存储空间</li>
+<li>二维数组：
+<ul>
+<li><strong>以行序为主序</strong></li>
+<li>如 C/C++ 等大多数语言</li>
+</ul></li>
+</ul></li>
+<li><strong>高下标优先</strong>
+<ul>
+<li>优先按高维下标的大小安排存储空间</li>
+<li>二维数组：
+<ul>
+<li><strong>以列序为主序</strong></li>
+<li>如 Fortran</li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>数组的顺序存储的特点：
+<ul>
+<li>随机存取</li>
+<li>存取数组中任一元素时间相等</li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="矩阵的压缩存储" class="titleslide slide level1"><h1>5.3 矩阵的压缩存储</h1></section><section id="特殊矩阵" class="slide level2">
+<h2>特殊矩阵</h2>
+<ul>
+<li><strong>对称矩阵</strong>： <span class="math inline">\(a_{ij} = a_{ji}, \quad 1 \le i,j \le n\)</span>
+<ul>
+<li>下三角部分 a[i,j] 映射到 sa[k]</li>
+<li><span class="math inline">\(k \ge 0\)</span> 和 <span class="math inline">\(1 \le i,j \le n\)</span> 满足以下关系：</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[k = \begin{cases}   \dfrac{ i (i-1) }{ 2 } + j-1,  &amp; i \ge j,  \\   \dfrac{ j (j-1) }{ 2 } + i-1,  &amp; i&lt;j.  \end{cases}\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>三角矩阵</strong>
+<ul>
+<li>与对称矩阵类似</li>
+</ul></li>
+<li><strong>下三角矩阵</strong> a[i,j] 映射到 sa[k]，满足</li>
+</ul>
+<p><span class="math display">\[k = \begin{cases} \dfrac{ i (i-1) }{ 2 } + j-1,  &amp; i \ge j, \\ 0,  &amp; i&lt;j. \end{cases}\]</span></p>
+<ul>
+<li><strong>上三角矩阵</strong> a[i,j] 映射到 sa[k]，满足</li>
+</ul>
+<p><span class="math display">\[k = \begin{cases} 0,  &amp; i &lt; j,  \\   \dfrac{ j (j-1) }{ 2 } + i-1,  &amp; i\le j.  \end{cases}\]</span></p>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>对角矩阵</strong>
+<ul>
+<li>非零元集中在主对角线为中心的带状区域</li>
+<li>也可以压缩存储到一维数组上</li>
+</ul></li>
+</ul>
+</section><section id="稀疏矩阵" class="slide level2">
+<h2>稀疏矩阵</h2>
+<dl>
+<dt>稀疏因子与稀疏矩阵</dt>
+<dd>在 <span class="math inline">\(m \times n\)</span>的矩阵中有 <span class="math inline">\(t\)</span> 个元素不为零，定义<strong>稀疏因子</strong> <span class="math inline">\(\delta\)</span>
+</dd>
+<dd><span class="math display">\[\delta = \frac{t}{m \times n}\]</span>
+</dd>
+<dd>通常认为 <span class="math inline">\(\delta \le 0.05\)</span> 时称为<strong>稀疏矩阵</strong>
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<ul>
+<li>稀疏矩阵的压缩存储：只存储非零元
+<ul>
+<li>（1）三元组顺序表</li>
+<li>（2）行逻辑链接的顺序表</li>
+<li>（3）十字链表</li>
+</ul></li>
+</ul>
+</section><section id="三元组顺序表" class="slide level2">
+<h2>三元组顺序表</h2>
+<dl>
+<dt>三元组</dt>
+<dd>矩阵中一个元素的位置和值 (i,j,e)
+</dd>
+<dt>三元组顺序表</dt>
+<dd>以行序为主序
+</dd>
+<dd>先按 i 排序，再按 j 排序
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<ul>
+<li>三元组顺序表的类型定义</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 三元组</span>
+<span class="kw">struct</span> Triple {
+  <span class="dt">int</span> i,j;  <span class="co">// 非零元的位置</span>
+  E e;      <span class="co">// 元素的值</span>
+};
+
+<span class="co">/// 三元组顺序表</span>
+<span class="kw">struct</span> TSMatrix {
+  Triple data[MAXSIZE];
+  <span class="dt">int</span> mu, nu, tu;  <span class="co">// 矩阵行数、列数和非零元数</span>
+}</code></pre></div>
+</section><section class="slide level2">
+
+<ul>
+<li><p>算法：矩阵转置</p></li>
+<li>思路：
+<ul>
+<li>先算出每一列中非零元的个数</li>
+<li>再计算每一列中第一个非零元的位置</li>
+<li>逐个元素转置</li>
+</ul></li>
+<li><p>时间复杂度：<span class="math inline">\(O(nu+tu)\)</span></p></li>
+</ul>
+</section><section id="行逻辑链接的顺序表" class="slide level2">
+<h2>行逻辑链接的顺序表</h2>
+<ul>
+<li>行逻辑链接的顺序表
+<ul>
+<li>存储各行第一个非零元的位置</li>
+<li>算法：矩阵乘法</li>
+</ul></li>
+</ul>
+</section><section id="十字链表" class="slide level2">
+<h2>十字链表</h2>
+<ul>
+<li>结点结构：( i, j, e, right, down )</li>
+<li>非零元素组成行表和列表</li>
+<li>算法：创建十字链表</li>
+</ul>
+</section></section>
+<section><section id="广义表的定义" class="titleslide slide level1"><h1>5.4 广义表的定义</h1></section><section id="广义表的定义-1" class="slide level2">
+<h2>广义表的定义</h2>
+<ul>
+<li><strong>广义表</strong>：<span class="math inline">\(L=(\alpha_1,\alpha_2,\ldots, \alpha_n)\)</span>，线性表的推广</li>
+<li>ADT 定义
+<ul>
+<li>数据对象：数据元素可以是<strong>原子</strong>或<strong>广义表</strong></li>
+<li>数据关系：线性关系</li>
+<li>基本操作</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<dl>
+<dt>长度</dt>
+<dd>表中元素个数
+</dd>
+<dt>空表 ( )</dt>
+<dd>长度为零的表
+</dd>
+<dd>与 (( )) 不同
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>表头 Head(L)</dt>
+<dd>表中的第一个元素
+</dd>
+<dd>可能是原子，也可能是列表
+</dd>
+<dt>表尾 Tail(L)</dt>
+<dd>除第一个之外的其余元素组成的表
+</dd>
+<dd>一定是列表
+</dd>
+</dl>
+</section><section class="slide level2">
+
+<dl>
+<dt>特点</dt>
+<dd>列表的元素可以是子表
+</dd>
+<dd>列表可以为其他列表共享
+</dd>
+<dd>列表可是是一个递归表
+</dd>
+</dl>
+</section></section>
+<section><section id="广义表的存储结构" class="titleslide slide level1"><h1>5.5 广义表的存储结构</h1></section><section id="广义表的存储结构-1" class="slide level2">
+<h2>广义表的存储结构</h2>
+<ul>
+<li>通常采用链式存储结构</li>
+<li>结点结构：
+<ul>
+<li>表结点（tag=1, hp, tp）</li>
+<li>原子结点（tag=0, atom）</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 广义表结点</span>
+<span class="kw">struct</span> GLNode {
+  <span class="dt">int</span> tag;  <span class="co">// ATOM=0 原子， LIST=1 子表</span>
+  <span class="kw">union</span> {
+    E atom;  <span class="co">// 原子结点的值</span>
+    <span class="kw">struct</span> {
+      GLNode *hp, *tp; <span class="co">// 表头指针和表尾指针</span>
+    } ptr;   <span class="co">// 表结点的指针</span>
+  };
+};
+
+<span class="co">/// 广义表</span>
+<span class="kw">typedef</span> GLNode *GList;</code></pre></div>
+</section></section>
+<section><section id="广义表的递归算法" class="titleslide slide level1"><h1>5.7 广义表的递归算法</h1></section><section id="广义表的递归算法-1" class="slide level2">
+<h2>广义表的递归算法</h2>
+<ul>
+<li>广义表具有递归结构</li>
+<li>便于采用递归算法
+<ul>
+<li>空表和原子通常作为递归停止条件</li>
+<li>对子表递归</li>
+</ul></li>
+<li>算法：求广义表的深度（括号嵌套的最大重数）</li>
+<li>算法：复制广义表</li>
+<li>算法：建立广义表</li>
+</ul>
+</section><section id="习题" class="slide level2">
+<h2>习题</h2>
+<ul>
+<li>5.1 二维数组 A[10..20, 5..10] 采用以行为主的方法存储,每个元素占 4 个存储单元,并且 A[10, 5] 的存储地址是 1000,则 A[18, 9]的地址为<code>____</code>。</li>
+<li>5.2 n 阶对称矩阵中的元素 a[i,j] 压缩存储到一维数组 sa[k]，以行序为主序存储其下三角中的元，写出 k 与 i 和 j 的对应关系。</li>
+<li>5.3 广义表 L = ((a,b),(c,d))，则 GetHead(L)=<code>____</code>，GetTail(L)=<code>____</code>，GetTail(GetHead(L))=<code>____</code>，GetTail(GetHead(GetTail(L)))=<code>____</code>。</li>
+<li>5.4 广义表 L = ((()),a,((b,c),(),d),(((e)))) 的深度为 <code>____</code>。</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
