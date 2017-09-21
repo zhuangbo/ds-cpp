@@ -11,8 +11,8 @@ using namespace std;
 ///
 /// 打印顺序表
 ///
-template<typename T, int M>
-void PrintList(const SqList<T,M>& L)
+template<typename E, int M>
+void PrintList(const SqList<E,M>& L)
 {
     cout << "(";
     for(int i=0; i<L.length; i++)

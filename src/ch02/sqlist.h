@@ -15,9 +15,9 @@ using std::length_error;
 ///
 /// 线性表的顺序存储结构
 ///
-template<typename T, int MAXSIZE=256>
+template<typename E, int MAXSIZE=256>
 struct SqList {
-    T elem[MAXSIZE];
+    E elem[MAXSIZE];
     int length;
 };
 
@@ -27,16 +27,16 @@ struct SqList {
 ///
 /// 构造空的顺序表 L
 ///
-template<typename T, int M>
-void InitList(SqList<T,M>& L) {
+template<typename E, int M>
+void InitList(SqList<E,M>& L) {
     L.length = 0;  // 空表长度为 0
 }
 
 ///
 /// 销毁顺序表 L
 ///
-template<typename T, int M>
-void DestroyList(SqList<T,M>& L)
+template<typename E, int M>
+void DestroyList(SqList<E,M>& L)
 {
     // do nothing
 }
@@ -44,8 +44,8 @@ void DestroyList(SqList<T,M>& L)
 ///
 /// 将顺序表 L 置为空表
 ///
-template<typename T, int M>
-void ClearList(SqList<T,M>& L)
+template<typename E, int M>
+void ClearList(SqList<E,M>& L)
 {
     L.length = 0;
 }
@@ -53,8 +53,8 @@ void ClearList(SqList<T,M>& L)
 ///
 /// 若 L 为空表，则返回 true，否则返回 false
 ///
-template<typename T, int M>
-bool ListEmpty(const SqList<T,M>& L)
+template<typename E, int M>
+bool ListEmpty(const SqList<E,M>& L)
 {
     return L.length == 0;
 }
@@ -62,8 +62,8 @@ bool ListEmpty(const SqList<T,M>& L)
 ///
 /// 返回顺序表 L 中数据元素个数
 ///
-template<typename T, int M>
-int ListLength(const SqList<T,M>& L)
+template<typename E, int M>
+int ListLength(const SqList<E,M>& L)
 {
     return L.length;
 }
@@ -71,8 +71,8 @@ int ListLength(const SqList<T,M>& L)
 ///
 /// 用 e 返回顺序表 L 中第 i 个数据元素，1<=i<=length
 ///
-template<typename T, int M>
-bool GetElem(const SqList<T,M>& L, int i, T& e)
+template<typename E, int M>
+bool GetElem(const SqList<E,M>& L, int i, E& e)
 {
     // 若 i 值不合法，则返回 false
     if(i<1 || i>L.length)  return false;
@@ -87,8 +87,8 @@ bool GetElem(const SqList<T,M>& L, int i, T& e)
 ///
 /// 取顺序表 L 中第 i 个元素
 ///
-template<typename T, int M>
-const T& GetElem(const SqList<T,M>& L, int i)
+template<typename E, int M>
+const E& GetElem(const SqList<E,M>& L, int i)
 {
     // 若 i 值不合法，不能取元素
     if(i<1 || i>L.length) throw out_of_range("i out of range");
@@ -100,8 +100,8 @@ const T& GetElem(const SqList<T,M>& L, int i)
 ///
 /// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e
 ///
-template<typename T, int MAXSIZE>
-void ListInsert(SqList<T,MAXSIZE>& L, int i, T e)
+template<typename E, int MAXSIZE>
+void ListInsert(SqList<E,MAXSIZE>& L, int i, E e)
 {
     // 若表满，则不能插入
     if(L.length==MAXSIZE) throw length_error("L is full");
@@ -121,8 +121,8 @@ void ListInsert(SqList<T,MAXSIZE>& L, int i, T e)
 ///
 /// 在顺序表 L 中删除第 i 个元素，用 e 返回
 ///
-template<typename T, int M>
-void ListDelete(SqList<T,M>& L, int i, T& e)
+template<typename E, int M>
+void ListDelete(SqList<E,M>& L, int i, E& e)
 {
     // 若 i 值不合法，则不能删除
     if(i<1 || i>L.length) throw out_of_range("i out of range");
@@ -142,8 +142,8 @@ void ListDelete(SqList<T,M>& L, int i, T& e)
 /// 返回顺序表 L 中第一个与 e 满足关系 compare 的数据元素的位序
 /// 若这样的数据元素不存在，则返回 0。
 ///
-template<typename T, int M, typename Cmp>
-int LocateElem(const SqList<T,M>& L, const T& e, Cmp compare)
+template<typename E, int M, typename Cmp>
+int LocateElem(const SqList<E,M>& L, const E& e, Cmp compare)
 {
     // 逐个取出元素与 e 比较
     for(int i = 0; i < L.length; i++) {
@@ -157,8 +157,8 @@ int LocateElem(const SqList<T,M>& L, const T& e, Cmp compare)
 ///
 /// 遍历顺序表，依次对 L 中的每个数据元素调用函数 visit
 ///
-template<typename T, int M, typename Func>
-void ListTraverse(const SqList<T,M>& L, Func visit)
+template<typename E, int M, typename Func>
+void ListTraverse(const SqList<E,M>& L, Func visit)
 {
     for(int i = 0; i < L.length; i++) {
         visit(L.elem[i]);

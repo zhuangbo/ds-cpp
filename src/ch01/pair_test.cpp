@@ -12,8 +12,8 @@ using namespace std;
 ///
 /// 打印输出一个对
 ///
-template <typename T1, typename T2>
-void print(const Pair<T1,T2>& p)
+template <typename E1, typename E2>
+void print(const Pair<E1,E2>& p)
 {
     cout << "(" << first(p) << ", " << second(p) << ")" << endl;
 }

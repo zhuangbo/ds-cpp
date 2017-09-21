@@ -14,15 +14,15 @@ using std::underflow_error;
 ///
 /// 结点结构
 ///
-template<typename T>
+template<typename E>
 struct LNode {
-    T data;
+    E data;
     LNode *next;
 };
 
 /// 指针作为链表类型
-template<typename T>
-using Stack = LNode<T> *; // C++11 only
+template<typename E>
+using Stack = LNode<E> *; // C++11 only
 
 ///////////////////////////////////////
 /// 基本操作
@@ -30,8 +30,8 @@ using Stack = LNode<T> *; // C++11 only
 ///
 /// 初始化链栈
 ///
-template<typename T>
-void InitStack(Stack<T>& S)
+template<typename E>
+void InitStack(Stack<E>& S)
 {
     S = NULL;
 }
@@ -39,8 +39,8 @@ void InitStack(Stack<T>& S)
 ///
 /// 判空
 ///
-template<typename T>
-bool StackEmpty(const Stack<T>& S)
+template<typename E>
+bool StackEmpty(const Stack<E>& S)
 {
     return S == NULL;
 }
@@ -48,8 +48,8 @@ bool StackEmpty(const Stack<T>& S)
 ///
 /// 栈长度
 ///
-template<typename T>
-int StackLength(const Stack<T>& S)
+template<typename E>
+int StackLength(const Stack<E>& S)
 {
     int n = 0;
     for(auto p = S; p; p = p->next) ++n;
@@ -59,11 +59,11 @@ int StackLength(const Stack<T>& S)
 ///
 /// 入栈
 ///
-template<typename T>
-void Push(Stack<T>& S, T e)
+template<typename E>
+void Push(Stack<E>& S, E e)
 {
     // 新建结点
-    Stack<T> p = new LNode<T>;
+    Stack<E> p = new LNode<E>;
     p->data = e;
     // 作为新的表头
     p->next = S;
@@ -73,8 +73,8 @@ void Push(Stack<T>& S, T e)
 ///
 /// 出栈
 ///
-template<typename T>
-void Pop(Stack<T>& S, T& e)
+template<typename E>
+void Pop(Stack<E>& S, E& e)
 {
     // 栈空则下溢
     if(S==NULL) throw underflow_error("Stack underflow");
@@ -89,8 +89,8 @@ void Pop(Stack<T>& S, T& e)
 ///
 /// 出栈
 ///
-template<typename T>
-T Pop(Stack<T>& S)
+template<typename E>
+E Pop(Stack<E>& S)
 {
     // 栈空则下溢
     if(S==NULL) throw underflow_error("Stack underflow");
@@ -105,8 +105,8 @@ T Pop(Stack<T>& S)
 ///
 /// 取栈顶元素
 ///
-template<typename T>
-void GetTop(const Stack<T>& S, T& e)
+template<typename E>
+void GetTop(const Stack<E>& S, E& e)
 {
     // 栈空则下溢
     if(S==NULL) throw underflow_error("Stack underflow");
@@ -117,8 +117,8 @@ void GetTop(const Stack<T>& S, T& e)
 ///
 /// 取栈顶元素
 ///
-template<typename T>
-T GetTop(const Stack<T>& S)
+template<typename E>
+E GetTop(const Stack<E>& S)
 {
     // 栈空则下溢
     if(S==NULL) throw underflow_error("Stack underflow");

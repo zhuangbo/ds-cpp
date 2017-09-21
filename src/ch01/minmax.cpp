@@ -6,10 +6,10 @@
 ///
 /// 返回数组 a[n] 中最小的元素
 ///
-template <typename T>
-T min(T a[], int n)
+template <typename E>
+E min(E a[], int n)
 {
-    T tmp = a[0];
+    E tmp = a[0];
     for(int i=1; i<n; i++)
         if(a[i] < tmp)
             tmp = a[i];
@@ -19,10 +19,10 @@ T min(T a[], int n)
 ///
 /// 返回数组 a[n] 中最大的元素
 ///
-template <typename T>
-T max(T a[], int n)
+template <typename E>
+E max(E a[], int n)
 {
-    T tmp = a[0];
+    E tmp = a[0];
     for(int i=1; i<n; i++)
         if(a[i] > tmp)
             tmp = a[i];
@@ -33,8 +33,8 @@ T max(T a[], int n)
 /// 返回数组 a[n] 中最小的和最大的元素 min 和 max
 /// 总计 2n-2 次比较
 ///
-template <typename T>
-void minmax(T a[], int n, T& min, T& max)
+template <typename E>
+void minmax(E a[], int n, E& min, E& max)
 {
     min = max = a[0];
     for(int i=1; i<n; i++) {
@@ -49,8 +49,8 @@ void minmax(T a[], int n, T& min, T& max)
 /// 返回数组 a[n] 中最小的和最大的元素 min 和 max
 /// 总计 ⌈3n/2⌉-2 次比较
 ///
-template <typename T>
-void minmax2(T a[], int n, T& min, T& max)
+template <typename E>
+void minmax2(E a[], int n, E& min, E& max)
 {
     if(n==1) {
         min = max = a[0];
@@ -89,8 +89,8 @@ using std::endl;
 ///
 /// 测试最小值最大值
 ///
-template <typename T>
-void test(T a[], int n)
+template <typename E>
+void test(E a[], int n)
 {
     // 测试数据
     cout << "{ ";

@@ -17,8 +17,8 @@
  * @param x  the element to be found
  * @return the index of the element in the array if found, -1 otherwise.
  */
-template <typename T>
-int binary_search(T a[], int n, const T& x)
+template <typename E>
+int binary_search(E a[], int n, const E& x)
 {
     int low, mid, high;
 

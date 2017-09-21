@@ -10,9 +10,9 @@
 ///////////////////////////////////////
 /// 存储结构定义
 ///
-template <typename T>
+template <typename E>
 struct Triplet {
-    T elem[3];
+    E elem[3];
 };
 
 ///////////////////////////////////////
@@ -22,8 +22,8 @@ struct Triplet {
 ///
 /// 返回三元组 t 的第 i 个元素（1<=i<=3）。
 ///
-template <typename T>
-const T& Get(const Triplet<T>& t, int i)
+template <typename E>
+const E& Get(const Triplet<E>& t, int i)
 {
     if(i<1 || i>3)
         throw std::out_of_range("i<1 or i>3");
@@ -34,8 +34,8 @@ const T& Get(const Triplet<T>& t, int i)
 ///
 /// 改变三元组 t 的第 i 个元素（1<=i<=3）的值为 e。
 ///
-template <typename T>
-void Put(Triplet<T>& t, int i, const T& e)
+template <typename E>
+void Put(Triplet<E>& t, int i, const E& e)
 {
     if(i<1 || i>3)
         throw std::out_of_range("i<1 or i>3");
@@ -50,8 +50,8 @@ void Put(Triplet<T>& t, int i, const T& e)
 // // 不足之处：与上述常引用版本相比，在参数传递和返回结果时
 // // 都会产生额外的存储分配和释放，可能导致低效率。
 // // 没有检查参数合法性，缺少错误处理。
-// template <typename T>
-// T Get(Triplet<T> t, int i)
+// template <typename E>
+// E Get(Triplet<E> t, int i)
 // {
 //     return t.elem[i-1];
 // }
@@ -59,8 +59,8 @@ void Put(Triplet<T>& t, int i, const T& e)
 // // 不足之处：与上述常引用版本相比，在参数传递时会产生
 // // 额外的存储分配和释放，可能导致低效率。
 // // 没有检查参数合法性，缺少错误处理。
-// template <typename T>
-// void Put(Triplet<T>& t, int i, T e)
+// template <typename E>
+// void Put(Triplet<E>& t, int i, E e)
 // {
 //     t.elem[i-1] = e;
 // }

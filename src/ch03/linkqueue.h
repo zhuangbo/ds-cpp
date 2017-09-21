@@ -12,18 +12,18 @@ using std::underflow_error;
 /// 存储结构
 
 /// 结点结构
-template<typename T>
+template<typename E>
 struct QNode
 {
-    T data;
+    E data;
     QNode *next;
 };
 
 /// 链队列结构
-template<typename T>
+template<typename E>
 struct LinkQueue {
-    QNode<T> *front;
-    QNode<T> *rear;
+    QNode<E> *front;
+    QNode<E> *rear;
 };
 
 ///////////////////////////////////////
@@ -32,10 +32,10 @@ struct LinkQueue {
 ///
 /// 初始化空队列
 ///
-template<typename T>
-void InitQueue(LinkQueue<T>& Q)
+template<typename E>
+void InitQueue(LinkQueue<E>& Q)
 {
-    Q.front = new QNode<T>;
+    Q.front = new QNode<E>;
     Q.front->next = nullptr;
     Q.rear = Q.front;
 }
@@ -43,8 +43,8 @@ void InitQueue(LinkQueue<T>& Q)
 ///
 /// 队列判空
 ///
-template<typename T>
-bool QueueEmpty(const LinkQueue<T>& Q)
+template<typename E>
+bool QueueEmpty(const LinkQueue<E>& Q)
 {
     return Q.front == Q.rear;
     // 或 return Q.front->next == nullptr;
@@ -53,8 +53,8 @@ bool QueueEmpty(const LinkQueue<T>& Q)
 ///
 /// 清空队列
 ///
-template<typename T>
-void ClearQueue(LinkQueue<T>& Q)
+template<typename E>
+void ClearQueue(LinkQueue<E>& Q)
 {
     auto p = Q.front;
     while(p->next) {
@@ -67,8 +67,8 @@ void ClearQueue(LinkQueue<T>& Q)
 ///
 /// 销毁队列
 ///
-template<typename T>
-void DestroyQueue(LinkQueue<T>& Q)
+template<typename E>
+void DestroyQueue(LinkQueue<E>& Q)
 {
     ClearQueue(Q);
     delete Q.front;
@@ -78,11 +78,11 @@ void DestroyQueue(LinkQueue<T>& Q)
 ///
 /// 入队列
 ///
-template<typename T>
-void EnQueue(LinkQueue<T>& Q, T e)
+template<typename E>
+void EnQueue(LinkQueue<E>& Q, E e)
 {
     // 新建结点
-    auto p = new QNode<T>;
+    auto p = new QNode<E>;
     p->data = e;
     p->next = nullptr;
     // 插入队尾
@@ -94,8 +94,8 @@ void EnQueue(LinkQueue<T>& Q, T e)
 ///
 /// 出队列
 ///
-template<typename T>
-void DeQueue(LinkQueue<T>& Q, T& e)
+template<typename E>
+void DeQueue(LinkQueue<E>& Q, E& e)
 {
     // 如果队列空则出错
     if(Q.front==Q.rear)
@@ -114,10 +114,10 @@ void DeQueue(LinkQueue<T>& Q, T& e)
 ///
 /// 出队列
 ///
-template<typename T>
-T DeQueue(LinkQueue<T>& Q)
+template<typename E>
+E DeQueue(LinkQueue<E>& Q)
 {
-    T e;
+    E e;
     DeQueue(Q,e);
     return e;
 }
@@ -125,8 +125,8 @@ T DeQueue(LinkQueue<T>& Q)
 ///
 /// 取队头元素
 ///
-template<typename T>
-void GetHead(const LinkQueue<T>& Q, T& e)
+template<typename E>
+void GetHead(const LinkQueue<E>& Q, E& e)
 {
     // 如果队列空则出错
     if(Q.front==Q.rear)
@@ -138,10 +138,10 @@ void GetHead(const LinkQueue<T>& Q, T& e)
 ///
 /// 取队头元素
 ///
-template<typename T>
-T GetHead(const LinkQueue<T>& Q)
+template<typename E>
+E GetHead(const LinkQueue<E>& Q)
 {
-    T e;
+    E e;
     GetHead(Q,e);
     return e;
 }
@@ -150,8 +150,8 @@ T GetHead(const LinkQueue<T>& Q)
 ///
 /// 遍历队列中的元素
 ///
-template<typename T, typename F>
-void QueueTraverse(const LinkQueue<T>& Q, F visit)
+template<typename E, typename F>
+void QueueTraverse(const LinkQueue<E>& Q, F visit)
 {
     for(auto p = Q.front->next; p; p = p->next) {
         visit(p->data);

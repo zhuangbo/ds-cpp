@@ -9,8 +9,8 @@
 using namespace std;
 
 /// 打印栈中的数据
-template<typename T, int M>
-void Print(const SqStack<T,M>& S)
+template<typename E, int M>
+void Print(const SqStack<E,M>& S)
 {
     cout << "[";
     for(int i=0; i<S.top; i++) {

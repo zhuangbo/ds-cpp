@@ -9,8 +9,8 @@
 ///
 /// 重载输出运算符 << 输出三元组
 ///
-template <typename T>
-std::ostream& operator<<(std::ostream& out, const Triplet<T>& t)
+template <typename E>
+std::ostream& operator<<(std::ostream& out, const Triplet<E>& t)
 {
     out << '(' << t.elem[0] << ','
         << t.elem[1] << ','

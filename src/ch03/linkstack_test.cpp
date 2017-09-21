@@ -9,8 +9,8 @@
 using namespace std;
 
 /// 打印栈中的数据
-template<typename T>
-void Print(const Stack<T>& S)
+template<typename E>
+void Print(const Stack<E>& S)
 {
     cout << "[^";
     for(auto p = S; p; p = p->next) {

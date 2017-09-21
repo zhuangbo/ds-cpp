@@ -14,9 +14,9 @@ using std::out_of_range;  // 导入名称
 ///
 /// 线性表的顺序存储结构（初始空间大小为 S）
 ///
-template<typename T, int S=16>
+template<typename E, int S=16>
 struct SqList {
-    T *elem;
+    E *elem;
     int listsize;
     int length;
 };
@@ -27,9 +27,9 @@ struct SqList {
 ///
 /// 构造空的顺序表 L
 ///
-template<typename T, int S>
-void InitList(SqList<T,S>& L) {
-    L.elem = new T[S];  // 初始分配空间大小为 S
+template<typename E, int S>
+void InitList(SqList<E,S>& L) {
+    L.elem = new E[S];  // 初始分配空间大小为 S
     L.listsize = S;
     L.length = 0;  // 空表长度为 0
 }
@@ -37,8 +37,8 @@ void InitList(SqList<T,S>& L) {
 ///
 /// 销毁顺序表 L
 ///
-template<typename T, int S>
-void DestroyList(SqList<T,S>& L)
+template<typename E, int S>
+void DestroyList(SqList<E,S>& L)
 {
     delete[] L.elem;
     L.elem = NULL;
@@ -49,8 +49,8 @@ void DestroyList(SqList<T,S>& L)
 ///
 /// 将顺序表 L 置为空表
 ///
-template<typename T, int S>
-void ClearList(SqList<T,S>& L)
+template<typename E, int S>
+void ClearList(SqList<E,S>& L)
 {
     L.length = 0;
 }
@@ -58,8 +58,8 @@ void ClearList(SqList<T,S>& L)
 ///
 /// 若 L 为空表，则返回 true，否则返回 false
 ///
-template<typename T, int S>
-bool ListEmpty(const SqList<T,S>& L)
+template<typename E, int S>
+bool ListEmpty(const SqList<E,S>& L)
 {
     return L.length == 0;
 }
@@ -67,8 +67,8 @@ bool ListEmpty(const SqList<T,S>& L)
 ///
 /// 返回顺序表 L 中数据元素个数
 ///
-template<typename T, int S>
-int ListLength(const SqList<T,S>& L)
+template<typename E, int S>
+int ListLength(const SqList<E,S>& L)
 {
     return L.length;
 }
@@ -76,8 +76,8 @@ int ListLength(const SqList<T,S>& L)
 ///
 /// 用 e 返回顺序表 L 中第 i 个数据元素，1<=i<=length
 ///
-template<typename T, int S>
-bool GetElem(const SqList<T,S>& L, int i, T& e)
+template<typename E, int S>
+bool GetElem(const SqList<E,S>& L, int i, E& e)
 {
     // 若 i 值不合法，则返回 false
     if(i<1 || i>L.length)  return false;
@@ -92,8 +92,8 @@ bool GetElem(const SqList<T,S>& L, int i, T& e)
 ///
 /// 取顺序表 L 中第 i 个元素
 ///
-template<typename T, int S>
-const T& GetElem(const SqList<T,S>& L, int i)
+template<typename E, int S>
+const E& GetElem(const SqList<E,S>& L, int i)
 {
     // 若 i 值不合法，不能取元素
     if(i<1 || i>L.length) throw out_of_range("i out of range");
@@ -105,12 +105,12 @@ const T& GetElem(const SqList<T,S>& L, int i)
 ///
 /// 扩展顺序表 L 的存储空间
 ///
-template<typename T, int S>
-void expand(SqList<T,S>& L)
+template<typename E, int S>
+void expand(SqList<E,S>& L)
 {
     int n = L.listsize * 2;
     // 分配新空间
-    T *p = new T[n];
+    E *p = new E[n];
     // 复制数据
     for(int i=0; i<L.length; i++) p[i] = L.elem[i];
     // 释放旧空间
@@ -123,8 +123,8 @@ void expand(SqList<T,S>& L)
 ///
 /// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e
 ///
-template<typename T, int S>
-void ListInsert(SqList<T,S>& L, int i, T e)
+template<typename E, int S>
+void ListInsert(SqList<E,S>& L, int i, E e)
 {
     // 若 i 值不合法，则不能插入
     if(i<1 || i>L.length+1) throw out_of_range("i out of range");
@@ -144,8 +144,8 @@ void ListInsert(SqList<T,S>& L, int i, T e)
 ///
 /// 在顺序表 L 中删除第 i 个元素，用 e 返回
 ///
-template<typename T, int S>
-void ListDelete(SqList<T,S>& L, int i, T& e)
+template<typename E, int S>
+void ListDelete(SqList<E,S>& L, int i, E& e)
 {
     // 若 i 值不合法，则不能删除
     if(i<1 || i>L.length) throw out_of_range("i out of range");

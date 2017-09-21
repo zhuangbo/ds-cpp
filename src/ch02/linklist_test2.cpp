@@ -9,8 +9,8 @@ using namespace std;
 ///
 /// 打印链表
 ///
-template<typename T>
-void PrintList(LinkList<T> L)
+template<typename E>
+void PrintList(LinkList<E> L)
 {
     cout << "(";
     auto p = L->next;
