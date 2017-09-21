@@ -45,6 +45,7 @@
     
 ### CH04 串
 
+- [幻灯片](slides/ch04.md)
 - [代码](src/ch04)
     - sstring 定长顺序串
     - kmp KMP算法
