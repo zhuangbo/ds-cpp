@@ -214,14 +214,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>顺序表的类型定义</h2>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 顺序表类型定义</span>
 <span class="kw">struct</span> SqList {
-    T elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
+    E elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
     <span class="dt">int</span> length;  <span class="co">// 当前长度</span>
 };</code></pre></div>
 <div class="fragment">
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 顺序表类型定义（用 C++ 模板实现）</span>
-<span class="kw">template</span>&lt;<span class="kw">typename</span> T, <span class="dt">int</span> MAXSIZE&gt;
+<span class="kw">template</span>&lt;<span class="kw">typename</span> E, <span class="dt">int</span> MAXSIZE&gt;
 <span class="kw">struct</span> SqList {
-    T elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
+    E elem[MAXSIZE];  <span class="co">// 存储数据元素的空间</span>
     <span class="dt">int</span> length;  <span class="co">// 当前长度</span>
 };</code></pre></div>
 </div>
@@ -272,7 +272,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><strong>GetElem(L,i,&amp;e) 取元素</strong></li>
 <li>随机访问 O(1)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> GetElem(<span class="at">const</span> SqLis&amp; L, <span class="dt">int</span> i, T&amp; e)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">bool</span> GetElem(<span class="at">const</span> SqLis&amp; L, <span class="dt">int</span> i, E&amp; e)
 {
     <span class="co">// 若 i 值不合法，则返回 false</span>
     <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length)  <span class="cf">return</span> <span class="kw">false</span>;
@@ -285,7 +285,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }
 
 <span class="co">// 另一种实现</span>
-T GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</span> i)
+E GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</span> i)
 {
     <span class="co">// 若 i 值不合法，不能取元素</span>
     <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length)
@@ -303,7 +303,7 @@ T GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</spa
 <li>若找到，返回位序，否则返回 0</li>
 </ul></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, T e)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, E e)
 {
     <span class="co">// 逐个取出元素与 e 比较</span>
     <span class="cf">for</span>(i = <span class="dv">0</span>; i &lt; L.length; i++) {
@@ -322,7 +322,7 @@ T GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</spa
 <li>若找到，返回位序，否则返回 0</li>
 </ul></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, T e, C cond)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> LocateElem(<span class="at">const</span> SqList&amp; L, E e, C cond)
 {
     <span class="co">// 逐个取出元素与 e 比较</span>
     <span class="cf">for</span>(i = <span class="dv">0</span>; i &lt; L.length; i++) {
@@ -341,11 +341,11 @@ T GetElem(<span class="at">const</span> SqList&amp; L, <span class="dt">int</spa
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// 自定义比较条件</span>
-<span class="dt">bool</span> eq(T a, T b) { <span class="cf">return</span> a == b; }
-<span class="dt">bool</span> lt(T a, T b) { <span class="cf">return</span> a &lt; b; }
-<span class="dt">bool</span> gt(T a, T b) { <span class="cf">return</span> a &gt; b; }
-<span class="dt">bool</span> le(T a, T b) { <span class="cf">return</span> a &lt;= b; }
-<span class="dt">bool</span> ge(T a, T b) { <span class="cf">return</span> a &gt;= b; }
+<span class="dt">bool</span> eq(E a, E b) { <span class="cf">return</span> a == b; }
+<span class="dt">bool</span> lt(E a, E b) { <span class="cf">return</span> a &lt; b; }
+<span class="dt">bool</span> gt(E a, E b) { <span class="cf">return</span> a &gt; b; }
+<span class="dt">bool</span> le(E a, E b) { <span class="cf">return</span> a &lt;= b; }
+<span class="dt">bool</span> ge(E a, E b) { <span class="cf">return</span> a &gt;= b; }
 
 <span class="co">// 用不同条件进行元素定位</span>
 LocateElem(L,e,eq)  <span class="co">// 定位第一个等于 e 的元素</span>
@@ -406,7 +406,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 <li><strong>算法实现</strong>：</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e</span>
-<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
+<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, E e)
 {
     <span class="co">// 若表满，则不能插入</span>
     <span class="cf">if</span>(L.length==MAXSIZE) <span class="cf">throw</span> length_error(<span class="st">&quot;L is full&quot;</span>);
@@ -475,7 +475,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 <li><strong>算法实现</strong>：</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中删除第 i 个元素，用 e 返回</span>
-<span class="dt">void</span> ListDelete(SqList&amp; L, <span class="dt">int</span> i, T&amp; e)
+<span class="dt">void</span> ListDelete(SqList&amp; L, <span class="dt">int</span> i, E&amp; e)
 {
     <span class="co">// 若表空，则不能删除，抛出异常</span>
     <span class="cf">if</span>(L.length==<span class="dv">0</span>) <span class="cf">throw</span> length_error(<span class="st">&quot;L is empty&quot;</span>);
@@ -513,7 +513,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 顺序表类型定义</span>
 <span class="kw">struct</span> SqList {
-  T *elem;      <span class="co">// 动态分配的存储空间</span>
+  E *elem;      <span class="co">// 动态分配的存储空间</span>
   <span class="dt">int</span> listsize; <span class="co">// 当前分配的存储容量</span>
   <span class="dt">int</span> length;   <span class="co">// 当前长度</span>
 };</code></pre></div>
@@ -547,7 +547,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> InitList(SqList&amp; L)
 {
-  L.elem = <span class="kw">new</span> T [INIT_SIZE];  <span class="co">// 按初始容量分配空间</span>
+  L.elem = <span class="kw">new</span> E [INIT_SIZE];  <span class="co">// 按初始容量分配空间</span>
   L.listsize = INIT_SIZE;
   L.length = <span class="dv">0</span>;  <span class="co">// 置空表</span>
 }</code></pre></div>
@@ -601,7 +601,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 {
   <span class="co">// 分配新空间</span>
   n = L.listsize * <span class="dv">2</span>;
-  p = <span class="kw">new</span> T [n];
+  p = <span class="kw">new</span> E [n];
   <span class="co">// 复制元素</span>
   <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;L.length; i++) p[i] = L.elem[i];
   <span class="co">// 释放旧空间</span>
@@ -619,7 +619,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在顺序表 L 中第 i 个位置之前插入新的数据元素 e</span>
-<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, T e)
+<span class="dt">void</span> ListInsert(SqList&amp; L, <span class="dt">int</span> i, E e)
 {
     <span class="co">// 若 i 值不合法，则不能插入</span>
     <span class="cf">if</span>(i&lt;<span class="dv">1</span> || i&gt;L.length<span class="dv">+1</span>) <span class="cf">throw</span> out_of_range(<span class="st">&quot;i out of range&quot;</span>);
@@ -693,7 +693,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </dl>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 单链表结点结构</span>
 <span class="kw">struct</span> LNode {
-    T  data;  <span class="co">// 数据域</span>
+    E  data;  <span class="co">// 数据域</span>
     LNode *next;  <span class="co">// 指针域</span>
 };
 
@@ -766,7 +766,7 @@ LocateElem(L,e,ge)  <span class="co">// 定位第一个大于等于 e 的元素<
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在单链表 L 中查找元素 x</span>
 <span class="co">/// 若找到，返回指向该结点的指针，否则返回空指针</span>
-LinkList Find(LinkList L, T x)
+LinkList Find(LinkList L, E x)
 {
   p = L-&gt;next;
   <span class="cf">while</span>(p!=NULL) {
@@ -878,7 +878,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <li><strong>GetElem(L,i,&amp;e)</strong> 取元素</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取元素</span>
-<span class="dt">void</span> GetElem(LinkList L, <span class="dt">int</span> i, T&amp; e)
+<span class="dt">void</span> GetElem(LinkList L, <span class="dt">int</span> i, E&amp; e)
 {
     <span class="co">// 找到第 i 个结点 p</span>
     p = L-&gt;next;  j = <span class="dv">1</span>;
@@ -918,7 +918,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <li>单链表插入算法</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在单链表 L 中第 i 个位置插入数据元素 e</span>
-<span class="dt">void</span> ListInsert(LinkList&amp; L, <span class="dt">int</span> i, T e)
+<span class="dt">void</span> ListInsert(LinkList&amp; L, <span class="dt">int</span> i, E e)
 {
     <span class="co">// 找到第 i-1 个结点 p</span>
     p = L;  j = <span class="dv">0</span>;
@@ -982,7 +982,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 <li>单链表删除算法</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 删除单链表 L 中第 i 个数据元素并用 e 返回</span>
-<span class="dt">void</span> ListDelete(LinkList&amp; L, <span class="dt">int</span> i, T&amp; e)
+<span class="dt">void</span> ListDelete(LinkList&amp; L, <span class="dt">int</span> i, E&amp; e)
 {
     <span class="co">// 寻找找第 i-1 个结点 p</span>
     p = L;  j = <span class="dv">0</span>;
@@ -1185,7 +1185,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 </dl>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 双向链表结点结构</span>
 <span class="kw">struct</span> Node {
-    T data;      <span class="co">// 数据域</span>
+    E data;      <span class="co">// 数据域</span>
     Node *next;  <span class="co">// 指向后继的指针</span>
     Node *prev;  <span class="co">// 指向前驱的指针</span>
 };
@@ -1219,7 +1219,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 在双向循环链表 L 中第 i 个位置插入元素 e</span>
-<span class="dt">void</span> ListInsert(List&amp; L, <span class="dt">int</span> i, T e)
+<span class="dt">void</span> ListInsert(List&amp; L, <span class="dt">int</span> i, E e)
 {
     <span class="co">// 找到第 i 个结点 p</span>
     j = <span class="dv">1</span>;
@@ -1252,7 +1252,7 @@ LinkList Get(LinkList L, <span class="dt">int</span> i)
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 删除双向循环链表 L 中第 i 个数据元素，用 e 返回</span>
-<span class="dt">void</span> ListDelete(List&amp; L, <span class="dt">int</span> i, T&amp; e)
+<span class="dt">void</span> ListDelete(List&amp; L, <span class="dt">int</span> i, E&amp; e)
 {
     <span class="co">// 寻找找第 i 个结点 p</span>
     j = <span class="dv">1</span>;

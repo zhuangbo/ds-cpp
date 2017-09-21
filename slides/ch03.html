@@ -149,7 +149,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">struct</span> SqStack {
-    T elem[MAXSIZE];
+    E elem[MAXSIZE];
     <span class="dt">int</span> top;
 };</code></pre></div>
 </section><section class="slide level2">
@@ -195,7 +195,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>算法思路：若栈满则出错，否则在栈顶插入元素</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入栈</span>
-<span class="dt">void</span> Push(SqStack&lt;T,MAXSIZE&gt;&amp; S, T e)
+<span class="dt">void</span> Push(SqStack&lt;E,MAXSIZE&gt;&amp; S, E e)
 {
     <span class="co">// 栈满则溢出</span>
     <span class="cf">if</span>(S.top == MAXSIZE)
@@ -214,7 +214,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>出栈 Pop(&amp;S,&amp;e)</h2>
 <p>算法思路：若栈空则出错，否则删除栈顶元素</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出栈</span>
-<span class="dt">void</span> Pop(SqStack&amp; S, T&amp; e)
+<span class="dt">void</span> Pop(SqStack&amp; S, E&amp; e)
 {
     <span class="co">// 栈空则下溢</span>
     <span class="cf">if</span>(S.top==<span class="dv">0</span>)
@@ -233,7 +233,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>取栈顶元素 Top(S,&amp;e)</h2>
 <p>算法思路：若栈空则出错，否则返回栈顶元素</p>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取栈顶元素</span>
-<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, T&amp; e)
+<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, E&amp; e)
 {
     <span class="co">// 栈空则下溢</span>
     <span class="cf">if</span>(S.top==<span class="dv">0</span>)
@@ -259,17 +259,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }
 
 <span class="co">/// 入栈</span>
-<span class="dt">void</span> Push(SqStack&amp; S, T e) {
+<span class="dt">void</span> Push(SqStack&amp; S, E e) {
     ListInsert(S, ListLength(S)<span class="dv">+1</span>, e);
 }
 
 <span class="co">/// 出栈</span>
-<span class="dt">void</span> Pop(SqStack&amp; S, T&amp; e) {
+<span class="dt">void</span> Pop(SqStack&amp; S, E&amp; e) {
     ListDelete(S, ListLength(S), e);
 }
 
 <span class="co">/// 取栈顶元素</span>
-<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, T&amp; e) {
+<span class="dt">void</span> GetTop(<span class="at">const</span> SqStack&amp; S, E&amp; e) {
     GetElem(S, ListLength(S), e);
 }</code></pre></div>
 </section><section class="slide level2">
@@ -292,7 +292,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">struct</span> LNode
 {
-    T data;
+    E data;
     LNode *next;
 };
 
@@ -324,10 +324,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入栈（链栈）</span>
-<span class="dt">void</span> Push(LinkStack&amp; S, T e)
+<span class="dt">void</span> Push(LinkStack&amp; S, E e)
 {
     <span class="co">// 新建结点</span>
-    p = <span class="kw">new</span> LNode&lt;T&gt;;
+    p = <span class="kw">new</span> LNode&lt;E&gt;;
     p-&gt;data = e;
     <span class="co">// 插入栈顶（链表表头）</span>
     p-&gt;next = S;
@@ -343,7 +343,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出栈</span>
 <span class="co">///</span>
-<span class="dt">void</span> Pop(Stack&amp; S, T&amp; e)
+<span class="dt">void</span> Pop(Stack&amp; S, E&amp; e)
 {
     <span class="co">// 栈空则下溢</span>
     <span class="cf">if</span>(S==NULL) <span class="cf">throw</span> underflow_error(<span class="st">&quot;Stack underflow&quot;</span>);
@@ -372,12 +372,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }
 
 <span class="co">/// 入栈</span>
-<span class="dt">void</span> Push(LinkStack&amp; S, T e) {
+<span class="dt">void</span> Push(LinkStack&amp; S, E e) {
     ListInsert(S, <span class="dv">1</span>, e);
 }
 
 <span class="co">/// 出栈</span>
-<span class="dt">void</span> Pop(LinkList&amp; S, T&amp; e) {
+<span class="dt">void</span> Pop(LinkList&amp; S, E&amp; e) {
     ListDelete(S, <span class="dv">1</span>, e);
 }</code></pre></div>
 </section><section class="slide level2">
@@ -957,7 +957,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 结点结构</span>
 <span class="kw">struct</span> QNode
 {
-    T data;
+    E data;
     QNode *next;
 };
 
@@ -1003,10 +1003,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入队列</span>
-<span class="dt">void</span> EnQueue(LinkQueue&amp; Q, T e)
+<span class="dt">void</span> EnQueue(LinkQueue&amp; Q, E e)
 {
     <span class="co">// 新建结点</span>
-    p = <span class="kw">new</span> QNode&lt;T&gt;;
+    p = <span class="kw">new</span> QNode&lt;E&gt;;
     p-&gt;data = e;
     p-&gt;next = <span class="kw">nullptr</span>;
     <span class="co">// 插入队尾</span>
@@ -1024,7 +1024,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出队列</span>
-<span class="dt">void</span> DeQueue(LinkQueue&amp; Q, T&amp; e)
+<span class="dt">void</span> DeQueue(LinkQueue&amp; Q, E&amp; e)
 {
     <span class="co">// 如果队列空则出错</span>
     <span class="cf">if</span>(Q.front==Q.rear)
@@ -1048,7 +1048,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取队头元素</span>
-<span class="dt">void</span> GetHead(<span class="at">const</span> LinkQueue&amp; Q, T&amp; e)
+<span class="dt">void</span> GetHead(<span class="at">const</span> LinkQueue&amp; Q, E&amp; e)
 {
     <span class="co">// 如果队列空则出错</span>
     <span class="cf">if</span>(Q.front==Q.rear)
@@ -1069,7 +1069,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 循环队列</span>
 <span class="kw">struct</span> SqQueue
 {
-    T elem[MAXSIZE];    <span class="co">// 数据元素</span>
+    E elem[MAXSIZE];    <span class="co">// 数据元素</span>
     <span class="dt">int</span> front, rear;    <span class="co">// 头尾位置</span>
 };</code></pre></div>
 </section><section class="slide level2">
@@ -1122,7 +1122,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 入队列</span>
-<span class="dt">void</span> EnQueue(SqQueue&amp; Q, T e)
+<span class="dt">void</span> EnQueue(SqQueue&amp; Q, E e)
 {
     <span class="co">// 若队列满，则上溢</span>
     <span class="cf">if</span>((Q.rear<span class="dv">+1</span>) % MAXSIZE == Q.front)
@@ -1141,7 +1141,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 出队列</span>
-<span class="dt">void</span> DeQueue(SqQueue&amp; Q, T&amp; e)
+<span class="dt">void</span> DeQueue(SqQueue&amp; Q, E&amp; e)
 {
     <span class="co">// 若队列空，则出错</span>
     <span class="cf">if</span>(Q.front == Q.rear)
@@ -1160,7 +1160,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/// 取队头元素</span>
-<span class="dt">void</span> GetHead(<span class="at">const</span> SqQueue&amp; Q, T&amp; e)
+<span class="dt">void</span> GetHead(<span class="at">const</span> SqQueue&amp; Q, E&amp; e)
 {
     <span class="co">// 若队列空，则出错</span>
     <span class="cf">if</span>(Q.front == Q.rear)

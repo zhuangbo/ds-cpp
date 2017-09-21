@@ -307,8 +307,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>C++
 <ul>
 <li>输入输出 <iostream>, cin, cout</li>
-<li>引用 T&amp;, const T&amp;</li>
-<li>模板 template<typename T></li>
+<li>引用 E&amp;, const E&amp;</li>
+<li>模板 template<typename E></li>
 <li>内存分配 new, delete</li>
 <li>异常处理 throw, try-catch</li>
 </ul></li>
@@ -459,7 +459,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <dd>若找到，返回下标，若找不到，返回 <code>-1</code>
 </dd>
 </dl>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> find(T a[], <span class="dt">int</span> n, T x)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> find(E a[], <span class="dt">int</span> n, E x)
 {
   <span class="cf">for</span>(i=<span class="dv">0</span>; i&lt;n; i++) {
     <span class="cf">if</span>(a[i]==x) <span class="cf">return</span> i;
@@ -475,7 +475,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section id="section-11" class="slide level2">
 <h2></h2>
 <p><strong>二分搜索</strong>：在有序数组 <code>a[n]</code> 中查找元素 <code>x</code></p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> binary_search(T a[], <span class="dt">int</span> n, <span class="at">const</span> T&amp; x)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> binary_search(E a[], <span class="dt">int</span> n, <span class="at">const</span> E&amp; x)
 {
     <span class="dt">int</span> low, mid, high;
 
@@ -505,9 +505,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <dd>求数组 <code>a[n]</code> 中的最小值（最大值）
 </dd>
 </dl>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">T min(T a[], <span class="dt">int</span> n)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">E min(E a[], <span class="dt">int</span> n)
 {
-    T tmp = a[<span class="dv">0</span>];
+    E tmp = a[<span class="dv">0</span>];
     <span class="cf">for</span>(<span class="dt">int</span> i=<span class="dv">1</span>; i&lt;n; i++)
         <span class="cf">if</span>(a[i] &lt; tmp)
             tmp = a[i];
@@ -561,13 +561,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </section><section id="section-15" class="slide level2">
 <h2></h2>
 <p>冒泡排序</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> bubble_sort(T a[], <span class="dt">int</span> n)
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> bubble_sort(E a[], <span class="dt">int</span> n)
 {
     <span class="cf">for</span>(<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;n<span class="dv">-1</span>; i++) {
         <span class="dt">bool</span> change = <span class="kw">false</span>;
         <span class="cf">for</span>(<span class="dt">int</span> j=<span class="dv">0</span>; j&lt;n-i<span class="dv">-1</span>; j++) {
             <span class="cf">if</span>(a[j] &gt; a[j<span class="dv">+1</span>]) {
-                T temp = a[j];
+                E temp = a[j];
                 a[j] = a[j<span class="dv">+1</span>];
                 a[j<span class="dv">+1</span>] = temp;
 
