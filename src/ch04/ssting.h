@@ -21,7 +21,7 @@ typedef unsigned char SString[MAXSTRLEN+2];
 ///
 /// 创建串
 ///
-void Assign(SString& T, const char *chars)
+void StrAssign(SString& T, const char *chars)
 {
     int i = 1;
     auto p = chars;
@@ -35,7 +35,7 @@ void Assign(SString& T, const char *chars)
 ///
 /// 清空串
 ///
-void Clear(SString& S)
+void ClearString(SString& S)
 {
     S[0] = 0;
     S[1] = '\0';
@@ -44,7 +44,7 @@ void Clear(SString& S)
 ///
 /// 判空
 ///
-bool Empty(SString S)
+bool StrEmpty(SString S)
 {
     return S[0] == 0;
 }
@@ -52,7 +52,7 @@ bool Empty(SString S)
 ///
 /// 求长度
 ///
-int Length(SString S)
+int StrLength(SString S)
 {
     return S[0];
 }
@@ -60,7 +60,7 @@ int Length(SString S)
 ///
 /// 串比较
 ///
-int Compare(SString S, SString T)
+int StrCompare(SString S, SString T)
 {
     int i=1, j=1;
     while (i<=S[0] && j<=T[0] && S[i]==T[j]) {
