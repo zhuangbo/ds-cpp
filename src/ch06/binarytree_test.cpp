@@ -15,11 +15,46 @@ int main()
     auto pm = new BiTNode<char> { '*', pa, pb };
     auto ps = new BiTNode<char> { '-', pm, pc };
 
+    auto T = ps; // ps 作为二叉树的根
+
+    // 打印二叉树
+    Print(T);
+
     auto print = [](char c) { cout << c; return true; };
 
-    PreOrderTraverse(ps,print); cout << endl;
-    InOrderTraverse(ps,print); cout << endl;
-    PostOrderTraverse(ps,print); cout << endl;
-    
+    // 先序、中序和后序遍历
+    cout << "\nPreorder: ";
+    Preorder(T,print);
+    cout << "\nInorder: ";
+    Inorder(T,print);
+    cout << "\nPostorder: ";
+    Postorder(T,print);
+
+    // 先序、中序和后序遍历
+    cout << "\nPreorderTraverse: ";
+    PreorderTraverse(T,print);
+    cout << "\nInorderTraverse: ";
+    InorderTraverse(T,print);
+    cout << "\nPostorderTraverse: ";
+    PostorderTraverse(T,print);
+
+    // 按层遍历
+    cout << "\nLevelOrder: ";
+    LevelOrder(T,print);
+
+    // 非递归遍历
+    cout << "\nInorderNR: ";
+    InorderNR(T,print);
+    cout << "\nPreorderNR: ";
+    PreorderNR(T,print);
+    cout << "\nPostorderNR: ";
+    PostorderNR(T,print);
+
+    cout << endl;
+
+    cout << "NodeCount: " << NodeCount(T) << endl;
+    cout << "LeafCount: " << LeafCount(T) << endl;
+    cout << "Depth: " << Depth(T) << endl;
+
     return 0;
 }
