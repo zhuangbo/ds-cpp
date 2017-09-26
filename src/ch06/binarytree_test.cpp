@@ -52,9 +52,15 @@ int main()
 
     cout << endl;
 
+    // 结点数，叶子结点数，深度
     cout << "NodeCount: " << NodeCount(T) << endl;
     cout << "LeafCount: " << LeafCount(T) << endl;
     cout << "Depth: " << Depth(T) << endl;
 
+    // 输入先序序列，创建二叉树
+    cout << "Input preorder with null tree (e.g. `AB C  `): ";
+    auto bt = CreateBinaryTree();
+    Print(bt);
+    
     return 0;
 }

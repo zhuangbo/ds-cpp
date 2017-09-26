@@ -269,3 +269,28 @@ void Print(BiTree<E> T)
 {
     Print(T, 0);
 }
+
+
+#include <iostream>
+using std::cin;
+using std::noskipws;
+
+///
+/// 根据先序序列（含空树，用空格表示）建立二叉树
+///
+BiTree<char> CreateBinaryTree()
+{
+    // 输入字符
+    char e;
+    cin >> noskipws >> e;
+    if (e == ' ') return nullptr; // 空格表示空二叉树
+    // 建立根结点
+    auto p = new BiTNode<char>;
+    p->data = e;
+    // 建立左子树
+    p->lchild = CreateBinaryTree();
+    // 建立右子树
+    p->rchild = CreateBinaryTree();
+
+    return p;
+}
