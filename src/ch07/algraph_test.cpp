@@ -11,35 +11,35 @@ using namespace std;
 int main()
 {
     // 建立图
-    typedef ALGraph<char,int> Graph;
-    typedef ALGraph<char,int>::ArcNode ArcNode;
-    // 弧结点
-    auto pac = new ArcNode{1, 2, nullptr};
-    auto pab = new ArcNode{1, 1, pac};
-    auto pbe = new ArcNode{1, 4, nullptr};
-    auto pcd = new ArcNode{1, 3, nullptr};
-    auto pcb = new ArcNode{1, 1, pcd};
-    auto pdb = new ArcNode{1, 1, nullptr};
-    auto ped = new ArcNode{1, 3, nullptr};
-    auto pea = new ArcNode{1, 0, ped};
-    // 邻接表
-    Graph G {
-        { // 顶点
-            {'A', pab}, // AB, AC
-            {'B', pbe}, // BE
-            {'C', pcb}, // CB, CD
-            {'D', pdb}, // DB
-            {'E', pea}, // EA, ED
-        },
-        5, //顶点数
-    };
+    // G = ({A,B,C,D,E}, {AB,AC,BE,CB,CD,DB,EA,ED})
+    ALGraph<char, int> G;
+    // 初始化
+    InitGraph(G);
+    // 添加顶点
+    auto a = AddVertex(G,'A');
+    auto b = AddVertex(G,'B');
+    auto c = AddVertex(G,'C');
+    auto d = AddVertex(G,'D');
+    auto e = AddVertex(G,'E');
+    // 添加边
+    AddEdge(G,a,b);
+    AddEdge(G,a,c);
+    AddEdge(G,b,e);
+    AddEdge(G,c,b);
+    AddEdge(G,c,d);
+    AddEdge(G,d,b);
+    AddEdge(G,e,a);
+    AddEdge(G,e,d);
 
+    // 打印顶点的方法
+    auto print = [](char c){ cout << c; };
+    
     // 深度优先遍历
-    DFSTraverse(G, [](char c){ cout << c; });
+    DFSTraverse(G, print);
     cout << endl;
 
     // 广度优先遍历
-    BFSTraverse(G, [](char c){ cout << c; });
+    BFSTraverse(G, print);
     cout << endl;
 
     return 0;

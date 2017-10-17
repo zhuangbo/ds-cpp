@@ -5,13 +5,17 @@
 
 #pragma once
 
+#include <stdexcept>
+using std::length_error;
+using std::invalid_argument;
+
 ///////////////////////////////////////
 /// 存储结构
 
 ///
 /// 图的邻接表(Adjacency-List)存储结构
 ///
-template <typename V, typename E, int M=20>
+template <typename V, typename E, int M = 20>
 struct ALGraph
 {
     // 弧结点结构
@@ -32,12 +36,59 @@ struct ALGraph
     VexNode vexs[M];    // 图中的顶点
     int vexnum, arcnum; // 顶点和弧的数量
 
-    bool visited[M];    // 顶点访问标志
+    bool visited[M]; // 顶点访问标志
 };
-
 
 ///////////////////////////////////////
 /// 基本操作
+
+///
+/// 初始化图
+///
+template <typename V, typename E, int M>
+void InitGraph(ALGraph<V, E, M> &G)
+{
+    G.vexnum = 0;
+    G.arcnum = 0;
+}
+
+///
+/// 添加顶点
+///
+template <typename V, typename E, int M>
+int AddVertex(ALGraph<V, E, M> &G, V v)
+{
+    if (G.vexnum == M)
+        throw std::length_error("Too many vertex");
+
+    int i = G.vexnum;
+    G.vexs[i].data = v;
+    G.vexs[i].firstarc = nullptr;
+    G.vexnum++;
+    return i;
+}
+
+///
+/// 添加边
+///
+template <typename V, typename E, int M>
+void AddEdge(ALGraph<V, E, M> &G, int s, int t, E e = 1)
+{
+    if (s < 0 || s >= G.vexnum)
+        throw std::invalid_argument("Invalid source vertex");
+    if (t < 0 || t >= G.vexnum)
+        throw std::invalid_argument("Invalid target vertex");
+
+    using ArcNode = typename ALGraph<V, E, M>::ArcNode;
+
+    auto p = new ArcNode;
+    p->weight = e;
+    p->adjvex = t;
+    p->nextarc = G.vexs[s].firstarc;
+    G.vexs[s].firstarc = p;
+}
+
+#include "../ch03/sqstack.h"
 
 ///
 /// 从顶点 v 出发深度优先遍历图 G
@@ -49,7 +100,8 @@ void DFS(ALGraph<V, E, M> &G, int v, F visit)
     visit(G.vexs[v].data);
     G.visited[v] = true;
     // 从顶点 v 的未被访问的邻接点 w 开始继续深度优先搜索
-    for (auto p = G.vexs[v].firstarc; p; p=p->nextarc) {
+    for (auto p = G.vexs[v].firstarc; p; p = p->nextarc)
+    {
         auto w = p->adjvex;
         if (!G.visited[w])
             DFS(G, w, visit);
@@ -90,7 +142,8 @@ void BFS(ALGraph<V, E, M> &G, int v, F visit)
     {
         auto v = DeQueue(Q);
         // 访问 v 的未被访问的邻接点 w 并入队列
-        for (auto p = G.vexs[v].firstarc; p; p=p->nextarc) {
+        for (auto p = G.vexs[v].firstarc; p; p = p->nextarc)
+        {
             auto w = p->adjvex;
             if (!G.visited[w])
             {
