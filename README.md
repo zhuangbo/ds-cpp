@@ -69,3 +69,4 @@
     - graphs 图的存储结构
     - amgraph 邻接矩阵和图的遍历
     - algraph 邻接表和图的遍历
+    - mst 最小生成树 Prim 算法
