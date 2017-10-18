@@ -70,3 +70,7 @@
     - amgraph 邻接矩阵和图的遍历
     - algraph 邻接表和图的遍历
     - mst 最小生成树 Prim 算法
+    - topological 拓扑排序
+    - dijkstra 最短路径（Dijkstra）
+    - floyd 最短路径（Floyd）
+    
