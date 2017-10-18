@@ -6,7 +6,18 @@
 #include <iostream>
 #include <limits>
 using namespace std;
-#include "graphs.h" // for AMGraph
+
+///
+/// 邻接矩阵
+///
+template <typename V, typename E = bool, int M = 20>
+struct AMGraph
+{
+    V vexs[M];          // 图中的顶点
+    E arcs[M][M];       // 邻接矩阵
+    int vexnum, arcnum; // 顶点数和弧数
+};
+
 
 ///
 /// 最小生成树 Prim 算法
@@ -77,6 +88,7 @@ int main()
         },
         N,
     };
+
     // 求最小生成树
     int P[N];
     Prim(G, P);
