@@ -73,4 +73,11 @@
     - topological 拓扑排序
     - dijkstra 最短路径（Dijkstra）
     - floyd 最短路径（Floyd）
+
+### CH09 查找
+
+- [代码](src/ch09)
+    - sqsearch 顺序查找
+    - binarysearch 折半查找
+    - bst 二叉排序树
     
