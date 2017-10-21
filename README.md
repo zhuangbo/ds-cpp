@@ -80,4 +80,14 @@
     - sqsearch 顺序查找
     - binarysearch 折半查找
     - bst 二叉排序树
+
+### CH10 排序
+
+- [代码](src/ch10)
+    - insertionsort 插入排序
+    - shellsort 希尔排序
+    - quicksort 快速排序
+    - selectionsort 选择排序
+    - heapsort 堆排序
+    - mergesort 归并排序
     
