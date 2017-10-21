@@ -80,6 +80,7 @@
     - sqsearch 顺序查找
     - binarysearch 折半查找
     - bst 二叉排序树
+    - hashtable 哈希表
 
 ### CH10 排序
 
