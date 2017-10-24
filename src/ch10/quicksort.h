@@ -26,7 +26,7 @@ void QSort(T a[], int low, int high)
     }
     a[i] = pivot;
 
-    // 分别对子序列 a[low..i-1] 和 a[i+1..high]
+    // 分别对子序列 a[low..i-1] 和 a[i+1..high] 快排
     QSort(a, low, i - 1);
     QSort(a, i + 1, high);
 }
