@@ -16,7 +16,7 @@ void InsertionSort(T a[], int n)
         // 将 a[i] 插入有序序列 a[0..i-1] 中
         auto x = a[i];
         int j = i - 1;
-        for (; x < a[j]; j--)
+        for (; j >= 0 && x < a[j]; j--)
             a[j + 1] = a[j];
         a[j + 1] = x;
     }
