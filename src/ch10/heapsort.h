@@ -5,6 +5,9 @@
 
 #pragma once
 
+#include <utility> // for std::swap
+using std::swap;
+
 /// 假设除 a[s] 外其他结点已经构成大顶堆
 /// 把序列 a[s..m] 调整成大顶堆
 template <typename T>

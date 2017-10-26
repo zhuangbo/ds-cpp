@@ -5,6 +5,9 @@
 
 #pragma once
 
+#include <utility> // for std::swap
+using std::swap;
+
 ///
 /// 选择排序
 ///
