@@ -11,11 +11,11 @@ using namespace std;
 ///
 /// 打印顺序表
 ///
-template<typename E, int M>
-void PrintList(const SqList<E,M>& L)
+template <typename E, int M>
+void PrintList(const SqList<E, M> &L)
 {
     cout << "(";
-    for(int i=0; i<L.length; i++)
+    for (int i = 0; i < L.length; i++)
         cout << " " << L.elem[i];
     cout << " )" << endl;
 }
@@ -31,13 +31,12 @@ int main()
     InitList(L);
     PrintList(L);
     cout << "list size: " << L.listsize << endl;
-    
+
     // 插入元素
-    for(int i=1; i<=20; i++) {
-        ListInsert(L,1,i);
-    }
+    for (int i = 1; i <= 20; i++)
+        ListInsert(L, 1, i);
     PrintList(L);
     cout << "list size: " << L.listsize << endl;
-    
+
     return 0;
 }

@@ -39,14 +39,14 @@ int main()
     auto p = Search(T, 12);
     cout << "Search 12: " << p->data << endl;
     // 删除 80, 12, 53
-    cout << "Delete 80: " << boolalpha << Delete(T,80) << endl;
+    cout << "Delete 80: " << boolalpha << Delete(T, 80) << endl;
     Print(T);
-    cout << "Delete 12: " << boolalpha << Delete(T,12) << endl;
+    cout << "Delete 12: " << boolalpha << Delete(T, 12) << endl;
     Print(T);
-    cout << "Delete 53: " << boolalpha << Delete(T,53) << endl;
+    cout << "Delete 53: " << boolalpha << Delete(T, 53) << endl;
     Print(T);
-    cout << "Delete 40: " << boolalpha << Delete(T,40) << endl;
+    cout << "Delete 40: " << boolalpha << Delete(T, 40) << endl;
     Print(T);
-    
+
     return 0;
 }

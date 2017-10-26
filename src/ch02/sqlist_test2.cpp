@@ -11,18 +11,18 @@ using namespace std;
 ///
 /// 打印顺序表
 ///
-template<typename E, int M>
-void PrintList(const SqList<E,M>& L)
+template <typename E, int M>
+void PrintList(const SqList<E, M> &L)
 {
     cout << "(";
-    for(int i=0; i<L.length; i++)
+    for (int i = 0; i < L.length; i++)
         cout << " " << L.elem[i];
     cout << " )" << endl;
 }
 
 bool eq(int a, int b)
 {
-    return a==b;
+    return a == b;
 }
 
 void print(int x)
@@ -42,21 +42,21 @@ int main()
     PrintList(L);
 
     // 插入元素
-    ListInsert(L,1,3);
-    ListInsert(L,2,1);
-    ListInsert(L,3,4);
-    ListInsert(L,4,1);
-    ListInsert(L,5,5);
-    ListInsert(L,6,9);
+    ListInsert(L, 1, 3);
+    ListInsert(L, 2, 1);
+    ListInsert(L, 3, 4);
+    ListInsert(L, 4, 1);
+    ListInsert(L, 5, 5);
+    ListInsert(L, 6, 9);
     PrintList(L);
-    
+
     // 元素定位
     cout << "LocateElem 9 = ";
-    cout << "L(" << LocateElem(L,9,eq) << ")" << endl;
+    cout << "L(" << LocateElem(L, 9, eq) << ")" << endl;
 
     // 遍历线性表
     cout << "ListTraverse: ";
-    ListTraverse(L,print);
+    ListTraverse(L, print);
     cout << endl;
 
     return 0;

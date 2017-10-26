@@ -26,8 +26,7 @@ void Merge(T a[], T b[], int low, int mid, int high)
 template <typename T>
 void MSort(T a[], T b[], int low, int high)
 {
-    if (low < high)
-    {
+    if (low < high) {
         int mid = (low + high) / 2;
         MSort(a, b, low, mid);
         MSort(a, b, mid + 1, high);

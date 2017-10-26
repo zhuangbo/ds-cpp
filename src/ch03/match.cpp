@@ -16,21 +16,26 @@ bool match(const char *expr)
     // 匹配括号
     SqStack<char> s;
     InitStack(s);
-    for(int i = 0; expr[i]; i++) {
+    for (int i = 0; expr[i]; i++)
+    {
         char c = expr[i];
-        if(c=='(' || c=='[' || c=='{') {
+        if (c == '(' || c == '[' || c == '{')
+        {
             // 左括号入栈
-            Push(s,c);
-        } else if(c==')' || c==']' || c=='}') {
+            Push(s, c);
+        }
+        else if (c == ')' || c == ']' || c == '}')
+        {
             // 右括号与栈顶括号进行匹配
-            if(StackEmpty(s)) return false; // 栈空则匹配失败
+            if (StackEmpty(s))
+                return false; // 栈空则匹配失败
             // 出栈
             char b;
-            Pop(s,b);
+            Pop(s, b);
             // 匹配失败则返回
-            if(( c==')' && b!='(' ) ||
-              ( c==']' && b!='[' ) ||
-              ( c=='}' && b!='{' ))
+            if ((c == ')' && b != '(') ||
+                (c == ']' && b != '[') ||
+                (c == '}' && b != '{'))
                 return false;
         }
     }
@@ -38,7 +43,6 @@ bool match(const char *expr)
     // 若栈空，则匹配成功
     return StackEmpty(s);
 }
-
 
 int main()
 {
@@ -51,10 +55,11 @@ int main()
         "(([][])]",
     };
 
-    for(int i=0; i<N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         cout << expr[i] << " match = "
-            << boolalpha << match(expr[i]) << endl;
+             << boolalpha << match(expr[i]) << endl;
     }
-    
+
     return 0;
 }

@@ -9,12 +9,13 @@ using namespace std;
 ///
 /// 打印链表
 ///
-template<typename E>
+template <typename E>
 void PrintList(LinkList<E> L)
 {
     cout << "(";
     auto p = L->next;
-    while(p) {
+    while (p)
+    {
         cout << " " << p->data;
         p = p->next;
     }
@@ -23,7 +24,7 @@ void PrintList(LinkList<E> L)
 
 bool eq(int a, int b)
 {
-    return a==b;
+    return a == b;
 }
 
 void print(int x)
@@ -43,21 +44,21 @@ int main()
     PrintList(L);
 
     // 插入元素
-    ListInsert(L,1,3);
-    ListInsert(L,2,1);
-    ListInsert(L,3,4);
-    ListInsert(L,4,1);
-    ListInsert(L,5,5);
-    ListInsert(L,6,9);
+    ListInsert(L, 1, 3);
+    ListInsert(L, 2, 1);
+    ListInsert(L, 3, 4);
+    ListInsert(L, 4, 1);
+    ListInsert(L, 5, 5);
+    ListInsert(L, 6, 9);
     PrintList(L);
 
     // 元素定位
     cout << "LocateElem 9 = ";
-    cout << "L(@" << LocateElem(L,9,eq) << ")" << endl;
+    cout << "L(@" << LocateElem(L, 9, eq) << ")" << endl;
 
     // 遍历线性表
     cout << "ListTraverse: ";
-    ListTraverse(L,print);
+    ListTraverse(L, print);
     cout << endl;
 
     // 销毁链表

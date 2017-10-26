@@ -8,22 +8,21 @@ using namespace std;
 
 #include "cstree.h"
 
-
 int main()
 {
     // 创建孩子兄弟链表
-    auto 
-    pk = new CSNode<char>{'K', nullptr, nullptr},
-    pj = new CSNode<char>{'J', nullptr, pk},
-    pi = new CSNode<char>{'I', pj, nullptr},
-    ph = new CSNode<char>{'H', nullptr, nullptr},
-    pg = new CSNode<char>{'G', ph, pi},
-    pf = new CSNode<char>{'F', nullptr, nullptr},
-    pe = new CSNode<char>{'E', nullptr, nullptr},
-    pd = new CSNode<char>{'D', pe, pf},
-    pc = new CSNode<char>{'C', nullptr, pd},
-    pb = new CSNode<char>{'B', pc, pg},
-    pa = new CSNode<char>{'A', pb, nullptr};
+    auto
+        pk = new CSNode<char>{'K', nullptr, nullptr},
+        pj = new CSNode<char>{'J', nullptr, pk},
+        pi = new CSNode<char>{'I', pj, nullptr},
+        ph = new CSNode<char>{'H', nullptr, nullptr},
+        pg = new CSNode<char>{'G', ph, pi},
+        pf = new CSNode<char>{'F', nullptr, nullptr},
+        pe = new CSNode<char>{'E', nullptr, nullptr},
+        pd = new CSNode<char>{'D', pe, pf},
+        pc = new CSNode<char>{'C', nullptr, pd},
+        pb = new CSNode<char>{'B', pc, pg},
+        pa = new CSNode<char>{'A', pb, nullptr};
     auto T = pa;
 
     // 打印树
@@ -40,19 +39,19 @@ int main()
 
     // 先根遍历
     cout << "Preorder: ";
-    Preorder(T, [](char c) {cout << c;});
+    Preorder(T, [](char c) { cout << c; });
     cout << endl;
 
     // 后根遍历
     cout << "Postorder: ";
-    Postorder(T, [](char c) {cout << c;});
+    Postorder(T, [](char c) { cout << c; });
     cout << endl;
 
     // 建立树
     char a[] = "ABCDEFGHIJK";
     char b[] = "CEDFBHGJKIA";
-    T = CreateTree(a,0,10,b,0,10);
+    T = CreateTree(a, 0, 10, b, 0, 10);
     Print(T);
-    
+
     return 0;
 }

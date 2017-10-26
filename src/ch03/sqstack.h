@@ -15,8 +15,9 @@ using std::underflow_error;
 ///
 /// 顺序栈存储结构
 ///
-template<typename E, int MAXSIZE=256>
-struct SqStack {
+template <typename E, int MAXSIZE = 256>
+struct SqStack
+{
     E elem[MAXSIZE];
     int top;
 };
@@ -27,8 +28,8 @@ struct SqStack {
 ///
 /// 初始化空栈
 ///
-template<typename E, int M>
-void InitStack(SqStack<E,M>& S)
+template <typename E, int M>
+void InitStack(SqStack<E, M> &S)
 {
     S.top = 0;
 }
@@ -36,8 +37,8 @@ void InitStack(SqStack<E,M>& S)
 ///
 /// 判空
 ///
-template<typename E, int M>
-bool StackEmpty(const SqStack<E,M>& S)
+template <typename E, int M>
+bool StackEmpty(const SqStack<E, M> &S)
 {
     return S.top == 0;
 }
@@ -45,8 +46,8 @@ bool StackEmpty(const SqStack<E,M>& S)
 ///
 /// 求长度
 ///
-template<typename E, int M>
-int StackLength(const SqStack<E,M>& S)
+template <typename E, int M>
+int StackLength(const SqStack<E, M> &S)
 {
     return S.top;
 }
@@ -54,11 +55,12 @@ int StackLength(const SqStack<E,M>& S)
 ///
 /// 入栈
 ///
-template<typename E, int MAXSIZE>
-void Push(SqStack<E,MAXSIZE>& S, E e)
+template <typename E, int MAXSIZE>
+void Push(SqStack<E, MAXSIZE> &S, E e)
 {
     // 栈满则溢出
-    if(S.top == MAXSIZE) throw overflow_error("Stack overflow");
+    if (S.top == MAXSIZE)
+        throw overflow_error("Stack overflow");
     // 入栈
     S.elem[S.top++] = e;
 }
@@ -66,11 +68,12 @@ void Push(SqStack<E,MAXSIZE>& S, E e)
 ///
 /// 出栈
 ///
-template<typename E, int M>
-void Pop(SqStack<E,M>& S, E& e)
+template <typename E, int M>
+void Pop(SqStack<E, M> &S, E &e)
 {
     // 栈空则下溢
-    if(S.top==0) throw underflow_error("Stack underflow");
+    if (S.top == 0)
+        throw underflow_error("Stack underflow");
     // 出栈
     e = S.elem[--S.top];
 }
@@ -78,11 +81,12 @@ void Pop(SqStack<E,M>& S, E& e)
 ///
 /// 出栈
 ///
-template<typename E, int M>
-E Pop(SqStack<E,M>& S)
+template <typename E, int M>
+E Pop(SqStack<E, M> &S)
 {
     // 栈空则下溢
-    if(S.top==0) throw underflow_error("Stack underflow");
+    if (S.top == 0)
+        throw underflow_error("Stack underflow");
     // 出栈
     return S.elem[--S.top];
 }
@@ -90,27 +94,28 @@ E Pop(SqStack<E,M>& S)
 ///
 /// 取栈顶元素
 ///
-template<typename E, int M>
-void GetTop(const SqStack<E,M>& S, E& e)
+template <typename E, int M>
+void GetTop(const SqStack<E, M> &S, E &e)
 {
     // 栈空则下溢
-    if(S.top==0) throw underflow_error("Stack underflow");
+    if (S.top == 0)
+        throw underflow_error("Stack underflow");
     // 返回栈顶元素
-    e = S.elem[S.top - 1];  // 栈顶元素的下标 top-1
+    e = S.elem[S.top - 1]; // 栈顶元素的下标 top-1
 }
 
 ///
 /// 取栈顶元素
 ///
-template<typename E, int M>
-E GetTop(const SqStack<E,M>& S)
+template <typename E, int M>
+E GetTop(const SqStack<E, M> &S)
 {
     // 栈空则下溢
-    if(S.top==0) throw underflow_error("Stack underflow");
+    if (S.top == 0)
+        throw underflow_error("Stack underflow");
     // 返回栈顶元素
-    return S.elem[S.top - 1];  // 栈顶元素的下标 top-1
+    return S.elem[S.top - 1]; // 栈顶元素的下标 top-1
 }
-
 
 ///////////////////////////////////////
 /// 其他操作
@@ -118,8 +123,8 @@ E GetTop(const SqStack<E,M>& S)
 ///
 /// 清空栈
 ///
-template<typename E, int M>
-void ClearStack(SqStack<E,M>& S)
+template <typename E, int M>
+void ClearStack(SqStack<E, M> &S)
 {
     S.top = 0;
 }
@@ -127,8 +132,8 @@ void ClearStack(SqStack<E,M>& S)
 ///
 /// 销毁栈
 ///
-template<typename E, int M>
-void DestroyStack(SqStack<E,M>& S)
+template <typename E, int M>
+void DestroyStack(SqStack<E, M> &S)
 {
     ClearStack(S);
 }

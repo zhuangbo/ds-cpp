@@ -13,24 +13,30 @@ using namespace std;
 char Precede(char opl, char opr)
 {
     // 语法错误
-    if(opl==')' && opr=='(') return 'X';
+    if (opl == ')' && opr == '(')
+        return 'X';
     // 括号匹配的情况
-    if(opl=='(' && opr==')') return '=';
+    if (opl == '(' && opr == ')')
+        return '=';
     // 全 > 的情况
-    if(opl==')' || opr==')') return '>';
+    if (opl == ')' || opr == ')')
+        return '>';
     // 全 < 的情况
-    if(opl=='(' || opr=='(') return '<';
+    if (opl == '(' || opr == '(')
+        return '<';
     // 剩余 +-*/ 中 > 的情况
-    if(opl=='*' || opl=='/' || opr=='+' || opr=='-') return '>';
+    if (opl == '*' || opl == '/' || opr == '+' || opr == '-')
+        return '>';
     // 其他为 < 的情况
-    if(opr=='*' || opr=='/') return '<';
-    return 'X';  // 其他意外情况
+    if (opr == '*' || opr == '/')
+        return '<';
+    return 'X'; // 其他意外情况
 }
 
 /// 判断是否是运算符（+-*/()）
 bool IsOperator(char c)
 {
-    return c=='+' || c=='-' || c=='*' || c=='/' || c=='(' || c==')';
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '(' || c == ')';
 }
 
 ///
@@ -43,33 +49,45 @@ void InfixToPostfix()
     // 初始化运算符栈为空
     InitStack(S);
     // 读取一个字符（运算符或操作数）
-    cin >> skipws >> c;  // skipws 跳过空白符
+    cin >> skipws >> c; // skipws 跳过空白符
     // 转换表达式直到遇到等号
-    while(c!='=') {
-        if(! IsOperator(c)) { // 非运算符即操作数
+    while (c != '=')
+    {
+        if (!IsOperator(c))
+        { // 非运算符即操作数
             // 遇到操作数，直接输出，继续读下一个字符
             cout << c;
             cin >> skipws >> c;
-        } else { // 遇到运算符
-            if(StackEmpty(S)) { // 运算符栈空
+        }
+        else
+        { // 遇到运算符
+            if (StackEmpty(S))
+            { // 运算符栈空
                 // 运算符入栈，继续读下一个字符
-                Push(S,c);
+                Push(S, c);
                 cin >> skipws >> c;
-            } else { // 运算符栈不空
+            }
+            else
+            { // 运算符栈不空
                 // 栈顶运算符与 c 比较优先级
-                char p = Precede(GetTop(S),c);
+                char p = Precede(GetTop(S), c);
                 // 根据优先级分别处理
-                if(p == '<') { // 栈顶运算符优先级低
+                if (p == '<')
+                { // 栈顶运算符优先级低
                     // 运算符入栈，继续读下一个字符
-                    Push(S,c);
+                    Push(S, c);
                     cin >> skipws >> c;
-                } else if(p == '>') { // 栈顶运算符优先级高
+                }
+                else if (p == '>')
+                { // 栈顶运算符优先级高
                     // 栈顶运算符出栈并输出
-                    Pop(S,op);
+                    Pop(S, op);
                     cout << op;
-                } else { // 优先级相等（括号匹配）
+                }
+                else
+                { // 优先级相等（括号匹配）
                     // 出栈不输出（脱括号），继续读下一个字符
-                    Pop(S,op);
+                    Pop(S, op);
                     cin >> skipws >> c;
                 }
             }
@@ -77,13 +95,13 @@ void InfixToPostfix()
     }
 
     // 输出栈中剩余的运算符
-    while(! StackEmpty(S)) {
-        Pop(S,op);
+    while (!StackEmpty(S))
+    {
+        Pop(S, op);
         cout << op;
     }
     cout << endl;
 }
-
 
 int main()
 {

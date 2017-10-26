@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <string>
-#include "pair.h"  // for Pair
+#include "pair.h" // for Pair
 
 using namespace std;
 
@@ -13,7 +13,7 @@ using namespace std;
 /// 打印输出一个对
 ///
 template <typename E1, typename E2>
-void print(const Pair<E1,E2>& p)
+void print(const Pair<E1, E2> &p)
 {
     cout << "(" << first(p) << ", " << second(p) << ")" << endl;
 }
@@ -30,6 +30,6 @@ int main()
     int age = 20;
     Pair<string, int> p2 = create_pair(name, age);
     print(p2);
-    
+
     return 0;
 }

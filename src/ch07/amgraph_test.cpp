@@ -16,23 +16,23 @@ int main()
     // 初始化
     InitGraph(G);
     // 添加顶点
-    auto a = AddVertex(G,'A');
-    auto b = AddVertex(G,'B');
-    auto c = AddVertex(G,'C');
-    auto d = AddVertex(G,'D');
-    auto e = AddVertex(G,'E');
+    auto a = AddVertex(G, 'A');
+    auto b = AddVertex(G, 'B');
+    auto c = AddVertex(G, 'C');
+    auto d = AddVertex(G, 'D');
+    auto e = AddVertex(G, 'E');
     // 添加边
-    AddEdge(G,a,b);
-    AddEdge(G,a,c);
-    AddEdge(G,b,e);
-    AddEdge(G,c,b);
-    AddEdge(G,c,d);
-    AddEdge(G,d,b);
-    AddEdge(G,e,a);
-    AddEdge(G,e,d);
+    AddEdge(G, a, b);
+    AddEdge(G, a, c);
+    AddEdge(G, b, e);
+    AddEdge(G, c, b);
+    AddEdge(G, c, d);
+    AddEdge(G, d, b);
+    AddEdge(G, e, a);
+    AddEdge(G, e, d);
 
     // 打印顶点的方法
-    auto print = [](char c){ cout << c; };
+    auto print = [](char c) { cout << c; };
 
     // 深度优先遍历
     DFSTraverse(G, print);

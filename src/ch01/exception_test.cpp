@@ -38,7 +38,7 @@ int f(int n)
 ///
 int main()
 {
-    try{
+    try {
         std::cout << mydiv(1,0) << std::endl;
     } catch(std::invalid_argument& e) {
         std::cout << e.what() << std::endl;
@@ -46,7 +46,7 @@ int main()
         std::cout << e.what() << std::endl;
     }
 
-    try{
+    try {
         std::cout << f(-1) << std::endl;
     } catch(InvalidArgumentException& e) {
         std::cout << e.what() << std::endl;

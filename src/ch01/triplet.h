@@ -11,7 +11,8 @@
 /// 存储结构定义
 ///
 template <typename E>
-struct Triplet {
+struct Triplet
+{
     E elem[3];
 };
 
@@ -23,24 +24,24 @@ struct Triplet {
 /// 返回三元组 t 的第 i 个元素（1<=i<=3）。
 ///
 template <typename E>
-const E& Get(const Triplet<E>& t, int i)
+const E &Get(const Triplet<E> &t, int i)
 {
-    if(i<1 || i>3)
+    if (i < 1 || i > 3)
         throw std::out_of_range("i<1 or i>3");
-    
-    return t.elem[i-1];
+
+    return t.elem[i - 1];
 }
 
 ///
 /// 改变三元组 t 的第 i 个元素（1<=i<=3）的值为 e。
 ///
 template <typename E>
-void Put(Triplet<E>& t, int i, const E& e)
+void Put(Triplet<E> &t, int i, const E &e)
 {
-    if(i<1 || i>3)
+    if (i < 1 || i > 3)
         throw std::out_of_range("i<1 or i>3");
-    
-    t.elem[i-1] = e;
+
+    t.elem[i - 1] = e;
 }
 
 // ///////////////////////////////////////

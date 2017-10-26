@@ -18,16 +18,16 @@ struct BSTNode
 template <typename E>
 using BSTree = BSTNode<E> *;
 
-
 ///
 /// 最小元素
 ///
 template <typename E>
 BSTree<E> FindMin(BSTree<E> T)
 {
-    if (T==nullptr) return nullptr;
+    if (T == nullptr)
+        return nullptr;
     auto p = T;
-    while(p->lchild)
+    while (p->lchild)
         p = p->lchild;
     return p;
 }
@@ -38,9 +38,10 @@ BSTree<E> FindMin(BSTree<E> T)
 template <typename E>
 BSTree<E> FindMax(BSTree<E> T)
 {
-    if (T==nullptr) return nullptr;
+    if (T == nullptr)
+        return nullptr;
     auto p = T;
-    while(p->rchild)
+    while (p->rchild)
         p = p->rchild;
     return p;
 }
@@ -161,7 +162,7 @@ bool Delete(BSTree<E> &T, E e)
     else
     {
         // 找到 p 的“前驱”（左子树上的最大元素）
-        auto q = p, s = p->lchild;  // q 为 s 的双亲
+        auto q = p, s = p->lchild; // q 为 s 的双亲
         while (s->rchild)
             q = s, s = s->rchild;
         //用 p 的“前驱” s 代替 p

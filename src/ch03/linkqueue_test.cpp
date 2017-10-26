@@ -20,7 +20,7 @@ int main()
     InitQueue(Q);
     QueueTraverse(Q, print);
     cout << "\nQueueEmpty = " << QueueEmpty(Q) << endl;
-    
+
     // 入队列
     EnQueue(Q, 3);
     EnQueue(Q, 1);
@@ -32,11 +32,12 @@ int main()
     cout << "\nQueueEmpty = " << QueueEmpty(Q) << endl;
 
     // 出队列
-    while(!QueueEmpty(Q)) {
+    while (!QueueEmpty(Q))
+    {
         auto e = DeQueue(Q);
         cout << "DeQueue = " << e << endl;
     }
-    cout << "\nQueueEmpty = " << QueueEmpty(Q) << endl;    
-    
+    cout << "\nQueueEmpty = " << QueueEmpty(Q) << endl;
+
     return 0;
 }

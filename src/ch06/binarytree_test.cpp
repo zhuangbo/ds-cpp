@@ -9,11 +9,11 @@ using namespace std;
 
 int main()
 {
-    auto pa = new BiTNode<char> { 'a', nullptr, nullptr };
-    auto pb = new BiTNode<char> { 'b', nullptr, nullptr };
-    auto pc = new BiTNode<char> { 'c', nullptr, nullptr };
-    auto pm = new BiTNode<char> { '*', pa, pb };
-    auto ps = new BiTNode<char> { '-', pm, pc };
+    auto pa = new BiTNode<char>{'a', nullptr, nullptr};
+    auto pb = new BiTNode<char>{'b', nullptr, nullptr};
+    auto pc = new BiTNode<char>{'c', nullptr, nullptr};
+    auto pm = new BiTNode<char>{'*', pa, pb};
+    auto ps = new BiTNode<char>{'-', pm, pc};
 
     auto T = ps; // ps 作为二叉树的根
 
@@ -24,31 +24,31 @@ int main()
 
     // 先序、中序和后序遍历
     cout << "\nPreorder: ";
-    Preorder(T,print);
+    Preorder(T, print);
     cout << "\nInorder: ";
-    Inorder(T,print);
+    Inorder(T, print);
     cout << "\nPostorder: ";
-    Postorder(T,print);
+    Postorder(T, print);
 
     // 先序、中序和后序遍历
     cout << "\nPreorderTraverse: ";
-    PreorderTraverse(T,print);
+    PreorderTraverse(T, print);
     cout << "\nInorderTraverse: ";
-    InorderTraverse(T,print);
+    InorderTraverse(T, print);
     cout << "\nPostorderTraverse: ";
-    PostorderTraverse(T,print);
+    PostorderTraverse(T, print);
 
     // 按层遍历
     cout << "\nLevelOrder: ";
-    LevelOrder(T,print);
+    LevelOrder(T, print);
 
     // 非递归遍历
     cout << "\nInorderNR: ";
-    InorderNR(T,print);
+    InorderNR(T, print);
     cout << "\nPreorderNR: ";
-    PreorderNR(T,print);
+    PreorderNR(T, print);
     cout << "\nPostorderNR: ";
-    PostorderNR(T,print);
+    PostorderNR(T, print);
 
     cout << endl;
 
@@ -61,6 +61,6 @@ int main()
     cout << "Input preorder with null tree (e.g. `AB C  `): ";
     auto bt = CreateBinaryTree();
     Print(bt);
-    
+
     return 0;
 }

@@ -15,8 +15,7 @@ void QSort(T a[], int low, int high)
     // 划分序列 a[low..high]
     T pivot = a[low];
     int i = low, j = high;
-    while (i < j)
-    {
+    while (i < j) {
         while (i < j && a[j] >= pivot)
             --j;
         a[i] = a[j];

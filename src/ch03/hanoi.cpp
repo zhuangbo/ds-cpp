@@ -7,7 +7,8 @@
 using namespace std;
 
 /// 移动一个盘子
-void move(char from, int n, char to) {
+void move(char from, int n, char to)
+{
     cout << n << " : " << from << " -> " << to << endl;
 }
 
@@ -16,12 +17,13 @@ void move(char from, int n, char to) {
 ///
 void hanoi(int n, char x, char y, char z)
 {
-    if(n==1) {
-        move(x,1,z);
-    } else {
-        hanoi(n-1, x, z, y);
+    if (n == 1)
+        move(x, 1, z);
+    else
+    {
+        hanoi(n - 1, x, z, y);
         move(x, n, z);
-        hanoi(n-1, y, x, z);
+        hanoi(n - 1, y, x, z);
     }
 }
 

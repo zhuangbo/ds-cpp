@@ -18,7 +18,6 @@ struct AMGraph
     int vexnum, arcnum; // 顶点数和弧数
 };
 
-
 ///
 /// 最小生成树 Prim 算法
 ///  P[v] 表示最小生成树中与顶点 v 关联的边 (v,P[v])

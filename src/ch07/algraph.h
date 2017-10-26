@@ -88,8 +88,6 @@ void AddEdge(ALGraph<V, E, M> &G, int s, int t, E e = 1)
     G.vexs[s].firstarc = p;
 }
 
-#include "../ch03/sqstack.h"
-
 ///
 /// 从顶点 v 出发深度优先遍历图 G
 ///

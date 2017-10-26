@@ -4,18 +4,19 @@
 ///////////////////////////////////////
 
 #include <iostream>
-#include "bubblesort.h"  // for bubble_sort
+#include "bubblesort.h" // for bubble_sort
 
 ///
 /// 冒泡排序
 ///
 int main()
 {
-    int a[] = {7,4,3,2,1,6,9,8,5};
+    int a[] = {7, 4, 3, 2, 1, 6, 9, 8, 5};
 
-    bubble_sort(a,9);
+    bubble_sort(a, 9);
 
-    for(int i=0; i<9; i++) {
+    for (int i = 0; i < 9; i++)
+    {
         std::cout << a[i];
     }
     std::cout << std::endl;

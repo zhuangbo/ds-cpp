@@ -3,7 +3,7 @@
 /// Hash table
 ///////////////////////////////////////
 
-#include <cstddef>  // for size_t
+#include <cstddef>            // for size_t
 #include "../ch02/linklist.h" // for LinkList
 
 ///////////////////////////////////////

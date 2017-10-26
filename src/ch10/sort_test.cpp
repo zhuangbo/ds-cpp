@@ -26,49 +26,49 @@ int main()
     cout << "简单插入排序" << endl;
     reset(a, n, v);
     print(a, n);
-    InsertionSort(a, n);  // 简单插入排序
+    InsertionSort(a, n); // 简单插入排序
     print(a, n);
 
     cout << "二分插入排序" << endl;
     reset(a, n, v);
     print(a, n);
-    BinInsertionSort(a, n);  // 二分插入排序
+    BinInsertionSort(a, n); // 二分插入排序
     print(a, n);
 
     cout << "希尔排序" << endl;
     reset(a, n, v);
     print(a, n);
-    ShellSort(a, n);  // 希尔排序
+    ShellSort(a, n); // 希尔排序
     print(a, n);
 
     cout << "冒泡排序" << endl;
     reset(a, n, v);
     print(a, n);
-    BubbleSort(a, n);  // 冒泡排序
+    BubbleSort(a, n); // 冒泡排序
     print(a, n);
 
     cout << "快速排序" << endl;
     reset(a, n, v);
     print(a, n);
-    QuickSort(a, n);  // 快速排序
+    QuickSort(a, n); // 快速排序
     print(a, n);
 
     cout << "简单选择排序" << endl;
     reset(a, n, v);
     print(a, n);
-    SelectionSort(a, n);  // 简单选择排序
+    SelectionSort(a, n); // 简单选择排序
     print(a, n);
 
     cout << "堆排序" << endl;
     reset(a, n, v);
     print(a, n);
-    HeapSort(a, n);  // 堆排序
+    HeapSort(a, n); // 堆排序
     print(a, n);
 
     cout << "归并排序" << endl;
     reset(a, n, v);
     print(a, n);
-    MergeSort(a, n);  // 归并排序
+    MergeSort(a, n); // 归并排序
     print(a, n);
 
     return 0;

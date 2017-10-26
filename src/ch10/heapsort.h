@@ -40,8 +40,7 @@ void HeapSort(T a[], int n)
     for (int i = (n - 3) / 2; i >= 0; i--)
         HeapAdjust(a, i, n - 1);
     // 堆排序
-    for (int i = n - 1; i > 0; i--)
-    {
+    for (int i = n - 1; i > 0; i--) {
         // 堆顶元素 a[0] 与最后一个元素 a[i] 交换
         swap(a[0], a[i]);
         // 重新调整 a[0..i-1] 为大顶堆

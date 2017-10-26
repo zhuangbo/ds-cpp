@@ -15,13 +15,13 @@ int main()
 
     SString S, T;
 
-    Assign(S, s1);
-    Assign(T, s2);
+    StrAssign(S, s1);
+    StrAssign(T, s2);
 
-    cout << S+1 << endl;
-    cout << T+1 << endl;
-    cout << Index(S,T,1) << endl;
-    cout << Index_KMP(S,T,1) << endl;
+    cout << S + 1 << endl;
+    cout << T + 1 << endl;
+    cout << Index(S, T, 1) << endl;
+    cout << Index_KMP(S, T, 1) << endl;
 
     return 0;
 }

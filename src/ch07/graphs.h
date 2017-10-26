@@ -3,11 +3,10 @@
 /// 图的存储结构
 ///////////////////////////////////////
 
-
 ///
 /// 图的邻接矩阵(Adjacency-Matrix)存储结构
 ///
-template <typename V, typename E, int M=20>
+template <typename V, typename E, int M = 20>
 struct AMGraph
 {
     V vexs[M];          // 图中的顶点
@@ -15,11 +14,10 @@ struct AMGraph
     int vexnum, arcnum; // 顶点和弧的数量
 };
 
-
 ///
 /// 图的邻接表(Adjacency-List)存储结构
 ///
-template <typename V, typename E, int M=20>
+template <typename V, typename E, int M = 20>
 struct ALGraph
 {
     // 弧结点结构
@@ -41,11 +39,10 @@ struct ALGraph
     int vexnum, arcnum; // 顶点和弧的数量
 };
 
-
 ///
 /// 图的十字链表(Orthogonal-List)存储结构
 ///
-template <typename V, typename E, int M=20>
+template <typename V, typename E, int M = 20>
 struct OLGraph
 {
     // 弧结点结构
@@ -58,7 +55,7 @@ struct OLGraph
     // 顶点结点结构
     struct VexNode
     {
-        V data;                 // 顶点数据
+        V data;                      // 顶点数据
         ArcNode *firstin, *firstout; // 分别指向第一个入弧和出弧结点
     };
 
@@ -66,11 +63,10 @@ struct OLGraph
     int vexnum, arcnum; // 顶点和弧的数量
 };
 
-
 ///
 /// 无向图的邻接多重表(Adjacency-Multilist)存储结构
 ///
-template <typename V, typename E, int M=20>
+template <typename V, typename E, int M = 20>
 struct AMLGraph
 {
     // 边结点结构

@@ -18,16 +18,18 @@
  * @return the index of the element in the array if found, -1 otherwise.
  */
 template <typename E>
-int binary_search(E a[], int n, const E& x)
+int binary_search(E a[], int n, const E &x)
 {
     int low, mid, high;
 
-    low = 0; high = n-1;
-    while(low <= high) {
+    low = 0;
+    high = n - 1;
+    while (low <= high)
+    {
         mid = (low + high) / 2;
-        if(a[mid] < x)
+        if (a[mid] < x)
             low = mid + 1;
-        else if(a[mid] > x)
+        else if (a[mid] > x)
             high = mid - 1;
         else
             return mid;
